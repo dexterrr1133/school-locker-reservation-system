@@ -4,7 +4,6 @@
  */
 
 import java.awt.*;
-import javax.swing.text.Caret;
 
 public class LoginPage extends javax.swing.JFrame {
 
@@ -29,7 +28,7 @@ public class LoginPage extends javax.swing.JFrame {
         EnterNameJField = new javax.swing.JTextField();
         CreateAccBtn = new javax.swing.JButton();
         SignInBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,8 +87,8 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(639, 568, 165, 44));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-05-22 210440.png"))); // NOI18N
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Login.png"))); // NOI18N
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,7 +166,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField EnterNameJField;
     private javax.swing.JTextField EnterPasswordJField;
     private javax.swing.JButton SignInBtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

@@ -50,7 +50,6 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 51, 153));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/436352353_1195626568092940_2713922654363858477_n (1).png"))); // NOI18N
-        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -58,8 +57,8 @@ public class MainWindow extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1004, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addContainerGap(1018, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

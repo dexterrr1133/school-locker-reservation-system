@@ -25,6 +25,11 @@ public class SignUpPage extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextField2.setText("Enter First Name");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 340, 40));
 
         jTextField3.setText("Enter Last Name");
@@ -56,8 +61,7 @@ public class SignUpPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 840, 340, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2024-05-31 at 16.05.51.png"))); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(1418, 1012));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-05-31 at 16.05.51.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 1010));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -81,6 +85,10 @@ public class SignUpPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     
     public static void main(String args[]) {

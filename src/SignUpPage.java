@@ -21,6 +21,7 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1440, 1024));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -30,10 +31,10 @@ public class SignUpPage extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 340, 40));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, 340, 50));
 
         jTextField3.setText("Enter Last Name");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 340, 40));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 340, 50));
 
         jTextField4.setText("Enter Email");
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -41,13 +42,18 @@ public class SignUpPage extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 340, 50));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 580, 340, 50));
 
         jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 780, 340, 40));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 780, 340, 50));
 
         jPasswordField2.setText("jPasswordField1");
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 680, 340, 40));
+        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, 340, 50));
 
         jButton1.setBackground(new java.awt.Color(53, 64, 142));
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -59,10 +65,10 @@ public class SignUpPage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 840, 340, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 850, 340, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-05-31 at 16.05.51.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 1010));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SignUp.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +95,10 @@ public class SignUpPage extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
 
     
     public static void main(String args[]) {

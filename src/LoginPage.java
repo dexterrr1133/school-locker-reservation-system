@@ -28,6 +28,7 @@ public class LoginPage extends javax.swing.JFrame {
         EnterNameJField = new javax.swing.JTextField();
         CreateAccBtn = new javax.swing.JButton();
         SignInBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +47,7 @@ public class LoginPage extends javax.swing.JFrame {
                 EnterPasswordJFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(EnterPasswordJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 496, 329, 30));
+        jPanel3.add(EnterPasswordJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 590, 570, 60));
 
         EnterNameJField.setBackground(new java.awt.Color(242, 242, 242));
         EnterNameJField.setColumns(1);
@@ -63,7 +64,7 @@ public class LoginPage extends javax.swing.JFrame {
                 EnterNameJFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(EnterNameJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 435, 329, 30));
+        jPanel3.add(EnterNameJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 570, 60));
 
         CreateAccBtn.setBackground(new java.awt.Color(204, 204, 204));
         CreateAccBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -73,7 +74,7 @@ public class LoginPage extends javax.swing.JFrame {
                 CreateAccBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(CreateAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 568, 165, 44));
+        jPanel3.add(CreateAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 740, 270, 60));
 
         SignInBtn.setBackground(new java.awt.Color(0, 51, 153));
         SignInBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -85,9 +86,13 @@ public class LoginPage extends javax.swing.JFrame {
                 SignInBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(639, 568, 165, 44));
+        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 740, 280, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Login.png"))); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel1.setText("Forgot Password");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 660, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,6 +171,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField EnterNameJField;
     private javax.swing.JTextField EnterPasswordJField;
     private javax.swing.JButton SignInBtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables

@@ -1,9 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-import java.awt.*;
+import java.awt.Color;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.table.DefaultTableModel;
 
 public class LoginPage extends javax.swing.JFrame {
 
@@ -24,8 +29,8 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        EnterPasswordJField = new javax.swing.JTextField();
-        EnterNameJField = new javax.swing.JTextField();
+        PasswordField = new javax.swing.JPasswordField();
+        EnterStudentIDJField = new javax.swing.JTextField();
         CreateAccBtn = new javax.swing.JButton();
         SignInBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -35,36 +40,32 @@ public class LoginPage extends javax.swing.JFrame {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        EnterPasswordJField.setBackground(new java.awt.Color(242, 242, 242));
-        EnterPasswordJField.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 14)); // NOI18N
-        EnterPasswordJField.setForeground(new java.awt.Color(153, 153, 153));
-        EnterPasswordJField.setText("Enter Your Password");
-        EnterPasswordJField.setBorder(null);
-        EnterPasswordJField.setMinimumSize(new java.awt.Dimension(63, 22));
-        EnterPasswordJField.setPreferredSize(new java.awt.Dimension(50, 22));
-        EnterPasswordJField.addMouseListener(new java.awt.event.MouseAdapter() {
+        PasswordField.setBackground(new java.awt.Color(242, 242, 242));
+        PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PasswordField.setText("Password");
+        PasswordField.setBorder(null);
+        PasswordField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EnterPasswordJFieldMouseClicked(evt);
+                PasswordFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(EnterPasswordJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 590, 570, 60));
+        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 600, 550, 40));
 
-        EnterNameJField.setBackground(new java.awt.Color(242, 242, 242));
-        EnterNameJField.setColumns(1);
-        EnterNameJField.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 14)); // NOI18N
-        EnterNameJField.setForeground(new java.awt.Color(153, 153, 153));
-        EnterNameJField.setText("Enter Your Name");
-        EnterNameJField.setBorder(null);
-        EnterNameJField.setCaretPosition(0);
-        EnterNameJField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        EnterNameJField.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        EnterNameJField.setMinimumSize(new java.awt.Dimension(63, 22));
-        EnterNameJField.addMouseListener(new java.awt.event.MouseAdapter() {
+        EnterStudentIDJField.setBackground(new java.awt.Color(242, 242, 242));
+        EnterStudentIDJField.setColumns(1);
+        EnterStudentIDJField.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 14)); // NOI18N
+        EnterStudentIDJField.setForeground(new java.awt.Color(153, 153, 153));
+        EnterStudentIDJField.setText("Enter Your Student ID");
+        EnterStudentIDJField.setBorder(null);
+        EnterStudentIDJField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        EnterStudentIDJField.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        EnterStudentIDJField.setMinimumSize(new java.awt.Dimension(63, 22));
+        EnterStudentIDJField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EnterNameJFieldMouseClicked(evt);
+                EnterStudentIDJFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(EnterNameJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 570, 60));
+        jPanel3.add(EnterStudentIDJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 550, 50));
 
         CreateAccBtn.setBackground(new java.awt.Color(204, 204, 204));
         CreateAccBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -74,7 +75,7 @@ public class LoginPage extends javax.swing.JFrame {
                 CreateAccBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(CreateAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 740, 270, 60));
+        jPanel3.add(CreateAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 740, 280, 60));
 
         SignInBtn.setBackground(new java.awt.Color(0, 51, 153));
         SignInBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -86,7 +87,7 @@ public class LoginPage extends javax.swing.JFrame {
                 SignInBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 740, 280, 60));
+        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 740, 280, 60));
 
         jLabel1.setForeground(new java.awt.Color(49, 112, 143));
         jLabel1.setText("Forgot Password");
@@ -111,20 +112,13 @@ public class LoginPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void EnterNameJFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnterNameJFieldMouseClicked
-        EnterNameJField.setText("");
-        EnterNameJField.setForeground(Color.BLACK);
-    }//GEN-LAST:event_EnterNameJFieldMouseClicked
-
-    private void EnterPasswordJFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnterPasswordJFieldMouseClicked
-        EnterPasswordJField.setText("");
-        EnterPasswordJField.setForeground(Color.BLACK);
-    }//GEN-LAST:event_EnterPasswordJFieldMouseClicked
+    private void EnterStudentIDJFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnterStudentIDJFieldMouseClicked
+        EnterStudentIDJField.setText("");
+        EnterStudentIDJField.setForeground(Color.BLACK);
+    }//GEN-LAST:event_EnterStudentIDJFieldMouseClicked
 
     private void SignInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignInBtnActionPerformed
-        MainWindow GoToMainWindow = new MainWindow();
-        GoToMainWindow.setVisible(true);
-        dispose();
+        loginUser();
     }//GEN-LAST:event_SignInBtnActionPerformed
 
     private void CreateAccBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccBtnActionPerformed
@@ -133,9 +127,62 @@ public class LoginPage extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_CreateAccBtnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void PasswordFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordFieldMouseClicked
+        PasswordField.setText("");
+    }//GEN-LAST:event_PasswordFieldMouseClicked
+
+    public void loginUser() {
+        String student_id;
+        char[] password;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+
+            if ("".equals(EnterStudentIDJField.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Username is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (PasswordField.getPassword().length == 0) {
+                JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else {
+                student_id = EnterStudentIDJField.getText();
+                password = PasswordField.getPassword();
+
+                // Check if the student ID exists
+                String checkIdQuery = "SELECT * FROM user WHERE student_id = '" + student_id + "'";
+                ResultSet rsCheckId = st.executeQuery(checkIdQuery);
+
+                if (!rsCheckId.next()) {
+                    JOptionPane.showMessageDialog(null, "Student ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    char[] storedPasswordChars = rsCheckId.getString("pass_word").toCharArray();
+                    String storedPassword = new String(storedPasswordChars);
+
+                    // Convert the entered password char[] to a String
+                    String enteredPassword = new String(password);
+                    
+                    if (storedPassword.equals(enteredPassword)) {
+                        JOptionPane.showMessageDialog(null, "Login successful!");
+                        
+                        MainWindow GoToMainWindow = new MainWindow();
+                        GoToMainWindow.setVisible(true);
+                        dispose();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Invalid username or password", "Dialog", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+                con.close();
+            }
+        } catch (Exception e) {
+            System.out.println("Error " + e.getMessage());
+        }
+    }
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -168,11 +215,12 @@ public class LoginPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CreateAccBtn;
-    private javax.swing.JTextField EnterNameJField;
-    private javax.swing.JTextField EnterPasswordJField;
+    private javax.swing.JTextField EnterStudentIDJField;
+    private javax.swing.JPasswordField PasswordField;
     private javax.swing.JButton SignInBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
 }

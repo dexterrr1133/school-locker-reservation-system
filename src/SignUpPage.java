@@ -1,3 +1,13 @@
+import java.awt.Color;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.table.DefaultTableModel;
+
 
 public class SignUpPage extends javax.swing.JFrame {
 
@@ -12,12 +22,12 @@ public class SignUpPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        FirstNameTF = new javax.swing.JTextField();
+        LastNameTF = new javax.swing.JTextField();
+        StudentIDTF = new javax.swing.JTextField();
+        ReEnterPassTF = new javax.swing.JPasswordField();
+        PasswordTF = new javax.swing.JPasswordField();
+        CreateBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -25,47 +35,62 @@ public class SignUpPage extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField2.setText("Enter First Name");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+        FirstNameTF.setText("Enter First Name");
+        FirstNameTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                FirstNameTFMouseEntered(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 340, 40));
+        jPanel1.add(FirstNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 340, 40));
 
-        jTextField3.setText("Enter Last Name");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, 340, 40));
-
-        jTextField4.setText("Enter Email");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+        LastNameTF.setText("Enter Last Name");
+        LastNameTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LastNameTFMouseClicked(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, 340, 40));
+        jPanel1.add(LastNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, 340, 40));
 
-        jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 740, 340, 40));
-
-        jPasswordField2.setText("jPasswordField1");
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
+        StudentIDTF.setText("Enter Student ID");
+        StudentIDTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StudentIDTFMouseClicked(evt);
             }
         });
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 660, 340, 40));
-
-        jButton1.setBackground(new java.awt.Color(53, 64, 142));
-        jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Create Account");
-        jButton1.setPreferredSize(new java.awt.Dimension(211, 36));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        StudentIDTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                StudentIDTFActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 800, 340, 50));
+        jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, 340, 40));
+
+        ReEnterPassTF.setText("jPasswordField1");
+        ReEnterPassTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReEnterPassTFMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ReEnterPassTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 740, 340, 40));
+
+        PasswordTF.setText("jPasswordField1");
+        PasswordTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PasswordTFMouseClicked(evt);
+            }
+        });
+        jPanel1.add(PasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 660, 340, 40));
+
+        CreateBtn.setBackground(new java.awt.Color(53, 64, 142));
+        CreateBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        CreateBtn.setForeground(new java.awt.Color(255, 255, 255));
+        CreateBtn.setText("Create Account");
+        CreateBtn.setPreferredSize(new java.awt.Dimension(211, 36));
+        CreateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CreateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 800, 340, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/signup.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
@@ -86,21 +111,80 @@ public class SignUpPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void StudentIDTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentIDTFActionPerformed
         
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_StudentIDTFActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void CreateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBtnActionPerformed
+        String student_id, first_name, last_name, password, query;
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:MySQL://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+            
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+            
+            if("".equals(FirstNameTF.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "First Name is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            }
+            else if("".equals(LastNameTF.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Last Name is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            }
+            else if("".equals(StudentIDTF.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            }
+            else if("".equals(PasswordTF.getPassword())){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            }
+            else {
+                first_name = FirstNameTF.getText();
+                last_name = LastNameTF.getText();
+                student_id = StudentIDTF.getText();
+                password = new String(PasswordTF.getPassword());
+                
+                query = "INSERT INTO user (student_id, first_name, last_name, pass_word) " + "VALUES ('"+ student_id +"','"+ first_name + "','" + last_name + "','"+ password + "')";
+                
+                st.executeUpdate(query);
+                
+                FirstNameTF.setText("");
+                LastNameTF.setText("");
+                StudentIDTF.setText("");
+                PasswordTF.setText("");
+                ReEnterPassTF.setText("");
+                
+                showMessageDialog(null, "Successfully registered.");
+                con.close();
+                LoginPage GoToLoginPage = new LoginPage();
+                GoToLoginPage.setVisible(true);
+                dispose();
+            }
+        }catch(Exception e){
+                System.out.println("Error "+ e.getMessage());
+            }
+    }//GEN-LAST:event_CreateBtnActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    private void FirstNameTFMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FirstNameTFMouseEntered
+        FirstNameTF.setText("");
+    }//GEN-LAST:event_FirstNameTFMouseEntered
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    private void LastNameTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LastNameTFMouseClicked
+        LastNameTF.setText("");
+    }//GEN-LAST:event_LastNameTFMouseClicked
+
+    private void StudentIDTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentIDTFMouseClicked
+        StudentIDTF.setText("");
+    }//GEN-LAST:event_StudentIDTFMouseClicked
+
+    private void PasswordTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordTFMouseClicked
+        PasswordTF.setText("");
+    }//GEN-LAST:event_PasswordTFMouseClicked
+
+    private void ReEnterPassTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReEnterPassTFMouseClicked
+        ReEnterPassTF.setText("");
+    }//GEN-LAST:event_ReEnterPassTFMouseClicked
 
     
     public static void main(String args[]) {
@@ -136,13 +220,13 @@ public class SignUpPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton CreateBtn;
+    private javax.swing.JTextField FirstNameTF;
+    private javax.swing.JTextField LastNameTF;
+    private javax.swing.JPasswordField PasswordTF;
+    private javax.swing.JPasswordField ReEnterPassTF;
+    private javax.swing.JTextField StudentIDTF;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

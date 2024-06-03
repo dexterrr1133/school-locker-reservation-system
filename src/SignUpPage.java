@@ -1,26 +1,23 @@
 import java.awt.Color;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Base64;
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
-import javax.swing.table.DefaultTableModel;
 
 
 public class SignUpPage extends javax.swing.JFrame {
 
-    
+    private boolean passwordVisible = false;
     public SignUpPage() {
         initComponents();
+        setStudentIDTextFieldFilter();
     }
 
     
@@ -29,6 +26,9 @@ public class SignUpPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        showReEnterPasswordBtn = new javax.swing.JButton();
+        showPasswordBtn = new javax.swing.JButton();
+        CancelBtn = new javax.swing.JButton();
         FirstNameTF = new javax.swing.JTextField();
         LastNameTF = new javax.swing.JTextField();
         StudentIDTF = new javax.swing.JTextField();
@@ -38,9 +38,41 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1600, 1080));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        showReEnterPasswordBtn.setBackground(new java.awt.Color(255, 255, 255));
+        showReEnterPasswordBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-06-03 211835.png"))); // NOI18N
+        showReEnterPasswordBtn.setBorder(null);
+        showReEnterPasswordBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showReEnterPasswordBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(showReEnterPasswordBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 830, 80, 30));
+
+        showPasswordBtn.setBackground(new java.awt.Color(255, 255, 255));
+        showPasswordBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-06-03 211835.png"))); // NOI18N
+        showPasswordBtn.setBorder(null);
+        showPasswordBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showPasswordBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(showPasswordBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 730, 80, 30));
+
+        CancelBtn.setBackground(new java.awt.Color(153, 153, 153));
+        CancelBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        CancelBtn.setForeground(new java.awt.Color(255, 255, 255));
+        CancelBtn.setText("Cancel");
+        CancelBtn.setPreferredSize(new java.awt.Dimension(211, 36));
+        CancelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CancelBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 940, 530, 40));
 
         FirstNameTF.setText("Enter First Name");
         FirstNameTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -48,7 +80,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 FirstNameTFMouseEntered(evt);
             }
         });
-        jPanel1.add(FirstNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 420, 530, 50));
+        jPanel1.add(FirstNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(664, 420, 530, 50));
 
         LastNameTF.setText("Enter Last Name");
         LastNameTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -56,7 +88,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 LastNameTFMouseClicked(evt);
             }
         });
-        jPanel1.add(LastNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 520, 530, 50));
+        jPanel1.add(LastNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(664, 520, 530, 50));
 
         StudentIDTF.setText("Enter Student ID");
         StudentIDTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,7 +96,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 StudentIDTFMouseClicked(evt);
             }
         });
-        jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 620, 530, 50));
+        jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(664, 620, 530, 50));
 
         ReEnterPassTF.setText("jPasswordField1");
         ReEnterPassTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -72,7 +104,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 ReEnterPassTFMouseClicked(evt);
             }
         });
-        jPanel1.add(ReEnterPassTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 820, 530, 50));
+        jPanel1.add(ReEnterPassTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(664, 820, 530, 50));
 
         PasswordTF.setText("jPasswordField1");
         PasswordTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,7 +112,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 PasswordTFMouseClicked(evt);
             }
         });
-        jPanel1.add(PasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 720, 530, 50));
+        jPanel1.add(PasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(664, 720, 530, 50));
 
         CreateBtn.setBackground(new java.awt.Color(53, 64, 142));
         CreateBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -92,7 +124,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 CreateBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(CreateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 890, 530, 50));
+        jPanel1.add(CreateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 895, 530, 42));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/signup.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
@@ -184,6 +216,50 @@ public class SignUpPage extends javax.swing.JFrame {
         ReEnterPassTF.setText("");
     }//GEN-LAST:event_ReEnterPassTFMouseClicked
 
+    private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed
+        LoginPage GoToLoginPage = new LoginPage();
+        GoToLoginPage.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CancelBtnActionPerformed
+
+    private void showPasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordBtnActionPerformed
+        ImageIcon hidePasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\HidePasswordIcon.png");
+        ImageIcon showPasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\ShowPasswordIcon.png");
+        passwordVisible = !passwordVisible; // Toggle the password visibility
+                if (passwordVisible) {
+                    PasswordTF.setEchoChar((char) 0);
+                    showPasswordBtn.setIcon(hidePasswordIcon);
+                } else {
+                    PasswordTF.setEchoChar('*');
+                    showPasswordBtn.setIcon(showPasswordIcon);
+                }
+    }//GEN-LAST:event_showPasswordBtnActionPerformed
+
+    private void showReEnterPasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showReEnterPasswordBtnActionPerformed
+        ImageIcon hidePasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\HidePasswordIcon.png");
+        ImageIcon showPasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\ShowPasswordIcon.png");
+        passwordVisible = !passwordVisible; // Toggle the password visibility
+                if (passwordVisible) {
+                    ReEnterPassTF.setEchoChar((char) 0);
+                    showReEnterPasswordBtn.setIcon(hidePasswordIcon);
+                } else {
+                    ReEnterPassTF.setEchoChar('*');
+                    showReEnterPasswordBtn.setIcon(showPasswordIcon);
+                }
+    }//GEN-LAST:event_showReEnterPasswordBtnActionPerformed
+
+    private void setStudentIDTextFieldFilter() {
+    StudentIDTF.addKeyListener(new KeyAdapter() {
+        @Override
+        public void keyTyped(KeyEvent e) {
+            char c = e.getKeyChar();
+            if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || StudentIDTF.getText().length() >= 12 || (c == KeyEvent.VK_MINUS && StudentIDTF.getText().contains("-"))) {
+                e.consume();
+            }
+        }
+    });
+}
+    
     public class CryptoUtils {
 
         private static final String ALGORITHM = "SHA-256";
@@ -228,6 +304,7 @@ public class SignUpPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CancelBtn;
     private javax.swing.JButton CreateBtn;
     private javax.swing.JTextField FirstNameTF;
     private javax.swing.JTextField LastNameTF;
@@ -236,5 +313,7 @@ public class SignUpPage extends javax.swing.JFrame {
     private javax.swing.JTextField StudentIDTF;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton showPasswordBtn;
+    private javax.swing.JButton showReEnterPasswordBtn;
     // End of variables declaration//GEN-END:variables
 }

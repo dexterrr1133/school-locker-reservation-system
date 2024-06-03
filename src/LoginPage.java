@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
@@ -6,7 +8,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Base64;
-import javax.crypto.SecretKey;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -16,6 +17,7 @@ public class LoginPage extends javax.swing.JFrame {
     
     public LoginPage() {
         initComponents();
+        setStudentIDTextFieldFilter();
     }
 
     /**
@@ -48,7 +50,7 @@ public class LoginPage extends javax.swing.JFrame {
                 showPasswordButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(showPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 600, 130, 40));
+        jPanel3.add(showPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 600, 100, 40));
 
         PasswordField.setBackground(new java.awt.Color(242, 242, 242));
         PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -64,7 +66,7 @@ public class LoginPage extends javax.swing.JFrame {
                 PasswordFieldActionPerformed(evt);
             }
         });
-        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 590, 570, 60));
+        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 550, 40));
 
         EnterStudentIDJField.setBackground(new java.awt.Color(242, 242, 242));
         EnterStudentIDJField.setColumns(1);
@@ -80,7 +82,7 @@ public class LoginPage extends javax.swing.JFrame {
                 EnterStudentIDJFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(EnterStudentIDJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 570, 60));
+        jPanel3.add(EnterStudentIDJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 500, 560, 50));
 
         CreateAccBtn.setBackground(new java.awt.Color(204, 204, 204));
         CreateAccBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -197,7 +199,7 @@ public class LoginPage extends javax.swing.JFrame {
                     if (storedHashedPassword.equals(hashedEnteredPassword)) {
                         JOptionPane.showMessageDialog(null, "Login successful!");
 
-                        MainWindow GoToMainWindow = new MainWindow();
+                        AdminMainWindow GoToMainWindow = new AdminMainWindow();
                         GoToMainWindow.setVisible(true);
                         dispose();
                     } else {
@@ -222,6 +224,17 @@ public class LoginPage extends javax.swing.JFrame {
         byte[] hashedBytes = md.digest(password.getBytes());
         return Base64.getEncoder().encodeToString(hashedBytes);
     }
+}
+    private void setStudentIDTextFieldFilter() {
+    EnterStudentIDJField.addKeyListener(new KeyAdapter() {
+        @Override
+        public void keyTyped(KeyEvent e) {
+            char c = e.getKeyChar();
+            if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || EnterStudentIDJField.getText().length() >= 12 || (c == KeyEvent.VK_MINUS && EnterStudentIDJField.getText().contains("-"))) {
+                e.consume();
+            }
+        }
+    });
 }
     
     public static void main(String args[]) {

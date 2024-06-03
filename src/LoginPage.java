@@ -6,18 +6,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Base64;
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
-import javax.swing.table.DefaultTableModel;
 
 public class LoginPage extends javax.swing.JFrame {
-
-    private SecretKey secretKey;
+    private boolean passwordVisible = false;
     
     public LoginPage() {
         initComponents();
@@ -33,6 +28,7 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
+        showPasswordButton = new javax.swing.JButton();
         PasswordField = new javax.swing.JPasswordField();
         EnterStudentIDJField = new javax.swing.JTextField();
         CreateAccBtn = new javax.swing.JButton();
@@ -43,6 +39,16 @@ public class LoginPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        showPasswordButton.setBackground(new java.awt.Color(242, 242, 242));
+        showPasswordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ShowPasswordIcon.png"))); // NOI18N
+        showPasswordButton.setBorder(null);
+        showPasswordButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showPasswordButtonActionPerformed(evt);
+            }
+        });
+        jPanel3.add(showPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 600, 130, 40));
 
         PasswordField.setBackground(new java.awt.Color(242, 242, 242));
         PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -135,6 +141,19 @@ public class LoginPage extends javax.swing.JFrame {
         PasswordField.setText("");
     }//GEN-LAST:event_PasswordFieldMouseClicked
 
+    private void showPasswordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordButtonActionPerformed
+        ImageIcon hidePasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\HidePasswordIcon.png");
+        ImageIcon showPasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\ShowPasswordIcon.png");
+        passwordVisible = !passwordVisible; // Toggle the password visibility
+                if (passwordVisible) {
+                    PasswordField.setEchoChar((char) 0);
+                    showPasswordButton.setIcon(hidePasswordIcon);
+                } else {
+                    PasswordField.setEchoChar('*');
+                    showPasswordButton.setIcon(showPasswordIcon);
+                }
+    }//GEN-LAST:event_showPasswordButtonActionPerformed
+
     public void loginUser() {
         String student_id;
         char[] password;
@@ -197,30 +216,6 @@ public class LoginPage extends javax.swing.JFrame {
 }
     
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             new LoginPage().setVisible(true);
         });
@@ -234,6 +229,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton showPasswordButton;
     // End of variables declaration//GEN-END:variables
 
 }

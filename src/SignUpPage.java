@@ -133,6 +133,8 @@ public class SignUpPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Student ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if ("".equals(new String(PasswordTF.getPassword()))) {
                 JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (!(new String(PasswordTF.getPassword())).equals(new String(ReEnterPassTF.getPassword()))) {
+                JOptionPane.showMessageDialog(new JFrame(), "Password does not match", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else {
                 first_name = FirstNameTF.getText();
                 last_name = LastNameTF.getText();

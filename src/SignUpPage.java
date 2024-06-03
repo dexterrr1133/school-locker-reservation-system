@@ -48,7 +48,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 FirstNameTFMouseEntered(evt);
             }
         });
-        jPanel1.add(FirstNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 340, 40));
+        jPanel1.add(FirstNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 420, 530, 50));
 
         LastNameTF.setText("Enter Last Name");
         LastNameTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -56,7 +56,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 LastNameTFMouseClicked(evt);
             }
         });
-        jPanel1.add(LastNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, 340, 40));
+        jPanel1.add(LastNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 520, 530, 50));
 
         StudentIDTF.setText("Enter Student ID");
         StudentIDTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,7 +64,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 StudentIDTFMouseClicked(evt);
             }
         });
-        jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, 340, 40));
+        jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 620, 530, 50));
 
         ReEnterPassTF.setText("jPasswordField1");
         ReEnterPassTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -72,7 +72,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 ReEnterPassTFMouseClicked(evt);
             }
         });
-        jPanel1.add(ReEnterPassTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 740, 340, 40));
+        jPanel1.add(ReEnterPassTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 820, 530, 50));
 
         PasswordTF.setText("jPasswordField1");
         PasswordTF.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,7 +80,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 PasswordTFMouseClicked(evt);
             }
         });
-        jPanel1.add(PasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 660, 340, 40));
+        jPanel1.add(PasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 720, 530, 50));
 
         CreateBtn.setBackground(new java.awt.Color(53, 64, 142));
         CreateBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -92,7 +92,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 CreateBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(CreateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 800, 340, 50));
+        jPanel1.add(CreateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 890, 530, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/signup.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));

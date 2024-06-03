@@ -48,7 +48,7 @@ public class LoginPage extends javax.swing.JFrame {
                 showPasswordButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(showPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 600, 130, 40));
+        jPanel3.add(showPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 600, 130, 40));
 
         PasswordField.setBackground(new java.awt.Color(242, 242, 242));
         PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -59,7 +59,12 @@ public class LoginPage extends javax.swing.JFrame {
                 PasswordFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 600, 550, 40));
+        PasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordFieldActionPerformed(evt);
+            }
+        });
+        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 590, 570, 60));
 
         EnterStudentIDJField.setBackground(new java.awt.Color(242, 242, 242));
         EnterStudentIDJField.setColumns(1);
@@ -75,7 +80,7 @@ public class LoginPage extends javax.swing.JFrame {
                 EnterStudentIDJFieldMouseClicked(evt);
             }
         });
-        jPanel3.add(EnterStudentIDJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 550, 50));
+        jPanel3.add(EnterStudentIDJField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 570, 60));
 
         CreateAccBtn.setBackground(new java.awt.Color(204, 204, 204));
         CreateAccBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -85,7 +90,7 @@ public class LoginPage extends javax.swing.JFrame {
                 CreateAccBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(CreateAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 740, 280, 60));
+        jPanel3.add(CreateAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 740, 280, 60));
 
         SignInBtn.setBackground(new java.awt.Color(0, 51, 153));
         SignInBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
@@ -97,11 +102,11 @@ public class LoginPage extends javax.swing.JFrame {
                 SignInBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 740, 280, 60));
+        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 740, 280, 60));
 
         jLabel1.setForeground(new java.awt.Color(49, 112, 143));
         jLabel1.setText("Forgot Password");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 660, -1, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 650, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -153,6 +158,10 @@ public class LoginPage extends javax.swing.JFrame {
                     showPasswordButton.setIcon(showPasswordIcon);
                 }
     }//GEN-LAST:event_showPasswordButtonActionPerformed
+
+    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordFieldActionPerformed
 
     public void loginUser() {
         String student_id;

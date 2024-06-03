@@ -1,8 +1,15 @@
 import java.awt.Color;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Base64;
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -31,7 +38,7 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1440, 1024));
+        setPreferredSize(new java.awt.Dimension(1600, 1080));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -55,11 +62,6 @@ public class SignUpPage extends javax.swing.JFrame {
         StudentIDTF.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 StudentIDTFMouseClicked(evt);
-            }
-        });
-        StudentIDTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StudentIDTFActionPerformed(evt);
             }
         });
         jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, 340, 40));
@@ -111,59 +113,53 @@ public class SignUpPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void StudentIDTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentIDTFActionPerformed
-        
-    }//GEN-LAST:event_StudentIDTFActionPerformed
-
     private void CreateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBtnActionPerformed
         String student_id, first_name, last_name, password, query;
-        
-        try{
+
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:MySQL://localhost:3306/locker_reservation";
+            String url = "jdbc:mysql://localhost:3306/locker_reservation";
             String user = "root";
             String pass = "";
-            
+
             Connection con = DriverManager.getConnection(url, user, pass);
             Statement st = con.createStatement();
-            
-            if("".equals(FirstNameTF.getText())){
+
+            if ("".equals(FirstNameTF.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "First Name is required", "Dialog", JOptionPane.ERROR_MESSAGE);
-            }
-            else if("".equals(LastNameTF.getText())){
+            } else if ("".equals(LastNameTF.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Last Name is required", "Dialog", JOptionPane.ERROR_MESSAGE);
-            }
-            else if("".equals(StudentIDTF.getText())){
+            } else if ("".equals(StudentIDTF.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Student ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
-            }
-            else if("".equals(PasswordTF.getPassword())){
-                JOptionPane.showMessageDialog(new JFrame(), "Student ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
-            }
-            else {
+            } else if ("".equals(new String(PasswordTF.getPassword()))) {
+                JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else {
                 first_name = FirstNameTF.getText();
                 last_name = LastNameTF.getText();
                 student_id = StudentIDTF.getText();
                 password = new String(PasswordTF.getPassword());
                 
-                query = "INSERT INTO user (student_id, first_name, last_name, pass_word) " + "VALUES ('"+ student_id +"','"+ first_name + "','" + last_name + "','"+ password + "')";
-                
+                String hashedPassword = CryptoUtils.hashPassword(password);
+
+                query = "INSERT INTO user (student_id, first_name, last_name, pass_word) VALUES ('" + student_id + "','" + first_name + "','" + last_name + "','" + hashedPassword + "')";
+
                 st.executeUpdate(query);
-                
+
                 FirstNameTF.setText("");
                 LastNameTF.setText("");
                 StudentIDTF.setText("");
                 PasswordTF.setText("");
                 ReEnterPassTF.setText("");
-                
-                showMessageDialog(null, "Successfully registered.");
+
+                JOptionPane.showMessageDialog(null, "Successfully registered.");
                 con.close();
                 LoginPage GoToLoginPage = new LoginPage();
                 GoToLoginPage.setVisible(true);
                 dispose();
             }
-        }catch(Exception e){
-                System.out.println("Error "+ e.getMessage());
-            }
+        } catch (Exception e) {
+            System.out.println("Error " + e.getMessage());
+        }
     }//GEN-LAST:event_CreateBtnActionPerformed
 
     private void FirstNameTFMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FirstNameTFMouseEntered
@@ -186,7 +182,17 @@ public class SignUpPage extends javax.swing.JFrame {
         ReEnterPassTF.setText("");
     }//GEN-LAST:event_ReEnterPassTFMouseClicked
 
-    
+    public class CryptoUtils {
+
+        private static final String ALGORITHM = "SHA-256";
+
+    public static String hashPassword(String password) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance(ALGORITHM);
+        byte[] hashedBytes = md.digest(password.getBytes());
+        return Base64.getEncoder().encodeToString(hashedBytes);
+    }
+}
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

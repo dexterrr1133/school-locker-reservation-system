@@ -5,6 +5,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Base64;
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -12,9 +17,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class LoginPage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginPage
-     */
+    private SecretKey secretKey;
+    
     public LoginPage() {
         initComponents();
     }
@@ -152,28 +156,27 @@ public class LoginPage extends javax.swing.JFrame {
                 student_id = EnterStudentIDJField.getText();
                 password = PasswordField.getPassword();
 
-                // Check if the student ID exists
-                String checkIdQuery = "SELECT * FROM user WHERE student_id = '" + student_id + "'";
-                ResultSet rsCheckId = st.executeQuery(checkIdQuery);
+                // Retrieve the plain text password from the database
+                String query = "SELECT pass_word FROM user WHERE student_id = '" + student_id + "'";
+                ResultSet rs = st.executeQuery(query);
 
-                if (!rsCheckId.next()) {
-                    JOptionPane.showMessageDialog(null, "Student ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);
-                } else {
-                    char[] storedPasswordChars = rsCheckId.getString("pass_word").toCharArray();
-                    String storedPassword = new String(storedPasswordChars);
+                if (rs.next()) {
+                    String storedHashedPassword = rs.getString("pass_word");
 
-                    // Convert the entered password char[] to a String
                     String enteredPassword = new String(password);
-                    
-                    if (storedPassword.equals(enteredPassword)) {
+                    String hashedEnteredPassword = CryptoUtils.hashPassword(enteredPassword);
+
+                    if (storedHashedPassword.equals(hashedEnteredPassword)) {
                         JOptionPane.showMessageDialog(null, "Login successful!");
-                        
+
                         MainWindow GoToMainWindow = new MainWindow();
                         GoToMainWindow.setVisible(true);
                         dispose();
                     } else {
                         JOptionPane.showMessageDialog(null, "Invalid username or password", "Dialog", JOptionPane.ERROR_MESSAGE);
                     }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Student ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);
                 }
                 con.close();
             }
@@ -181,7 +184,17 @@ public class LoginPage extends javax.swing.JFrame {
             System.out.println("Error " + e.getMessage());
         }
     }
+   
+    public class CryptoUtils {
     
+    private static final String ALGORITHM = "SHA-256";
+
+    public static String hashPassword(String password) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance(ALGORITHM);
+        byte[] hashedBytes = md.digest(password.getBytes());
+        return Base64.getEncoder().encodeToString(hashedBytes);
+    }
+}
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

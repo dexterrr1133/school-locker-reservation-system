@@ -177,7 +177,9 @@ public class LoginPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Username is required", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if (PasswordField.getPassword().length == 0) {
                 JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
-            } else {
+            }else if (!(EnterStudentIDJField.getText().contains("-"))){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID must contain '-'", "Dialog", JOptionPane.ERROR_MESSAGE); 
+            }else {
                 student_id = EnterStudentIDJField.getText();
                 password = PasswordField.getPassword();
 

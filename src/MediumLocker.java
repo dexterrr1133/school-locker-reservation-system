@@ -86,13 +86,12 @@ public class MediumLocker extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
-        jPanel32 = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
-        jLabel32 = new javax.swing.JLabel();
+        Page2 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Page1 = new javax.swing.JLabel();
+        MediumLockerWindow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -818,52 +817,26 @@ public class MediumLocker extends javax.swing.JFrame {
 
         jPanel1.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 710, 160, 220));
 
-        jPanel32.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel33.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
-        jLabel33.setText("1");
-
-        javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
-        jPanel32.setLayout(jPanel32Layout);
-        jPanel32Layout.setHorizontalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel32Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(jLabel33)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        jPanel32Layout.setVerticalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel32Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel33)
-                .addContainerGap())
-        );
-
-        jPanel1.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 970, 50, 60));
-
         jPanel33.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel32.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
-        jLabel32.setText("2");
+        Page2.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        Page2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Page2.setText("2");
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
-                .addComponent(jLabel32)
-                .addContainerGap())
+            .addComponent(Page2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
-                .addComponent(jLabel32))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Page2))
         );
 
-        jPanel1.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 970, 50, 60));
+        jPanel1.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 970, 40, 60));
 
         jPanel34.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -875,21 +848,26 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addComponent(jLabel34)
                 .addContainerGap())
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel34))
         );
 
-        jPanel1.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 970, 50, 60));
+        jPanel1.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 970, 40, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/medium locker.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Page1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        Page1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Page1.setText("1");
+        jPanel1.add(Page1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 970, 40, -1));
+
+        MediumLockerWindow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/medium locker.png"))); // NOI18N
+        jPanel1.add(MediumLockerWindow, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -945,7 +923,9 @@ public class MediumLocker extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel MediumLockerWindow;
+    private javax.swing.JLabel Page1;
+    private javax.swing.JLabel Page2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -970,8 +950,6 @@ public class MediumLocker extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1004,7 +982,6 @@ public class MediumLocker extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel4;

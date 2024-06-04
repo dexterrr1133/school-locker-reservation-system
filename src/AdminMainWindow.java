@@ -35,75 +35,22 @@ public class AdminMainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        Header = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        Body = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        HomeIcon = new javax.swing.JLabel();
-        HomeText = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         ViewLockerPanel = new javax.swing.JPanel();
         ViewLockerText = new javax.swing.JLabel();
         LockerIcon = new javax.swing.JLabel();
-        PaymentPanel = new javax.swing.JPanel();
-        PaymentStatusText = new javax.swing.JLabel();
-        PaymentIcon = new javax.swing.JLabel();
-        StudentListPanel = new javax.swing.JPanel();
-        StudentListText = new javax.swing.JLabel();
-        StudentListIcon = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        ViewLockerPanel1 = new javax.swing.JPanel();
+        ViewLockerText1 = new javax.swing.JLabel();
+        LockerIcon1 = new javax.swing.JLabel();
+        ViewLockerPanel2 = new javax.swing.JPanel();
+        ViewLockerText2 = new javax.swing.JLabel();
+        LockerIcon2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        jPanel2.setBackground(new java.awt.Color(255, 212, 0));
-
-        Header.setBackground(new java.awt.Color(53, 64, 142));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/file (7).png"))); // NOI18N
-
-        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
-        Header.setLayout(HeaderLayout);
-        HeaderLayout.setHorizontalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addContainerGap(1294, Short.MAX_VALUE))
-        );
-        HeaderLayout.setVerticalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        Body.setBackground(new java.awt.Color(255, 255, 255));
-        Body.setPreferredSize(new java.awt.Dimension(1400, 900));
-
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 3, 28)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(49, 112, 143));
-        jLabel2.setText("Welcome, Admin!");
-
-        HomeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/file (1).png"))); // NOI18N
-
-        HomeText.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
-        HomeText.setForeground(new java.awt.Color(49, 112, 143));
-        HomeText.setText("Home");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1430, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
-        );
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ViewLockerPanel.setBackground(new java.awt.Color(255, 255, 255));
         ViewLockerPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
@@ -128,7 +75,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
                 .addComponent(LockerIcon)
                 .addGap(18, 18, 18)
                 .addComponent(ViewLockerText)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         ViewLockerPanelLayout.setVerticalGroup(
             ViewLockerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,169 +87,136 @@ public class AdminMainWindow extends javax.swing.JFrame {
                     .addGroup(ViewLockerPanelLayout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addComponent(ViewLockerText)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        PaymentPanel.setBackground(new java.awt.Color(255, 255, 255));
-        PaymentPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
-
-        PaymentStatusText.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
-        PaymentStatusText.setForeground(new java.awt.Color(49, 112, 143));
-        PaymentStatusText.setText("Payment Status");
-
-        PaymentIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/payment.png"))); // NOI18N
-
-        javax.swing.GroupLayout PaymentPanelLayout = new javax.swing.GroupLayout(PaymentPanel);
-        PaymentPanel.setLayout(PaymentPanelLayout);
-        PaymentPanelLayout.setHorizontalGroup(
-            PaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PaymentPanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(PaymentIcon)
-                .addGap(30, 30, 30)
-                .addComponent(PaymentStatusText)
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-        PaymentPanelLayout.setVerticalGroup(
-            PaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PaymentPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(PaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PaymentPanelLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(PaymentStatusText))
-                    .addComponent(PaymentIcon))
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
-
-        StudentListPanel.setBackground(new java.awt.Color(255, 255, 255));
-        StudentListPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
-
-        StudentListText.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
-        StudentListText.setForeground(new java.awt.Color(49, 112, 143));
-        StudentListText.setText("Student List");
-
-        StudentListIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/file (6).png"))); // NOI18N
-
-        javax.swing.GroupLayout StudentListPanelLayout = new javax.swing.GroupLayout(StudentListPanel);
-        StudentListPanel.setLayout(StudentListPanelLayout);
-        StudentListPanelLayout.setHorizontalGroup(
-            StudentListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentListPanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(StudentListIcon)
-                .addGap(18, 18, 18)
-                .addComponent(StudentListText)
-                .addContainerGap(122, Short.MAX_VALUE))
-        );
-        StudentListPanelLayout.setVerticalGroup(
-            StudentListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentListPanelLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(StudentListIcon)
-                .addContainerGap(43, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentListPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(StudentListText)
-                .addGap(71, 71, 71))
-        );
-
-        javax.swing.GroupLayout BodyLayout = new javax.swing.GroupLayout(Body);
-        Body.setLayout(BodyLayout);
-        BodyLayout.setHorizontalGroup(
-            BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BodyLayout.createSequentialGroup()
-                .addGroup(BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BodyLayout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8)
-                        .addGap(86, 86, 86)
-                        .addGroup(BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(BodyLayout.createSequentialGroup()
-                                .addComponent(ViewLockerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(63, 63, 63)
-                                .addComponent(StudentListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(PaymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BodyLayout.createSequentialGroup()
-                                    .addComponent(HomeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(HomeText)
-                                    .addGap(1155, 1155, 1155))
-                                .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(BodyLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel2)))
-                .addContainerGap())
-        );
-        BodyLayout.setVerticalGroup(
-            BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BodyLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel2)
-                .addGap(69, 69, 69)
-                .addComponent(jLabel10)
-                .addGroup(BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BodyLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(BodyLayout.createSequentialGroup()
-                        .addGroup(BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(BodyLayout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(HomeText))
-                            .addGroup(BodyLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(HomeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(StudentListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ViewLockerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PaymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 375, Short.MAX_VALUE))))
-        );
+        jPanel1.add(ViewLockerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 430, 190));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Header, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Body, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Body, javax.swing.GroupLayout.PREFERRED_SIZE, 848, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 10, Short.MAX_VALUE)
         );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 1400, 10));
+
+        ViewLockerPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        ViewLockerPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
+        ViewLockerPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ViewLockerPanel1MouseClicked(evt);
+            }
+        });
+
+        ViewLockerText1.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
+        ViewLockerText1.setForeground(new java.awt.Color(49, 112, 143));
+        ViewLockerText1.setText("View Students");
+
+        LockerIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/StudentListIcon.png"))); // NOI18N
+
+        javax.swing.GroupLayout ViewLockerPanel1Layout = new javax.swing.GroupLayout(ViewLockerPanel1);
+        ViewLockerPanel1.setLayout(ViewLockerPanel1Layout);
+        ViewLockerPanel1Layout.setHorizontalGroup(
+            ViewLockerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ViewLockerPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(LockerIcon1)
+                .addGap(18, 18, 18)
+                .addComponent(ViewLockerText1)
+                .addContainerGap(105, Short.MAX_VALUE))
+        );
+        ViewLockerPanel1Layout.setVerticalGroup(
+            ViewLockerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ViewLockerPanel1Layout.createSequentialGroup()
+                .addGroup(ViewLockerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ViewLockerPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(LockerIcon1))
+                    .addGroup(ViewLockerPanel1Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(ViewLockerText1)))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(ViewLockerPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 430, 190));
+
+        ViewLockerPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        ViewLockerPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
+        ViewLockerPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ViewLockerPanel2MouseClicked(evt);
+            }
+        });
+
+        ViewLockerText2.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
+        ViewLockerText2.setForeground(new java.awt.Color(49, 112, 143));
+        ViewLockerText2.setText("Payment Status");
+
+        LockerIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/payment.png"))); // NOI18N
+
+        javax.swing.GroupLayout ViewLockerPanel2Layout = new javax.swing.GroupLayout(ViewLockerPanel2);
+        ViewLockerPanel2.setLayout(ViewLockerPanel2Layout);
+        ViewLockerPanel2Layout.setHorizontalGroup(
+            ViewLockerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ViewLockerPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(LockerIcon2)
+                .addGap(18, 18, 18)
+                .addComponent(ViewLockerText2)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+        ViewLockerPanel2Layout.setVerticalGroup(
+            ViewLockerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ViewLockerPanel2Layout.createSequentialGroup()
+                .addGroup(ViewLockerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ViewLockerPanel2Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(LockerIcon2))
+                    .addGroup(ViewLockerPanel2Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(ViewLockerText2)))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(ViewLockerPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 440, 439, 190));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/AdminMainWindow.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ViewLockerPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewLockerPanelMouseClicked
-        
+
     }//GEN-LAST:event_ViewLockerPanelMouseClicked
+
+    private void ViewLockerPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewLockerPanel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ViewLockerPanel1MouseClicked
+
+    private void ViewLockerPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewLockerPanel2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ViewLockerPanel2MouseClicked
 
     private void showLayeredViewLockerPane() {
         JLayeredPane layeredPane = new JLayeredPane();
@@ -367,24 +281,17 @@ public class AdminMainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Body;
-    private javax.swing.JPanel Header;
-    private javax.swing.JLabel HomeIcon;
-    private javax.swing.JLabel HomeText;
     private javax.swing.JLabel LockerIcon;
-    private javax.swing.JLabel PaymentIcon;
-    private javax.swing.JPanel PaymentPanel;
-    private javax.swing.JLabel PaymentStatusText;
-    private javax.swing.JLabel StudentListIcon;
-    private javax.swing.JPanel StudentListPanel;
-    private javax.swing.JLabel StudentListText;
+    private javax.swing.JLabel LockerIcon1;
+    private javax.swing.JLabel LockerIcon2;
     private javax.swing.JPanel ViewLockerPanel;
+    private javax.swing.JPanel ViewLockerPanel1;
+    private javax.swing.JPanel ViewLockerPanel2;
     private javax.swing.JLabel ViewLockerText;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel ViewLockerText1;
+    private javax.swing.JLabel ViewLockerText2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }

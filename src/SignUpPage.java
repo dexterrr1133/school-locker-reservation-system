@@ -42,7 +42,6 @@ public class SignUpPage extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        showReEnterPasswordBtn.setBackground(new java.awt.Color(255, 255, 255));
         showReEnterPasswordBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-06-03 211835.png"))); // NOI18N
         showReEnterPasswordBtn.setBorder(null);
         showReEnterPasswordBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +51,6 @@ public class SignUpPage extends javax.swing.JFrame {
         });
         jPanel1.add(showReEnterPasswordBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 830, 80, 30));
 
-        showPasswordBtn.setBackground(new java.awt.Color(255, 255, 255));
         showPasswordBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Screenshot 2024-06-03 211835.png"))); // NOI18N
         showPasswordBtn.setBorder(null);
         showPasswordBtn.addActionListener(new java.awt.event.ActionListener() {

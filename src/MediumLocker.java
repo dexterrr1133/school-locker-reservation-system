@@ -859,11 +859,11 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel32))
         );
 
-        jPanel1.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 970, -1, -1));
+        jPanel1.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 970, 50, 60));
 
         jPanel34.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -882,11 +882,11 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
+                .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(jLabel34))
         );
 
-        jPanel1.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 970, -1, -1));
+        jPanel1.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 970, 50, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/medium locker.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

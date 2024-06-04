@@ -1,3 +1,10 @@
+
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -93,6 +100,11 @@ public class AdminMainWindow extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
+        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel6MouseClicked(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(49, 112, 143));
@@ -241,7 +253,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
                                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addGap(6, 6, 6)
                                     .addComponent(jLabel3)
                                     .addGap(18, 18, 18)
                                     .addComponent(jLabel4)
@@ -341,9 +352,33 @@ public class AdminMainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+        showLayeredPane();
+    }//GEN-LAST:event_jPanel6MouseClicked
+
+    private void showLayeredPane() {
+        // Create a JLayeredPane
+        JLayeredPane layeredPane = new JLayeredPane();
+        layeredPane.setPreferredSize(new Dimension(400, 300));
+
+        // Create a label to show on the top layer
+        JLabel topLabel = new JLabel("This is the top layer");
+        topLabel.setOpaque(true);
+        topLabel.setBackground(Color.YELLOW);
+        topLabel.setBounds(100, 100, 200, 50);
+
+        // Add the label to the layered pane at the top layer
+        layeredPane.add(topLabel, JLayeredPane.DRAG_LAYER);
+
+        // Create a new JFrame to display the layered pane
+        JFrame layeredFrame = new JFrame();
+        layeredFrame.setUndecorated(true);
+        layeredFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        layeredFrame.add(layeredPane);
+        layeredFrame.pack();
+        layeredFrame.setLocationRelativeTo(this);
+        layeredFrame.setVisible(true);
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

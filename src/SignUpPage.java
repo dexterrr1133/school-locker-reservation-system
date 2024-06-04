@@ -167,6 +167,8 @@ public class SignUpPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if (!(new String(PasswordTF.getPassword())).equals(new String(ReEnterPassTF.getPassword()))) {
                 JOptionPane.showMessageDialog(new JFrame(), "Password does not match", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (!(StudentIDTF.getText().contains("-"))){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID must contain '-'", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else {
                 first_name = FirstNameTF.getText();
                 last_name = LastNameTF.getText();
@@ -255,7 +257,7 @@ public class SignUpPage extends javax.swing.JFrame {
             char c = e.getKeyChar();
             if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || StudentIDTF.getText().length() >= 12 || (c == KeyEvent.VK_MINUS && StudentIDTF.getText().contains("-"))) {
                 e.consume();
-            }
+            } 
         }
     });
 }

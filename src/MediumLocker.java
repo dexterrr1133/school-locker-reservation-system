@@ -158,14 +158,14 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel5)
                 .addGap(53, 53, 53))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel5)
                 .addGap(67, 67, 67))
         );
@@ -182,9 +182,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel6)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,9 +206,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel7)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,9 +230,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel8)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,9 +254,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel9)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,9 +278,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel10)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,9 +302,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel4)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,16 +326,16 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel11)
-                .addGap(63, 63, 63))
+                .addGap(53, 53, 53))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel11)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1580, 270, 160, 220));
@@ -429,7 +429,7 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel13)
                 .addGap(69, 69, 69))
         );
@@ -446,9 +446,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel18)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -470,9 +470,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel14)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -494,16 +494,16 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel12)
                 .addGap(59, 59, 59))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel12)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 160, 220));
@@ -518,9 +518,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel16)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -542,9 +542,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel15)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -566,9 +566,9 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel17)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -583,23 +583,23 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel30.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
-        jLabel30.setText("1");
+        jLabel30.setText("30");
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel30)
                 .addGap(64, 64, 64))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel30)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1580, 710, 160, 220));
@@ -638,7 +638,7 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGap(0, 52, Short.MAX_VALUE)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel28)
                 .addGap(0, 52, Short.MAX_VALUE))
         );
@@ -734,16 +734,16 @@ public class MediumLocker extends javax.swing.JFrame {
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel21)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel21)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 710, 160, 220));

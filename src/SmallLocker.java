@@ -1357,6 +1357,7 @@ public class SmallLocker extends javax.swing.JFrame {
         jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
         Page1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        Page1.setForeground(new java.awt.Color(49, 112, 143));
         Page1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Page1.setText("1");
         jPanel1.add(Page1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 959, 50, 70));

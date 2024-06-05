@@ -235,7 +235,7 @@ public class LoginPage extends javax.swing.JFrame {
         @Override
         public void keyTyped(KeyEvent e) {
             char c = e.getKeyChar();
-            if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || EnterStudentIDJField.getText().length() >= 12 || (c == KeyEvent.VK_MINUS && EnterStudentIDJField.getText().contains("-"))) {
+            if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || EnterStudentIDJField.getText().length() >= 11 || (c == KeyEvent.VK_MINUS && EnterStudentIDJField.getText().contains("-"))) {
                 e.consume();
             }
         }

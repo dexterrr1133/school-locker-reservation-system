@@ -126,12 +126,13 @@ public class SmallLocker extends javax.swing.JFrame {
         jLabel62 = new javax.swing.JLabel();
         jPanel50 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        Page1 = new javax.swing.JLabel();
+        Page2 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1343,80 +1344,38 @@ public class SmallLocker extends javax.swing.JFrame {
 
         jPanel1.add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 770, 160, 130));
 
-        jPanel52.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Locker.png"))); // NOI18N
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
-        jLabel25.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
-        jLabel25.setText("1");
+        jLabel22.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel22.setText("Home");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
 
-        javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
-        jPanel52.setLayout(jPanel52Layout);
-        jPanel52Layout.setHorizontalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-            .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel52Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel25)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jPanel52Layout.setVerticalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-            .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel52Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 58, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
+        jLabel23.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel23.setText(">");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
 
-        jPanel1.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 960, 40, 70));
+        jLabel28.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel28.setText("Small Locker");
+        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
-        jPanel54.setBackground(new java.awt.Color(255, 255, 255));
+        Page1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        Page1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Page1.setText("1");
+        jPanel1.add(Page1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 959, 50, 70));
 
-        jLabel27.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
-        jLabel27.setText("2");
+        Page2.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        Page2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Page2.setText("2");
+        jPanel1.add(Page2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 959, 50, 70));
 
-        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
-        jPanel54.setLayout(jPanel54Layout);
-        jPanel54Layout.setHorizontalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel54Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel27)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel54Layout.setVerticalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel54Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel34.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel34.setText("3");
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 960, 50, 70));
 
-        jPanel1.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 960, 40, 70));
-
-        jPanel55.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel26.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
-        jLabel26.setText("3");
-
-        javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
-        jPanel55.setLayout(jPanel55Layout);
-        jPanel55Layout.setHorizontalGroup(
-            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel55Layout.setVerticalGroup(
-            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 40, 70));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/small locker.png"))); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/smallLocker.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1470,6 +1429,8 @@ public class SmallLocker extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Page1;
+    private javax.swing.JLabel Page2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1484,11 +1445,13 @@ public class SmallLocker extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
@@ -1571,9 +1534,6 @@ public class SmallLocker extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
-    private javax.swing.JPanel jPanel54;
-    private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;

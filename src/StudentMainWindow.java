@@ -25,21 +25,2986 @@ public class StudentMainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        containerPanel = new javax.swing.JPanel();
+        MainWindowPanel = new javax.swing.JPanel();
+        ViewLockerPanel = new javax.swing.JPanel();
+        ViewLockerText = new javax.swing.JLabel();
+        LockerIcon = new javax.swing.JLabel();
+        Line = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        SmallLockerPage = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jPanel56 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jPanel57 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jPanel58 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jPanel59 = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanel60 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jPanel61 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jPanel62 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jPanel63 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jPanel64 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jPanel65 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jPanel66 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jPanel67 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanel68 = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jPanel69 = new javax.swing.JPanel();
+        jLabel70 = new javax.swing.JLabel();
+        jPanel70 = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jPanel71 = new javax.swing.JPanel();
+        jLabel72 = new javax.swing.JLabel();
+        jPanel72 = new javax.swing.JPanel();
+        jLabel73 = new javax.swing.JLabel();
+        jPanel73 = new javax.swing.JPanel();
+        jLabel74 = new javax.swing.JLabel();
+        jPanel74 = new javax.swing.JPanel();
+        jLabel75 = new javax.swing.JLabel();
+        jPanel75 = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
+        jPanel76 = new javax.swing.JPanel();
+        jLabel77 = new javax.swing.JLabel();
+        jPanel77 = new javax.swing.JPanel();
+        jLabel78 = new javax.swing.JLabel();
+        jPanel78 = new javax.swing.JPanel();
+        jLabel79 = new javax.swing.JLabel();
+        jPanel79 = new javax.swing.JPanel();
+        jLabel80 = new javax.swing.JLabel();
+        jPanel80 = new javax.swing.JPanel();
+        jLabel81 = new javax.swing.JLabel();
+        jPanel81 = new javax.swing.JPanel();
+        jLabel82 = new javax.swing.JLabel();
+        jPanel82 = new javax.swing.JPanel();
+        jLabel83 = new javax.swing.JLabel();
+        jPanel83 = new javax.swing.JPanel();
+        jLabel84 = new javax.swing.JLabel();
+        jPanel84 = new javax.swing.JPanel();
+        jLabel85 = new javax.swing.JLabel();
+        jPanel132 = new javax.swing.JPanel();
+        jLabel144 = new javax.swing.JLabel();
+        jPanel133 = new javax.swing.JPanel();
+        jLabel145 = new javax.swing.JLabel();
+        jPanel134 = new javax.swing.JPanel();
+        jLabel146 = new javax.swing.JLabel();
+        jPanel135 = new javax.swing.JPanel();
+        jLabel147 = new javax.swing.JLabel();
+        jPanel136 = new javax.swing.JPanel();
+        jLabel148 = new javax.swing.JLabel();
+        jPanel137 = new javax.swing.JPanel();
+        jLabel149 = new javax.swing.JLabel();
+        jPanel138 = new javax.swing.JPanel();
+        jLabel150 = new javax.swing.JLabel();
+        jPanel139 = new javax.swing.JPanel();
+        jLabel151 = new javax.swing.JLabel();
+        jPanel140 = new javax.swing.JPanel();
+        jLabel152 = new javax.swing.JLabel();
+        jPanel141 = new javax.swing.JPanel();
+        jLabel153 = new javax.swing.JLabel();
+        jPanel142 = new javax.swing.JPanel();
+        jLabel154 = new javax.swing.JLabel();
+        jPanel143 = new javax.swing.JPanel();
+        jLabel155 = new javax.swing.JLabel();
+        jPanel144 = new javax.swing.JPanel();
+        jLabel156 = new javax.swing.JLabel();
+        jPanel145 = new javax.swing.JPanel();
+        jLabel157 = new javax.swing.JLabel();
+        jPanel146 = new javax.swing.JPanel();
+        jLabel158 = new javax.swing.JLabel();
+        jPanel147 = new javax.swing.JPanel();
+        jLabel159 = new javax.swing.JLabel();
+        jPanel148 = new javax.swing.JPanel();
+        jLabel160 = new javax.swing.JLabel();
+        jPanel149 = new javax.swing.JPanel();
+        jLabel161 = new javax.swing.JLabel();
+        jPanel150 = new javax.swing.JPanel();
+        jLabel162 = new javax.swing.JLabel();
+        jPanel151 = new javax.swing.JPanel();
+        jLabel163 = new javax.swing.JLabel();
+        jLabel164 = new javax.swing.JLabel();
+        HomeSmallLocker = new javax.swing.JLabel();
+        jLabel166 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        smallLockerPage1 = new javax.swing.JLabel();
+        smallLockerPage2 = new javax.swing.JLabel();
+        smallLockerPage3 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        MediumLockerPage = new javax.swing.JPanel();
+        jPanel54 = new javax.swing.JPanel();
+        jLabel87 = new javax.swing.JLabel();
+        jPanel87 = new javax.swing.JPanel();
+        jLabel88 = new javax.swing.JLabel();
+        jPanel88 = new javax.swing.JPanel();
+        jLabel89 = new javax.swing.JLabel();
+        jPanel89 = new javax.swing.JPanel();
+        jLabel90 = new javax.swing.JLabel();
+        jPanel90 = new javax.swing.JPanel();
+        jLabel91 = new javax.swing.JLabel();
+        jPanel91 = new javax.swing.JPanel();
+        jLabel92 = new javax.swing.JLabel();
+        jPanel92 = new javax.swing.JPanel();
+        jLabel93 = new javax.swing.JLabel();
+        jPanel93 = new javax.swing.JPanel();
+        jLabel94 = new javax.swing.JLabel();
+        jPanel94 = new javax.swing.JPanel();
+        jLabel95 = new javax.swing.JLabel();
+        jPanel95 = new javax.swing.JPanel();
+        jLabel96 = new javax.swing.JLabel();
+        jPanel96 = new javax.swing.JPanel();
+        jLabel97 = new javax.swing.JLabel();
+        jPanel97 = new javax.swing.JPanel();
+        jLabel98 = new javax.swing.JLabel();
+        jPanel98 = new javax.swing.JPanel();
+        jLabel99 = new javax.swing.JLabel();
+        jPanel99 = new javax.swing.JPanel();
+        jLabel100 = new javax.swing.JLabel();
+        jPanel100 = new javax.swing.JPanel();
+        jLabel101 = new javax.swing.JLabel();
+        jPanel101 = new javax.swing.JPanel();
+        jLabel102 = new javax.swing.JLabel();
+        jPanel102 = new javax.swing.JPanel();
+        jLabel103 = new javax.swing.JLabel();
+        jPanel103 = new javax.swing.JPanel();
+        jLabel104 = new javax.swing.JLabel();
+        jPanel104 = new javax.swing.JPanel();
+        jLabel105 = new javax.swing.JLabel();
+        jPanel105 = new javax.swing.JPanel();
+        jLabel106 = new javax.swing.JLabel();
+        jPanel122 = new javax.swing.JPanel();
+        jLabel110 = new javax.swing.JLabel();
+        jPanel123 = new javax.swing.JPanel();
+        jLabel129 = new javax.swing.JLabel();
+        jPanel124 = new javax.swing.JPanel();
+        jLabel130 = new javax.swing.JLabel();
+        jPanel125 = new javax.swing.JPanel();
+        jLabel131 = new javax.swing.JLabel();
+        jPanel126 = new javax.swing.JPanel();
+        jLabel132 = new javax.swing.JLabel();
+        jPanel127 = new javax.swing.JPanel();
+        jLabel133 = new javax.swing.JLabel();
+        jPanel128 = new javax.swing.JPanel();
+        jLabel134 = new javax.swing.JLabel();
+        jPanel129 = new javax.swing.JPanel();
+        jLabel135 = new javax.swing.JLabel();
+        jPanel130 = new javax.swing.JPanel();
+        jLabel136 = new javax.swing.JLabel();
+        jPanel131 = new javax.swing.JPanel();
+        jLabel137 = new javax.swing.JLabel();
+        mediumLockerPage1 = new javax.swing.JLabel();
+        mediumLockerPage2 = new javax.swing.JLabel();
+        mediumLockerPage3 = new javax.swing.JLabel();
+        jLabel139 = new javax.swing.JLabel();
+        HomeMediumLocker = new javax.swing.JLabel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel142 = new javax.swing.JLabel();
+        MediumLockerWindow1 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        LargeLockerPage = new javax.swing.JPanel();
+        jPanel53 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel55 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jPanel85 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jPanel86 = new javax.swing.JPanel();
+        jLabel86 = new javax.swing.JLabel();
+        jPanel106 = new javax.swing.JPanel();
+        jLabel107 = new javax.swing.JLabel();
+        jPanel107 = new javax.swing.JPanel();
+        jLabel108 = new javax.swing.JLabel();
+        jPanel108 = new javax.swing.JPanel();
+        jLabel109 = new javax.swing.JLabel();
+        jPanel109 = new javax.swing.JPanel();
+        jLabel111 = new javax.swing.JLabel();
+        jPanel110 = new javax.swing.JPanel();
+        jLabel112 = new javax.swing.JLabel();
+        jPanel111 = new javax.swing.JPanel();
+        jLabel113 = new javax.swing.JLabel();
+        jPanel112 = new javax.swing.JPanel();
+        jLabel114 = new javax.swing.JLabel();
+        jPanel113 = new javax.swing.JPanel();
+        jLabel115 = new javax.swing.JLabel();
+        jPanel114 = new javax.swing.JPanel();
+        jLabel116 = new javax.swing.JLabel();
+        jPanel115 = new javax.swing.JPanel();
+        jLabel117 = new javax.swing.JLabel();
+        jPanel116 = new javax.swing.JPanel();
+        jLabel118 = new javax.swing.JLabel();
+        jPanel117 = new javax.swing.JPanel();
+        jLabel119 = new javax.swing.JLabel();
+        jPanel118 = new javax.swing.JPanel();
+        jLabel120 = new javax.swing.JLabel();
+        jPanel119 = new javax.swing.JPanel();
+        jLabel121 = new javax.swing.JLabel();
+        jPanel120 = new javax.swing.JPanel();
+        jLabel122 = new javax.swing.JLabel();
+        jPanel121 = new javax.swing.JPanel();
+        jLabel123 = new javax.swing.JLabel();
+        largeLockerPage1 = new javax.swing.JLabel();
+        largeLockerPage2 = new javax.swing.JLabel();
+        largeLockerPage3 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        HomeLargeLocker = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        containerPanel.setLayout(new java.awt.CardLayout());
+
+        MainWindowPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ViewLockerPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ViewLockerPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
+        ViewLockerPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ViewLockerPanelMouseClicked(evt);
+            }
+        });
+
+        ViewLockerText.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
+        ViewLockerText.setForeground(new java.awt.Color(49, 112, 143));
+        ViewLockerText.setText("View Locker");
+
+        LockerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/file (4).png"))); // NOI18N
+
+        javax.swing.GroupLayout ViewLockerPanelLayout = new javax.swing.GroupLayout(ViewLockerPanel);
+        ViewLockerPanel.setLayout(ViewLockerPanelLayout);
+        ViewLockerPanelLayout.setHorizontalGroup(
+            ViewLockerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ViewLockerPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(LockerIcon)
+                .addGap(18, 18, 18)
+                .addComponent(ViewLockerText)
+                .addContainerGap(133, Short.MAX_VALUE))
+        );
+        ViewLockerPanelLayout.setVerticalGroup(
+            ViewLockerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ViewLockerPanelLayout.createSequentialGroup()
+                .addGroup(ViewLockerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ViewLockerPanelLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(LockerIcon))
+                    .addGroup(ViewLockerPanelLayout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(ViewLockerText)))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        MainWindowPanel.add(ViewLockerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 430, 190));
+
+        javax.swing.GroupLayout LineLayout = new javax.swing.GroupLayout(Line);
+        Line.setLayout(LineLayout);
+        LineLayout.setHorizontalGroup(
+            LineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1400, Short.MAX_VALUE)
+        );
+        LineLayout.setVerticalGroup(
+            LineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        MainWindowPanel.add(Line, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 1400, 10));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/StudentMainWindow.png"))); // NOI18N
+        MainWindowPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(MainWindowPanel, "card3");
+
+        SmallLockerPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel23.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel23.setText("1");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel23)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel23)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 160, 130));
+
+        jPanel56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel24.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel24.setText("2");
+
+        javax.swing.GroupLayout jPanel56Layout = new javax.swing.GroupLayout(jPanel56);
+        jPanel56.setLayout(jPanel56Layout);
+        jPanel56Layout.setHorizontalGroup(
+            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel56Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel24)
+                .addGap(66, 66, 66))
+        );
+        jPanel56Layout.setVerticalGroup(
+            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel56Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel24)
+                .addGap(23, 23, 23))
+        );
+
+        SmallLockerPage.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 160, 130));
+
+        jPanel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel28.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel28.setText("3");
+
+        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
+        jPanel57.setLayout(jPanel57Layout);
+        jPanel57Layout.setHorizontalGroup(
+            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel57Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel28)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel57Layout.setVerticalGroup(
+            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel57Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel28)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 160, 130));
+
+        jPanel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel29.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel29.setText("4");
+
+        javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
+        jPanel58.setLayout(jPanel58Layout);
+        jPanel58Layout.setHorizontalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel58Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel29)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel58Layout.setVerticalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel58Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel29)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 160, 130));
+
+        jPanel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel30.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel30.setText("5");
+
+        javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
+        jPanel59.setLayout(jPanel59Layout);
+        jPanel59Layout.setHorizontalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel59Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel30)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel59Layout.setVerticalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel59Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel30)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 250, 160, 130));
+
+        jPanel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel32.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel32.setText("6");
+
+        javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
+        jPanel60.setLayout(jPanel60Layout);
+        jPanel60Layout.setHorizontalGroup(
+            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel60Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel32)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel60Layout.setVerticalGroup(
+            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel60Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel32)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 250, 160, 130));
+
+        jPanel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel33.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel33.setText("7");
+
+        javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
+        jPanel61.setLayout(jPanel61Layout);
+        jPanel61Layout.setHorizontalGroup(
+            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel61Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel33)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel61Layout.setVerticalGroup(
+            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel61Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel33)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 250, 160, 130));
+
+        jPanel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel34.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel34.setText("8");
+
+        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
+        jPanel62.setLayout(jPanel62Layout);
+        jPanel62Layout.setHorizontalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel62Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel34)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel62Layout.setVerticalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel62Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel34)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 250, 160, 130));
+
+        jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel35.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel35.setText("9");
+
+        javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
+        jPanel63.setLayout(jPanel63Layout);
+        jPanel63Layout.setHorizontalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel63Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel35)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel63Layout.setVerticalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel63Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel35)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 250, 160, 130));
+
+        jPanel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel36.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel36.setText("10");
+
+        javax.swing.GroupLayout jPanel64Layout = new javax.swing.GroupLayout(jPanel64);
+        jPanel64.setLayout(jPanel64Layout);
+        jPanel64Layout.setHorizontalGroup(
+            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel64Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel36)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel64Layout.setVerticalGroup(
+            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel64Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel36)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 250, 160, 130));
+
+        jPanel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel37.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel37.setText("19");
+
+        javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
+        jPanel65.setLayout(jPanel65Layout);
+        jPanel65Layout.setHorizontalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel65Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel37)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel65Layout.setVerticalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel65Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel37)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 380, 160, 130));
+
+        jPanel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel38.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel38.setText("20");
+
+        javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
+        jPanel66.setLayout(jPanel66Layout);
+        jPanel66Layout.setHorizontalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel66Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel38)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel66Layout.setVerticalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel66Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel38)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 380, 160, 130));
+
+        jPanel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel39.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel39.setText("13");
+
+        javax.swing.GroupLayout jPanel67Layout = new javax.swing.GroupLayout(jPanel67);
+        jPanel67.setLayout(jPanel67Layout);
+        jPanel67Layout.setHorizontalGroup(
+            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel67Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel39)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel67Layout.setVerticalGroup(
+            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel67Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel39)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 160, 130));
+
+        jPanel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel69.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel69.setText("14");
+
+        javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
+        jPanel68.setLayout(jPanel68Layout);
+        jPanel68Layout.setHorizontalGroup(
+            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel68Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel69)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel68Layout.setVerticalGroup(
+            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel68Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel69)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 160, 130));
+
+        jPanel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel70.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel70.setText("16");
+
+        javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
+        jPanel69.setLayout(jPanel69Layout);
+        jPanel69Layout.setHorizontalGroup(
+            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel69Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel70)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel69Layout.setVerticalGroup(
+            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel69Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel70)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 380, 160, 130));
+
+        jPanel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel71.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel71.setText("17");
+
+        javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);
+        jPanel70.setLayout(jPanel70Layout);
+        jPanel70Layout.setHorizontalGroup(
+            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel70Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel71)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel70Layout.setVerticalGroup(
+            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel70Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel71)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 380, 160, 130));
+
+        jPanel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel72.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel72.setText("12");
+
+        javax.swing.GroupLayout jPanel71Layout = new javax.swing.GroupLayout(jPanel71);
+        jPanel71.setLayout(jPanel71Layout);
+        jPanel71Layout.setHorizontalGroup(
+            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel71Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel72)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel71Layout.setVerticalGroup(
+            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel71Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel72)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 160, 130));
+
+        jPanel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel73.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel73.setText("15");
+
+        javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
+        jPanel72.setLayout(jPanel72Layout);
+        jPanel72Layout.setHorizontalGroup(
+            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel72Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel73)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel72Layout.setVerticalGroup(
+            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel72Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel73)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 380, 160, 130));
+
+        jPanel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel74.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel74.setText("11");
+
+        javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
+        jPanel73.setLayout(jPanel73Layout);
+        jPanel73Layout.setHorizontalGroup(
+            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel73Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel74)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel73Layout.setVerticalGroup(
+            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel73Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel74)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 160, 130));
+
+        jPanel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel75.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel75.setText("18");
+
+        javax.swing.GroupLayout jPanel74Layout = new javax.swing.GroupLayout(jPanel74);
+        jPanel74.setLayout(jPanel74Layout);
+        jPanel74Layout.setHorizontalGroup(
+            jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel74Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel75)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel74Layout.setVerticalGroup(
+            jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel74Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel75)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 380, 160, 130));
+
+        jPanel75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel76.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel76.setText("21");
+
+        javax.swing.GroupLayout jPanel75Layout = new javax.swing.GroupLayout(jPanel75);
+        jPanel75.setLayout(jPanel75Layout);
+        jPanel75Layout.setHorizontalGroup(
+            jPanel75Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel75Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel76)
+                .addGap(64, 64, 64))
+        );
+        jPanel75Layout.setVerticalGroup(
+            jPanel75Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel75Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel76)
+                .addGap(30, 30, 30))
+        );
+
+        SmallLockerPage.add(jPanel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 160, 130));
+
+        jPanel76.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel77.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel77.setText("22");
+
+        javax.swing.GroupLayout jPanel76Layout = new javax.swing.GroupLayout(jPanel76);
+        jPanel76.setLayout(jPanel76Layout);
+        jPanel76Layout.setHorizontalGroup(
+            jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel76Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel77)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel76Layout.setVerticalGroup(
+            jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel76Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel77)
+                .addGap(32, 32, 32))
+        );
+
+        SmallLockerPage.add(jPanel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, 160, 130));
+
+        jPanel77.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel78.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel78.setText("23");
+
+        javax.swing.GroupLayout jPanel77Layout = new javax.swing.GroupLayout(jPanel77);
+        jPanel77.setLayout(jPanel77Layout);
+        jPanel77Layout.setHorizontalGroup(
+            jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel77Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel78)
+                .addGap(64, 64, 64))
+        );
+        jPanel77Layout.setVerticalGroup(
+            jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel77Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel78)
+                .addGap(27, 27, 27))
+        );
+
+        SmallLockerPage.add(jPanel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 160, 130));
+
+        jPanel78.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel79.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel79.setText("24");
+
+        javax.swing.GroupLayout jPanel78Layout = new javax.swing.GroupLayout(jPanel78);
+        jPanel78.setLayout(jPanel78Layout);
+        jPanel78Layout.setHorizontalGroup(
+            jPanel78Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel78Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel79)
+                .addGap(57, 57, 57))
+        );
+        jPanel78Layout.setVerticalGroup(
+            jPanel78Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel78Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel79)
+                .addGap(30, 30, 30))
+        );
+
+        SmallLockerPage.add(jPanel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 510, 160, 130));
+
+        jPanel79.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel80.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel80.setText("25");
+
+        javax.swing.GroupLayout jPanel79Layout = new javax.swing.GroupLayout(jPanel79);
+        jPanel79.setLayout(jPanel79Layout);
+        jPanel79Layout.setHorizontalGroup(
+            jPanel79Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel79Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel80)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel79Layout.setVerticalGroup(
+            jPanel79Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel79Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel80)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 510, 160, 130));
+
+        jPanel80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel81.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel81.setText("26");
+
+        javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
+        jPanel80.setLayout(jPanel80Layout);
+        jPanel80Layout.setHorizontalGroup(
+            jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel80Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel81)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel80Layout.setVerticalGroup(
+            jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel80Layout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addComponent(jLabel81)
+                .addGap(31, 31, 31))
+        );
+
+        SmallLockerPage.add(jPanel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 510, 160, 130));
+
+        jPanel81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel82.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel82.setText("27");
+
+        javax.swing.GroupLayout jPanel81Layout = new javax.swing.GroupLayout(jPanel81);
+        jPanel81.setLayout(jPanel81Layout);
+        jPanel81Layout.setHorizontalGroup(
+            jPanel81Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel81Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel82)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel81Layout.setVerticalGroup(
+            jPanel81Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel81Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel82)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 510, 160, 130));
+
+        jPanel82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel83.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel83.setText("28");
+
+        javax.swing.GroupLayout jPanel82Layout = new javax.swing.GroupLayout(jPanel82);
+        jPanel82.setLayout(jPanel82Layout);
+        jPanel82Layout.setHorizontalGroup(
+            jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel82Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel83)
+                .addGap(59, 59, 59))
+        );
+        jPanel82Layout.setVerticalGroup(
+            jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel82Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel83)
+                .addGap(30, 30, 30))
+        );
+
+        SmallLockerPage.add(jPanel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 510, 160, 130));
+
+        jPanel83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel84.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel84.setText("29");
+
+        javax.swing.GroupLayout jPanel83Layout = new javax.swing.GroupLayout(jPanel83);
+        jPanel83.setLayout(jPanel83Layout);
+        jPanel83Layout.setHorizontalGroup(
+            jPanel83Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel83Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel84)
+                .addGap(58, 58, 58))
+        );
+        jPanel83Layout.setVerticalGroup(
+            jPanel83Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel83Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel84)
+                .addGap(23, 23, 23))
+        );
+
+        SmallLockerPage.add(jPanel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 510, 160, 130));
+
+        jPanel84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel85.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel85.setText("30");
+
+        javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
+        jPanel84.setLayout(jPanel84Layout);
+        jPanel84Layout.setHorizontalGroup(
+            jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel84Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel85)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel84Layout.setVerticalGroup(
+            jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel84Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel85)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 510, 160, 130));
+
+        jPanel132.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel144.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel144.setText("31");
+
+        javax.swing.GroupLayout jPanel132Layout = new javax.swing.GroupLayout(jPanel132);
+        jPanel132.setLayout(jPanel132Layout);
+        jPanel132Layout.setHorizontalGroup(
+            jPanel132Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel132Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel144)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel132Layout.setVerticalGroup(
+            jPanel132Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel132Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel144)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 640, 160, 130));
+
+        jPanel133.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel145.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel145.setText("32");
+
+        javax.swing.GroupLayout jPanel133Layout = new javax.swing.GroupLayout(jPanel133);
+        jPanel133.setLayout(jPanel133Layout);
+        jPanel133Layout.setHorizontalGroup(
+            jPanel133Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel133Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel145)
+                .addGap(62, 62, 62))
+        );
+        jPanel133Layout.setVerticalGroup(
+            jPanel133Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel133Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel145)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 640, 160, 130));
+
+        jPanel134.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel146.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel146.setText("33");
+
+        javax.swing.GroupLayout jPanel134Layout = new javax.swing.GroupLayout(jPanel134);
+        jPanel134.setLayout(jPanel134Layout);
+        jPanel134Layout.setHorizontalGroup(
+            jPanel134Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel134Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel146)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel134Layout.setVerticalGroup(
+            jPanel134Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel134Layout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jLabel146)
+                .addGap(32, 32, 32))
+        );
+
+        SmallLockerPage.add(jPanel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 640, 160, 130));
+
+        jPanel135.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel147.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel147.setText("34");
+
+        javax.swing.GroupLayout jPanel135Layout = new javax.swing.GroupLayout(jPanel135);
+        jPanel135.setLayout(jPanel135Layout);
+        jPanel135Layout.setHorizontalGroup(
+            jPanel135Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel135Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel147)
+                .addGap(63, 63, 63))
+        );
+        jPanel135Layout.setVerticalGroup(
+            jPanel135Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel135Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel147)
+                .addGap(18, 18, 18))
+        );
+
+        SmallLockerPage.add(jPanel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 640, 160, 130));
+
+        jPanel136.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel148.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel148.setText("35");
+
+        javax.swing.GroupLayout jPanel136Layout = new javax.swing.GroupLayout(jPanel136);
+        jPanel136.setLayout(jPanel136Layout);
+        jPanel136Layout.setHorizontalGroup(
+            jPanel136Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel136Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel148)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel136Layout.setVerticalGroup(
+            jPanel136Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel136Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel148)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 640, 160, 130));
+
+        jPanel137.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel149.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel149.setText("36");
+
+        javax.swing.GroupLayout jPanel137Layout = new javax.swing.GroupLayout(jPanel137);
+        jPanel137.setLayout(jPanel137Layout);
+        jPanel137Layout.setHorizontalGroup(
+            jPanel137Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel137Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel149)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel137Layout.setVerticalGroup(
+            jPanel137Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel137Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel149)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 640, 160, 130));
+
+        jPanel138.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel150.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel150.setText("37");
+
+        javax.swing.GroupLayout jPanel138Layout = new javax.swing.GroupLayout(jPanel138);
+        jPanel138.setLayout(jPanel138Layout);
+        jPanel138Layout.setHorizontalGroup(
+            jPanel138Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel138Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel150)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel138Layout.setVerticalGroup(
+            jPanel138Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel138Layout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addComponent(jLabel150)
+                .addGap(31, 31, 31))
+        );
+
+        SmallLockerPage.add(jPanel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 640, 160, 130));
+
+        jPanel139.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel151.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel151.setText("38");
+
+        javax.swing.GroupLayout jPanel139Layout = new javax.swing.GroupLayout(jPanel139);
+        jPanel139.setLayout(jPanel139Layout);
+        jPanel139Layout.setHorizontalGroup(
+            jPanel139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel139Layout.createSequentialGroup()
+                .addContainerGap(51, Short.MAX_VALUE)
+                .addComponent(jLabel151)
+                .addGap(53, 53, 53))
+        );
+        jPanel139Layout.setVerticalGroup(
+            jPanel139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel139Layout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jLabel151)
+                .addGap(32, 32, 32))
+        );
+
+        SmallLockerPage.add(jPanel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 640, 160, 130));
+
+        jPanel140.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel152.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel152.setText("39");
+
+        javax.swing.GroupLayout jPanel140Layout = new javax.swing.GroupLayout(jPanel140);
+        jPanel140.setLayout(jPanel140Layout);
+        jPanel140Layout.setHorizontalGroup(
+            jPanel140Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel140Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel152)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel140Layout.setVerticalGroup(
+            jPanel140Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel140Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel152)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 640, 160, 130));
+
+        jPanel141.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel153.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel153.setText("40");
+
+        javax.swing.GroupLayout jPanel141Layout = new javax.swing.GroupLayout(jPanel141);
+        jPanel141.setLayout(jPanel141Layout);
+        jPanel141Layout.setHorizontalGroup(
+            jPanel141Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel141Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel153)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel141Layout.setVerticalGroup(
+            jPanel141Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel141Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel153)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 640, 160, 130));
+
+        jPanel142.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel154.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel154.setText("46");
+
+        javax.swing.GroupLayout jPanel142Layout = new javax.swing.GroupLayout(jPanel142);
+        jPanel142.setLayout(jPanel142Layout);
+        jPanel142Layout.setHorizontalGroup(
+            jPanel142Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel142Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel154)
+                .addGap(53, 53, 53))
+        );
+        jPanel142Layout.setVerticalGroup(
+            jPanel142Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel142Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel154)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 770, 160, 130));
+
+        jPanel143.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel155.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel155.setText("41");
+
+        javax.swing.GroupLayout jPanel143Layout = new javax.swing.GroupLayout(jPanel143);
+        jPanel143.setLayout(jPanel143Layout);
+        jPanel143Layout.setHorizontalGroup(
+            jPanel143Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel143Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel155)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel143Layout.setVerticalGroup(
+            jPanel143Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel143Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel155)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 770, 160, 130));
+
+        jPanel144.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel156.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel156.setText("50");
+
+        javax.swing.GroupLayout jPanel144Layout = new javax.swing.GroupLayout(jPanel144);
+        jPanel144.setLayout(jPanel144Layout);
+        jPanel144Layout.setHorizontalGroup(
+            jPanel144Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel144Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel156)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel144Layout.setVerticalGroup(
+            jPanel144Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel144Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel156)
+                .addGap(32, 32, 32))
+        );
+
+        SmallLockerPage.add(jPanel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 770, 160, 130));
+
+        jPanel145.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel157.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel157.setText("45");
+
+        javax.swing.GroupLayout jPanel145Layout = new javax.swing.GroupLayout(jPanel145);
+        jPanel145.setLayout(jPanel145Layout);
+        jPanel145Layout.setHorizontalGroup(
+            jPanel145Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel145Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel157)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel145Layout.setVerticalGroup(
+            jPanel145Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel145Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel157)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 770, 160, 130));
+
+        jPanel146.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel158.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel158.setText("44");
+
+        javax.swing.GroupLayout jPanel146Layout = new javax.swing.GroupLayout(jPanel146);
+        jPanel146.setLayout(jPanel146Layout);
+        jPanel146Layout.setHorizontalGroup(
+            jPanel146Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel146Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel158)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel146Layout.setVerticalGroup(
+            jPanel146Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel146Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel158)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 770, 160, 130));
+
+        jPanel147.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel159.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel159.setText("47");
+
+        javax.swing.GroupLayout jPanel147Layout = new javax.swing.GroupLayout(jPanel147);
+        jPanel147.setLayout(jPanel147Layout);
+        jPanel147Layout.setHorizontalGroup(
+            jPanel147Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel147Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel159)
+                .addGap(59, 59, 59))
+        );
+        jPanel147Layout.setVerticalGroup(
+            jPanel147Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel147Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel159)
+                .addGap(22, 22, 22))
+        );
+
+        SmallLockerPage.add(jPanel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 770, 160, 130));
+
+        jPanel148.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel160.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel160.setText("42");
+
+        javax.swing.GroupLayout jPanel148Layout = new javax.swing.GroupLayout(jPanel148);
+        jPanel148.setLayout(jPanel148Layout);
+        jPanel148Layout.setHorizontalGroup(
+            jPanel148Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel148Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel160)
+                .addGap(63, 63, 63))
+        );
+        jPanel148Layout.setVerticalGroup(
+            jPanel148Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel148Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel160)
+                .addGap(29, 29, 29))
+        );
+
+        SmallLockerPage.add(jPanel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 770, 160, 130));
+
+        jPanel149.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel161.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel161.setText("48");
+
+        javax.swing.GroupLayout jPanel149Layout = new javax.swing.GroupLayout(jPanel149);
+        jPanel149.setLayout(jPanel149Layout);
+        jPanel149Layout.setHorizontalGroup(
+            jPanel149Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel149Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel161)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel149Layout.setVerticalGroup(
+            jPanel149Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel149Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel161)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 770, 160, 130));
+
+        jPanel150.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel162.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel162.setText("43");
+
+        javax.swing.GroupLayout jPanel150Layout = new javax.swing.GroupLayout(jPanel150);
+        jPanel150.setLayout(jPanel150Layout);
+        jPanel150Layout.setHorizontalGroup(
+            jPanel150Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel150Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel162)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel150Layout.setVerticalGroup(
+            jPanel150Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel150Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel162)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 770, 160, 130));
+
+        jPanel151.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel163.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel163.setText("49");
+
+        javax.swing.GroupLayout jPanel151Layout = new javax.swing.GroupLayout(jPanel151);
+        jPanel151.setLayout(jPanel151Layout);
+        jPanel151Layout.setHorizontalGroup(
+            jPanel151Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel151Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel163)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel151Layout.setVerticalGroup(
+            jPanel151Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel151Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel163)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        SmallLockerPage.add(jPanel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 770, 160, 130));
+
+        jLabel164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Locker.png"))); // NOI18N
+        SmallLockerPage.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        HomeSmallLocker.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        HomeSmallLocker.setText("Home");
+        HomeSmallLocker.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeSmallLockerMouseClicked(evt);
+            }
+        });
+        SmallLockerPage.add(HomeSmallLocker, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+
+        jLabel166.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel166.setText(">");
+        SmallLockerPage.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        jLabel167.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel167.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel167.setText("Small Locker");
+        SmallLockerPage.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
+        smallLockerPage1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        smallLockerPage1.setForeground(new java.awt.Color(49, 112, 143));
+        smallLockerPage1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        smallLockerPage1.setText("1");
+        smallLockerPage1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                smallLockerPage1MouseClicked(evt);
+            }
+        });
+        SmallLockerPage.add(smallLockerPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 959, 50, 70));
+
+        smallLockerPage2.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        smallLockerPage2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        smallLockerPage2.setText("2");
+        smallLockerPage2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                smallLockerPage2MouseClicked(evt);
+            }
+        });
+        SmallLockerPage.add(smallLockerPage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 959, 50, 70));
+
+        smallLockerPage3.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        smallLockerPage3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        smallLockerPage3.setText("3");
+        smallLockerPage3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                smallLockerPage3MouseClicked(evt);
+            }
+        });
+        SmallLockerPage.add(smallLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
+
+        jLabel169.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/smallLocker.png"))); // NOI18N
+        SmallLockerPage.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(SmallLockerPage, "card6");
+
+        MediumLockerPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel87.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel87.setText("1");
+
+        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
+        jPanel54.setLayout(jPanel54Layout);
+        jPanel54Layout.setHorizontalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
+                .addContainerGap(66, Short.MAX_VALUE)
+                .addComponent(jLabel87)
+                .addGap(65, 65, 65))
+        );
+        jPanel54Layout.setVerticalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel54Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel87)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 160, 220));
+
+        jPanel87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel88.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel88.setText("2");
+
+        javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
+        jPanel87.setLayout(jPanel87Layout);
+        jPanel87Layout.setHorizontalGroup(
+            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel87Layout.createSequentialGroup()
+                .addContainerGap(66, Short.MAX_VALUE)
+                .addComponent(jLabel88)
+                .addGap(65, 65, 65))
+        );
+        jPanel87Layout.setVerticalGroup(
+            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel87Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel88)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 160, 220));
+
+        jPanel88.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel89.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel89.setText("3");
+
+        javax.swing.GroupLayout jPanel88Layout = new javax.swing.GroupLayout(jPanel88);
+        jPanel88.setLayout(jPanel88Layout);
+        jPanel88Layout.setHorizontalGroup(
+            jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel88Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel89)
+                .addGap(53, 53, 53))
+        );
+        jPanel88Layout.setVerticalGroup(
+            jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel88Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel89)
+                .addGap(67, 67, 67))
+        );
+
+        MediumLockerPage.add(jPanel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 160, 220));
+
+        jPanel89.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel90.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel90.setText("4");
+
+        javax.swing.GroupLayout jPanel89Layout = new javax.swing.GroupLayout(jPanel89);
+        jPanel89.setLayout(jPanel89Layout);
+        jPanel89Layout.setHorizontalGroup(
+            jPanel89Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel89Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel90)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel89Layout.setVerticalGroup(
+            jPanel89Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel89Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel90)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 160, 220));
+
+        jPanel90.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel91.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel91.setText("5");
+
+        javax.swing.GroupLayout jPanel90Layout = new javax.swing.GroupLayout(jPanel90);
+        jPanel90.setLayout(jPanel90Layout);
+        jPanel90Layout.setHorizontalGroup(
+            jPanel90Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel90Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel91)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel90Layout.setVerticalGroup(
+            jPanel90Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel90Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel91)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 160, 220));
+
+        jPanel91.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel92.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel92.setText("6");
+
+        javax.swing.GroupLayout jPanel91Layout = new javax.swing.GroupLayout(jPanel91);
+        jPanel91.setLayout(jPanel91Layout);
+        jPanel91Layout.setHorizontalGroup(
+            jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel91Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel92)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel91Layout.setVerticalGroup(
+            jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel91Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel92)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 270, 160, 220));
+
+        jPanel92.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel93.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel93.setText("7");
+
+        javax.swing.GroupLayout jPanel92Layout = new javax.swing.GroupLayout(jPanel92);
+        jPanel92.setLayout(jPanel92Layout);
+        jPanel92Layout.setHorizontalGroup(
+            jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel92Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel93)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel92Layout.setVerticalGroup(
+            jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel92Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel93)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 270, 160, 220));
+
+        jPanel93.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel94.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel94.setText("8");
+
+        javax.swing.GroupLayout jPanel93Layout = new javax.swing.GroupLayout(jPanel93);
+        jPanel93.setLayout(jPanel93Layout);
+        jPanel93Layout.setHorizontalGroup(
+            jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel93Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel94)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel93Layout.setVerticalGroup(
+            jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel93Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel94)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 270, 160, 220));
+
+        jPanel94.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel95.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel95.setText("9");
+
+        javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
+        jPanel94.setLayout(jPanel94Layout);
+        jPanel94Layout.setHorizontalGroup(
+            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel94Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel95)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanel94Layout.setVerticalGroup(
+            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel94Layout.createSequentialGroup()
+                .addContainerGap(84, Short.MAX_VALUE)
+                .addComponent(jLabel95)
+                .addGap(75, 75, 75))
+        );
+
+        MediumLockerPage.add(jPanel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 270, 160, 220));
+
+        jPanel95.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel96.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel96.setText("10");
+
+        javax.swing.GroupLayout jPanel95Layout = new javax.swing.GroupLayout(jPanel95);
+        jPanel95.setLayout(jPanel95Layout);
+        jPanel95Layout.setHorizontalGroup(
+            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel95Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel96)
+                .addGap(53, 53, 53))
+        );
+        jPanel95Layout.setVerticalGroup(
+            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel95Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel96)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(1580, 270, 160, 220));
+
+        jPanel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel97.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel97.setText("14");
+
+        javax.swing.GroupLayout jPanel96Layout = new javax.swing.GroupLayout(jPanel96);
+        jPanel96.setLayout(jPanel96Layout);
+        jPanel96Layout.setHorizontalGroup(
+            jPanel96Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel96Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel97)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel96Layout.setVerticalGroup(
+            jPanel96Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel96Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel97)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 490, 160, 220));
+
+        jPanel97.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel98.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel98.setText("13");
+
+        javax.swing.GroupLayout jPanel97Layout = new javax.swing.GroupLayout(jPanel97);
+        jPanel97.setLayout(jPanel97Layout);
+        jPanel97Layout.setHorizontalGroup(
+            jPanel97Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel97Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel98)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel97Layout.setVerticalGroup(
+            jPanel97Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel97Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel98)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 160, 220));
+
+        jPanel98.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel99.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel99.setText("11");
+
+        javax.swing.GroupLayout jPanel98Layout = new javax.swing.GroupLayout(jPanel98);
+        jPanel98.setLayout(jPanel98Layout);
+        jPanel98Layout.setHorizontalGroup(
+            jPanel98Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel98Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel99)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel98Layout.setVerticalGroup(
+            jPanel98Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel98Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel99)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 160, 220));
+
+        jPanel99.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel100.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel100.setText("20");
+
+        javax.swing.GroupLayout jPanel99Layout = new javax.swing.GroupLayout(jPanel99);
+        jPanel99.setLayout(jPanel99Layout);
+        jPanel99Layout.setHorizontalGroup(
+            jPanel99Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel99Layout.createSequentialGroup()
+                .addContainerGap(52, Short.MAX_VALUE)
+                .addComponent(jLabel100)
+                .addGap(52, 52, 52))
+        );
+        jPanel99Layout.setVerticalGroup(
+            jPanel99Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel99Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel100)
+                .addGap(69, 69, 69))
+        );
+
+        MediumLockerPage.add(jPanel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(1580, 490, 160, 220));
+
+        jPanel100.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel101.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel101.setText("15");
+
+        javax.swing.GroupLayout jPanel100Layout = new javax.swing.GroupLayout(jPanel100);
+        jPanel100.setLayout(jPanel100Layout);
+        jPanel100Layout.setHorizontalGroup(
+            jPanel100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel100Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel101)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel100Layout.setVerticalGroup(
+            jPanel100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel100Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel101)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 490, 160, 220));
+
+        jPanel101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel102.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel102.setText("19");
+
+        javax.swing.GroupLayout jPanel101Layout = new javax.swing.GroupLayout(jPanel101);
+        jPanel101.setLayout(jPanel101Layout);
+        jPanel101Layout.setHorizontalGroup(
+            jPanel101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel101Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel102)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel101Layout.setVerticalGroup(
+            jPanel101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel101Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel102)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 490, 160, 220));
+
+        jPanel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel103.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel103.setText("12");
+
+        javax.swing.GroupLayout jPanel102Layout = new javax.swing.GroupLayout(jPanel102);
+        jPanel102.setLayout(jPanel102Layout);
+        jPanel102Layout.setHorizontalGroup(
+            jPanel102Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel102Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel103)
+                .addGap(59, 59, 59))
+        );
+        jPanel102Layout.setVerticalGroup(
+            jPanel102Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel102Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel103)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 160, 220));
+
+        jPanel103.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel104.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel104.setText("17");
+
+        javax.swing.GroupLayout jPanel103Layout = new javax.swing.GroupLayout(jPanel103);
+        jPanel103.setLayout(jPanel103Layout);
+        jPanel103Layout.setHorizontalGroup(
+            jPanel103Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel103Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel104)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel103Layout.setVerticalGroup(
+            jPanel103Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel103Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel104)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 490, 160, 220));
+
+        jPanel104.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel105.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel105.setText("18");
+
+        javax.swing.GroupLayout jPanel104Layout = new javax.swing.GroupLayout(jPanel104);
+        jPanel104.setLayout(jPanel104Layout);
+        jPanel104Layout.setHorizontalGroup(
+            jPanel104Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel104Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel105)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel104Layout.setVerticalGroup(
+            jPanel104Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel104Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel105)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 490, 160, 220));
+
+        jPanel105.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel106.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel106.setText("16");
+
+        javax.swing.GroupLayout jPanel105Layout = new javax.swing.GroupLayout(jPanel105);
+        jPanel105.setLayout(jPanel105Layout);
+        jPanel105Layout.setHorizontalGroup(
+            jPanel105Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel105Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel106)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel105Layout.setVerticalGroup(
+            jPanel105Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel105Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel106)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 490, 160, 220));
+
+        jPanel122.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel110.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel110.setText("30");
+
+        javax.swing.GroupLayout jPanel122Layout = new javax.swing.GroupLayout(jPanel122);
+        jPanel122.setLayout(jPanel122Layout);
+        jPanel122Layout.setHorizontalGroup(
+            jPanel122Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel122Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel110)
+                .addGap(64, 64, 64))
+        );
+        jPanel122Layout.setVerticalGroup(
+            jPanel122Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel122Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel110)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(1580, 710, 160, 220));
+
+        jPanel123.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel129.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel129.setText("27");
+
+        javax.swing.GroupLayout jPanel123Layout = new javax.swing.GroupLayout(jPanel123);
+        jPanel123.setLayout(jPanel123Layout);
+        jPanel123Layout.setHorizontalGroup(
+            jPanel123Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel123Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel129)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel123Layout.setVerticalGroup(
+            jPanel123Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel123Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel129)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 710, 160, 220));
+
+        jPanel124.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel130.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel130.setText("26");
+
+        javax.swing.GroupLayout jPanel124Layout = new javax.swing.GroupLayout(jPanel124);
+        jPanel124.setLayout(jPanel124Layout);
+        jPanel124Layout.setHorizontalGroup(
+            jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel124Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel130)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel124Layout.setVerticalGroup(
+            jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel124Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel130)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 710, 160, 220));
+
+        jPanel125.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel131.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel131.setText("22");
+
+        javax.swing.GroupLayout jPanel125Layout = new javax.swing.GroupLayout(jPanel125);
+        jPanel125.setLayout(jPanel125Layout);
+        jPanel125Layout.setHorizontalGroup(
+            jPanel125Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel125Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel131)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel125Layout.setVerticalGroup(
+            jPanel125Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel125Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel131)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 710, 160, 220));
+
+        jPanel126.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel132.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel132.setText("25");
+
+        javax.swing.GroupLayout jPanel126Layout = new javax.swing.GroupLayout(jPanel126);
+        jPanel126.setLayout(jPanel126Layout);
+        jPanel126Layout.setHorizontalGroup(
+            jPanel126Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel126Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel132)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel126Layout.setVerticalGroup(
+            jPanel126Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel126Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel132)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 710, 160, 220));
+
+        jPanel127.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel133.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel133.setText("28");
+
+        javax.swing.GroupLayout jPanel127Layout = new javax.swing.GroupLayout(jPanel127);
+        jPanel127.setLayout(jPanel127Layout);
+        jPanel127Layout.setHorizontalGroup(
+            jPanel127Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel127Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel133)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel127Layout.setVerticalGroup(
+            jPanel127Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel127Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel133)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 710, 160, 220));
+
+        jPanel128.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel134.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel134.setText("29");
+
+        javax.swing.GroupLayout jPanel128Layout = new javax.swing.GroupLayout(jPanel128);
+        jPanel128.setLayout(jPanel128Layout);
+        jPanel128Layout.setHorizontalGroup(
+            jPanel128Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel128Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel134)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel128Layout.setVerticalGroup(
+            jPanel128Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel128Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel134)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 710, 160, 220));
+
+        jPanel129.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel135.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel135.setText("21");
+
+        javax.swing.GroupLayout jPanel129Layout = new javax.swing.GroupLayout(jPanel129);
+        jPanel129.setLayout(jPanel129Layout);
+        jPanel129Layout.setHorizontalGroup(
+            jPanel129Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel129Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel135)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel129Layout.setVerticalGroup(
+            jPanel129Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel129Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel135)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 710, 160, 220));
+
+        jPanel130.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel136.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel136.setText("23");
+
+        javax.swing.GroupLayout jPanel130Layout = new javax.swing.GroupLayout(jPanel130);
+        jPanel130.setLayout(jPanel130Layout);
+        jPanel130Layout.setHorizontalGroup(
+            jPanel130Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel130Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel136)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel130Layout.setVerticalGroup(
+            jPanel130Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel130Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel136)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 710, 160, 220));
+
+        jPanel131.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel137.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel137.setText("24");
+
+        javax.swing.GroupLayout jPanel131Layout = new javax.swing.GroupLayout(jPanel131);
+        jPanel131.setLayout(jPanel131Layout);
+        jPanel131Layout.setHorizontalGroup(
+            jPanel131Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel131Layout.createSequentialGroup()
+                .addGap(0, 52, Short.MAX_VALUE)
+                .addComponent(jLabel137)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+        jPanel131Layout.setVerticalGroup(
+            jPanel131Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel131Layout.createSequentialGroup()
+                .addGap(0, 79, Short.MAX_VALUE)
+                .addComponent(jLabel137)
+                .addGap(0, 80, Short.MAX_VALUE))
+        );
+
+        MediumLockerPage.add(jPanel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 710, 160, 220));
+
+        mediumLockerPage1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        mediumLockerPage1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mediumLockerPage1.setText("1");
+        mediumLockerPage1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mediumLockerPage1MouseClicked(evt);
+            }
+        });
+        MediumLockerPage.add(mediumLockerPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 959, 50, 70));
+
+        mediumLockerPage2.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        mediumLockerPage2.setForeground(new java.awt.Color(49, 112, 143));
+        mediumLockerPage2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mediumLockerPage2.setText("2");
+        mediumLockerPage2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mediumLockerPage2MouseClicked(evt);
+            }
+        });
+        MediumLockerPage.add(mediumLockerPage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 959, 50, 70));
+
+        mediumLockerPage3.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        mediumLockerPage3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mediumLockerPage3.setText("3");
+        mediumLockerPage3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mediumLockerPage3MouseClicked(evt);
+            }
+        });
+        MediumLockerPage.add(mediumLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
+
+        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Locker.png"))); // NOI18N
+        MediumLockerPage.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        HomeMediumLocker.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        HomeMediumLocker.setText("Home");
+        HomeMediumLocker.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeMediumLockerMouseClicked(evt);
+            }
+        });
+        MediumLockerPage.add(HomeMediumLocker, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+
+        jLabel141.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel141.setText(">");
+        MediumLockerPage.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        jLabel142.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel142.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel142.setText("Medium Locker");
+        MediumLockerPage.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
+        MediumLockerWindow1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mediumLocker.png"))); // NOI18N
+        MediumLockerPage.add(MediumLockerWindow1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel143.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel143.setText("3");
+        MediumLockerPage.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 960, 50, 70));
+
+        containerPanel.add(MediumLockerPage, "card6");
+
+        LargeLockerPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel25.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel25.setText("1");
+
+        javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
+        jPanel53.setLayout(jPanel53Layout);
+        jPanel53Layout.setHorizontalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel53Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(jLabel25)
+                .addGap(55, 55, 55))
+        );
+        jPanel53Layout.setVerticalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel53Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel25)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 140, 320));
+
+        jPanel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel26.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel26.setText("2");
+
+        javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
+        jPanel55.setLayout(jPanel55Layout);
+        jPanel55Layout.setHorizontalGroup(
+            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel26)
+                .addGap(48, 48, 48))
+        );
+        jPanel55Layout.setVerticalGroup(
+            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel26)
+                .addGap(121, 121, 121))
+        );
+
+        LargeLockerPage.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 140, 320));
+
+        jPanel85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel27.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel27.setText("3");
+
+        javax.swing.GroupLayout jPanel85Layout = new javax.swing.GroupLayout(jPanel85);
+        jPanel85.setLayout(jPanel85Layout);
+        jPanel85Layout.setHorizontalGroup(
+            jPanel85Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel85Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(jLabel27)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel85Layout.setVerticalGroup(
+            jPanel85Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel85Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel27)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, 140, 320));
+
+        jPanel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel86.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel86.setText("4");
+
+        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
+        jPanel86.setLayout(jPanel86Layout);
+        jPanel86Layout.setHorizontalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel86)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel86Layout.setVerticalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel86)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 280, 140, 320));
+
+        jPanel106.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel107.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel107.setText("8");
+
+        javax.swing.GroupLayout jPanel106Layout = new javax.swing.GroupLayout(jPanel106);
+        jPanel106.setLayout(jPanel106Layout);
+        jPanel106Layout.setHorizontalGroup(
+            jPanel106Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel106Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel107)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel106Layout.setVerticalGroup(
+            jPanel106Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel106Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel107)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 280, 140, 320));
+
+        jPanel107.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel108.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel108.setText("5");
+
+        javax.swing.GroupLayout jPanel107Layout = new javax.swing.GroupLayout(jPanel107);
+        jPanel107.setLayout(jPanel107Layout);
+        jPanel107Layout.setHorizontalGroup(
+            jPanel107Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel107Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel108)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel107Layout.setVerticalGroup(
+            jPanel107Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel107Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel108)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 280, 140, 320));
+
+        jPanel108.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel109.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel109.setText("7");
+
+        javax.swing.GroupLayout jPanel108Layout = new javax.swing.GroupLayout(jPanel108);
+        jPanel108.setLayout(jPanel108Layout);
+        jPanel108Layout.setHorizontalGroup(
+            jPanel108Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel108Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel109)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel108Layout.setVerticalGroup(
+            jPanel108Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel108Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel109)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 280, 140, 320));
+
+        jPanel109.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel111.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel111.setText("6");
+
+        javax.swing.GroupLayout jPanel109Layout = new javax.swing.GroupLayout(jPanel109);
+        jPanel109.setLayout(jPanel109Layout);
+        jPanel109Layout.setHorizontalGroup(
+            jPanel109Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel109Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel111)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel109Layout.setVerticalGroup(
+            jPanel109Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel109Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel111)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 280, 140, 320));
+
+        jPanel110.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel112.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel112.setText("9");
+
+        javax.swing.GroupLayout jPanel110Layout = new javax.swing.GroupLayout(jPanel110);
+        jPanel110.setLayout(jPanel110Layout);
+        jPanel110Layout.setHorizontalGroup(
+            jPanel110Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel110Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel112)
+                .addGap(46, 46, 46))
+        );
+        jPanel110Layout.setVerticalGroup(
+            jPanel110Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel110Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel112)
+                .addGap(120, 120, 120))
+        );
+
+        LargeLockerPage.add(jPanel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 280, 140, 320));
+
+        jPanel111.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel113.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel113.setText("10");
+
+        javax.swing.GroupLayout jPanel111Layout = new javax.swing.GroupLayout(jPanel111);
+        jPanel111.setLayout(jPanel111Layout);
+        jPanel111Layout.setHorizontalGroup(
+            jPanel111Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel111Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel113)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel111Layout.setVerticalGroup(
+            jPanel111Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel111Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel113)
+                .addGap(128, 128, 128))
+        );
+
+        LargeLockerPage.add(jPanel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(1520, 280, 140, 320));
+
+        jPanel112.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel114.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel114.setText("17");
+
+        javax.swing.GroupLayout jPanel112Layout = new javax.swing.GroupLayout(jPanel112);
+        jPanel112.setLayout(jPanel112Layout);
+        jPanel112Layout.setHorizontalGroup(
+            jPanel112Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel112Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel114)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel112Layout.setVerticalGroup(
+            jPanel112Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel112Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel114)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 600, 140, 320));
+
+        jPanel113.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel115.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel115.setText("11");
+
+        javax.swing.GroupLayout jPanel113Layout = new javax.swing.GroupLayout(jPanel113);
+        jPanel113.setLayout(jPanel113Layout);
+        jPanel113Layout.setHorizontalGroup(
+            jPanel113Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel113Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel115)
+                .addGap(50, 50, 50))
+        );
+        jPanel113Layout.setVerticalGroup(
+            jPanel113Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel113Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel115)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, 140, 320));
+
+        jPanel114.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel116.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel116.setText("13");
+
+        javax.swing.GroupLayout jPanel114Layout = new javax.swing.GroupLayout(jPanel114);
+        jPanel114.setLayout(jPanel114Layout);
+        jPanel114Layout.setHorizontalGroup(
+            jPanel114Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel114Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel116)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel114Layout.setVerticalGroup(
+            jPanel114Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel114Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel116)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 140, 320));
+
+        jPanel115.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel117.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel117.setText("14");
+
+        javax.swing.GroupLayout jPanel115Layout = new javax.swing.GroupLayout(jPanel115);
+        jPanel115.setLayout(jPanel115Layout);
+        jPanel115Layout.setHorizontalGroup(
+            jPanel115Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel115Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel117)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel115Layout.setVerticalGroup(
+            jPanel115Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel115Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel117)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 600, 140, 320));
+
+        jPanel116.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel118.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel118.setText("20");
+
+        javax.swing.GroupLayout jPanel116Layout = new javax.swing.GroupLayout(jPanel116);
+        jPanel116.setLayout(jPanel116Layout);
+        jPanel116Layout.setHorizontalGroup(
+            jPanel116Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel116Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel118)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel116Layout.setVerticalGroup(
+            jPanel116Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel116Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel118)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(1520, 600, 140, 320));
+
+        jPanel117.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel119.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel119.setText("16");
+
+        javax.swing.GroupLayout jPanel117Layout = new javax.swing.GroupLayout(jPanel117);
+        jPanel117.setLayout(jPanel117Layout);
+        jPanel117Layout.setHorizontalGroup(
+            jPanel117Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel117Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel119)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel117Layout.setVerticalGroup(
+            jPanel117Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel117Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel119)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 600, 140, 320));
+
+        jPanel118.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel120.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel120.setText("15");
+
+        javax.swing.GroupLayout jPanel118Layout = new javax.swing.GroupLayout(jPanel118);
+        jPanel118.setLayout(jPanel118Layout);
+        jPanel118Layout.setHorizontalGroup(
+            jPanel118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel118Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel120)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel118Layout.setVerticalGroup(
+            jPanel118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel118Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel120)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 600, 140, 320));
+
+        jPanel119.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel121.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel121.setText("19");
+
+        javax.swing.GroupLayout jPanel119Layout = new javax.swing.GroupLayout(jPanel119);
+        jPanel119.setLayout(jPanel119Layout);
+        jPanel119Layout.setHorizontalGroup(
+            jPanel119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel119Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel121)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel119Layout.setVerticalGroup(
+            jPanel119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel119Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel121)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 600, 140, 320));
+
+        jPanel120.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel122.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel122.setText("12");
+
+        javax.swing.GroupLayout jPanel120Layout = new javax.swing.GroupLayout(jPanel120);
+        jPanel120.setLayout(jPanel120Layout);
+        jPanel120Layout.setHorizontalGroup(
+            jPanel120Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel120Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel122)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel120Layout.setVerticalGroup(
+            jPanel120Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel120Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel122)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, 140, 320));
+
+        jPanel121.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel123.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        jLabel123.setText("18");
+
+        javax.swing.GroupLayout jPanel121Layout = new javax.swing.GroupLayout(jPanel121);
+        jPanel121.setLayout(jPanel121Layout);
+        jPanel121Layout.setHorizontalGroup(
+            jPanel121Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel121Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel123)
+                .addGap(45, 45, 45))
+        );
+        jPanel121Layout.setVerticalGroup(
+            jPanel121Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel121Layout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jLabel123)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        LargeLockerPage.add(jPanel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 600, 140, 320));
+
+        largeLockerPage1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        largeLockerPage1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        largeLockerPage1.setText("1");
+        largeLockerPage1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                largeLockerPage1MouseClicked(evt);
+            }
+        });
+        LargeLockerPage.add(largeLockerPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 959, 50, 70));
+
+        largeLockerPage2.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        largeLockerPage2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        largeLockerPage2.setText("2");
+        largeLockerPage2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                largeLockerPage2MouseClicked(evt);
+            }
+        });
+        LargeLockerPage.add(largeLockerPage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 959, 50, 70));
+
+        largeLockerPage3.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
+        largeLockerPage3.setForeground(new java.awt.Color(49, 112, 143));
+        largeLockerPage3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        largeLockerPage3.setText("3");
+        largeLockerPage3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                largeLockerPage3MouseClicked(evt);
+            }
+        });
+        LargeLockerPage.add(largeLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
+
+        jLabel125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Locker.png"))); // NOI18N
+        LargeLockerPage.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        HomeLargeLocker.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        HomeLargeLocker.setText("Home");
+        HomeLargeLocker.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeLargeLockerMouseClicked(evt);
+            }
+        });
+        LargeLockerPage.add(HomeLargeLocker, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+
+        jLabel127.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel127.setText(">");
+        LargeLockerPage.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        jLabel128.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel128.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel128.setText("Large Locker");
+        LargeLockerPage.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/large locke.png"))); // NOI18N
+        LargeLockerPage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(LargeLockerPage, "card6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1250, Short.MAX_VALUE)
+            .addComponent(containerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1932, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 553, Short.MAX_VALUE)
+            .addComponent(containerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1092, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ViewLockerPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewLockerPanelMouseClicked
+        containerPanel.removeAll();
+        containerPanel.add(SmallLockerPage);
+        containerPanel.repaint();
+        containerPanel.revalidate();
+    }//GEN-LAST:event_ViewLockerPanelMouseClicked
+
+    private void HomeSmallLockerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeSmallLockerMouseClicked
+        
+        Home();
+    }//GEN-LAST:event_HomeSmallLockerMouseClicked
+
+    private void smallLockerPage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smallLockerPage1MouseClicked
+        Page1();
+    }//GEN-LAST:event_smallLockerPage1MouseClicked
+
+    private void smallLockerPage2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smallLockerPage2MouseClicked
+        Page2();
+    }//GEN-LAST:event_smallLockerPage2MouseClicked
+
+    private void smallLockerPage3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smallLockerPage3MouseClicked
+        Page3();
+    }//GEN-LAST:event_smallLockerPage3MouseClicked
+
+    private void mediumLockerPage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mediumLockerPage1MouseClicked
+        Page1();
+    }//GEN-LAST:event_mediumLockerPage1MouseClicked
+
+    private void mediumLockerPage2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mediumLockerPage2MouseClicked
+        Page2();
+    }//GEN-LAST:event_mediumLockerPage2MouseClicked
+
+    private void mediumLockerPage3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mediumLockerPage3MouseClicked
+        Page3();
+    }//GEN-LAST:event_mediumLockerPage3MouseClicked
+
+    private void HomeMediumLockerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMediumLockerMouseClicked
+        Home();
+    }//GEN-LAST:event_HomeMediumLockerMouseClicked
+
+    private void largeLockerPage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_largeLockerPage1MouseClicked
+        Page1();
+    }//GEN-LAST:event_largeLockerPage1MouseClicked
+
+    private void largeLockerPage2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_largeLockerPage2MouseClicked
+        Page2();
+    }//GEN-LAST:event_largeLockerPage2MouseClicked
+
+    private void largeLockerPage3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_largeLockerPage3MouseClicked
+        Page3();
+    }//GEN-LAST:event_largeLockerPage3MouseClicked
+
+    private void HomeLargeLockerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLargeLockerMouseClicked
+        Home();
+    }//GEN-LAST:event_HomeLargeLockerMouseClicked
+
+    
+    private void Home() {
+        containerPanel.removeAll();
+        containerPanel.add(MainWindowPanel);
+        containerPanel.repaint();
+        containerPanel.revalidate();
+    }
+    
+     private void Page1() {
+        containerPanel.removeAll();
+        containerPanel.add(SmallLockerPage);
+        containerPanel.repaint();
+        containerPanel.revalidate();
+    }
+    
+    private void Page2() {
+        containerPanel.removeAll();
+        containerPanel.add(MediumLockerPage);
+        containerPanel.repaint();
+        containerPanel.revalidate();
+    }
+    
+    private void Page3() {
+        containerPanel.removeAll();
+        containerPanel.add(LargeLockerPage);
+        containerPanel.repaint();
+        containerPanel.revalidate();
+    }
 
     /**
      * @param args the command line arguments
@@ -77,5 +3042,240 @@ public class StudentMainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HomeLargeLocker;
+    private javax.swing.JLabel HomeMediumLocker;
+    private javax.swing.JLabel HomeSmallLocker;
+    private javax.swing.JPanel LargeLockerPage;
+    private javax.swing.JPanel Line;
+    private javax.swing.JLabel LockerIcon;
+    private javax.swing.JPanel MainWindowPanel;
+    private javax.swing.JPanel MediumLockerPage;
+    private javax.swing.JLabel MediumLockerWindow1;
+    private javax.swing.JPanel SmallLockerPage;
+    private javax.swing.JPanel ViewLockerPanel;
+    private javax.swing.JLabel ViewLockerText;
+    private javax.swing.JPanel containerPanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel139;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
+    private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel169;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
+    private javax.swing.JPanel jPanel100;
+    private javax.swing.JPanel jPanel101;
+    private javax.swing.JPanel jPanel102;
+    private javax.swing.JPanel jPanel103;
+    private javax.swing.JPanel jPanel104;
+    private javax.swing.JPanel jPanel105;
+    private javax.swing.JPanel jPanel106;
+    private javax.swing.JPanel jPanel107;
+    private javax.swing.JPanel jPanel108;
+    private javax.swing.JPanel jPanel109;
+    private javax.swing.JPanel jPanel110;
+    private javax.swing.JPanel jPanel111;
+    private javax.swing.JPanel jPanel112;
+    private javax.swing.JPanel jPanel113;
+    private javax.swing.JPanel jPanel114;
+    private javax.swing.JPanel jPanel115;
+    private javax.swing.JPanel jPanel116;
+    private javax.swing.JPanel jPanel117;
+    private javax.swing.JPanel jPanel118;
+    private javax.swing.JPanel jPanel119;
+    private javax.swing.JPanel jPanel120;
+    private javax.swing.JPanel jPanel121;
+    private javax.swing.JPanel jPanel122;
+    private javax.swing.JPanel jPanel123;
+    private javax.swing.JPanel jPanel124;
+    private javax.swing.JPanel jPanel125;
+    private javax.swing.JPanel jPanel126;
+    private javax.swing.JPanel jPanel127;
+    private javax.swing.JPanel jPanel128;
+    private javax.swing.JPanel jPanel129;
+    private javax.swing.JPanel jPanel130;
+    private javax.swing.JPanel jPanel131;
+    private javax.swing.JPanel jPanel132;
+    private javax.swing.JPanel jPanel133;
+    private javax.swing.JPanel jPanel134;
+    private javax.swing.JPanel jPanel135;
+    private javax.swing.JPanel jPanel136;
+    private javax.swing.JPanel jPanel137;
+    private javax.swing.JPanel jPanel138;
+    private javax.swing.JPanel jPanel139;
+    private javax.swing.JPanel jPanel140;
+    private javax.swing.JPanel jPanel141;
+    private javax.swing.JPanel jPanel142;
+    private javax.swing.JPanel jPanel143;
+    private javax.swing.JPanel jPanel144;
+    private javax.swing.JPanel jPanel145;
+    private javax.swing.JPanel jPanel146;
+    private javax.swing.JPanel jPanel147;
+    private javax.swing.JPanel jPanel148;
+    private javax.swing.JPanel jPanel149;
+    private javax.swing.JPanel jPanel150;
+    private javax.swing.JPanel jPanel151;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
+    private javax.swing.JPanel jPanel60;
+    private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel71;
+    private javax.swing.JPanel jPanel72;
+    private javax.swing.JPanel jPanel73;
+    private javax.swing.JPanel jPanel74;
+    private javax.swing.JPanel jPanel75;
+    private javax.swing.JPanel jPanel76;
+    private javax.swing.JPanel jPanel77;
+    private javax.swing.JPanel jPanel78;
+    private javax.swing.JPanel jPanel79;
+    private javax.swing.JPanel jPanel80;
+    private javax.swing.JPanel jPanel81;
+    private javax.swing.JPanel jPanel82;
+    private javax.swing.JPanel jPanel83;
+    private javax.swing.JPanel jPanel84;
+    private javax.swing.JPanel jPanel85;
+    private javax.swing.JPanel jPanel86;
+    private javax.swing.JPanel jPanel87;
+    private javax.swing.JPanel jPanel88;
+    private javax.swing.JPanel jPanel89;
+    private javax.swing.JPanel jPanel90;
+    private javax.swing.JPanel jPanel91;
+    private javax.swing.JPanel jPanel92;
+    private javax.swing.JPanel jPanel93;
+    private javax.swing.JPanel jPanel94;
+    private javax.swing.JPanel jPanel95;
+    private javax.swing.JPanel jPanel96;
+    private javax.swing.JPanel jPanel97;
+    private javax.swing.JPanel jPanel98;
+    private javax.swing.JPanel jPanel99;
+    private javax.swing.JLabel largeLockerPage1;
+    private javax.swing.JLabel largeLockerPage2;
+    private javax.swing.JLabel largeLockerPage3;
+    private javax.swing.JLabel mediumLockerPage1;
+    private javax.swing.JLabel mediumLockerPage2;
+    private javax.swing.JLabel mediumLockerPage3;
+    private javax.swing.JLabel smallLockerPage1;
+    private javax.swing.JLabel smallLockerPage2;
+    private javax.swing.JLabel smallLockerPage3;
     // End of variables declaration//GEN-END:variables
 }

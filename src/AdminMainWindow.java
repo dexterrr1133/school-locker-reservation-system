@@ -150,6 +150,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         smallLockerPage2 = new javax.swing.JLabel();
         smallLockerPage3 = new javax.swing.JLabel();
         jLabel169 = new javax.swing.JLabel();
+        jLabel168 = new javax.swing.JLabel();
         MediumLockerPage = new javax.swing.JPanel();
         jPanel54 = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
@@ -269,6 +270,18 @@ public class AdminMainWindow extends javax.swing.JFrame {
         jLabel127 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        ViewStudent = new javax.swing.JPanel();
+        jLabel165 = new javax.swing.JLabel();
+        HomeSmallLocker1 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        PaymentStatus = new javax.swing.JPanel();
+        jLabel172 = new javax.swing.JLabel();
+        HomeSmallLocker2 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1672,6 +1685,11 @@ public class AdminMainWindow extends javax.swing.JFrame {
         jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/smallLocker.png"))); // NOI18N
         SmallLockerPage.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jLabel168.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel168.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel168.setText("Small Locker");
+        SmallLockerPage.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
         containerPanel.add(SmallLockerPage, "card6");
 
         MediumLockerPage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2996,6 +3014,62 @@ public class AdminMainWindow extends javax.swing.JFrame {
 
         containerPanel.add(LargeLockerPage, "card6");
 
+        ViewStudent.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel165.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/student page.png"))); // NOI18N
+        ViewStudent.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        HomeSmallLocker1.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        HomeSmallLocker1.setText("Home");
+        HomeSmallLocker1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeSmallLocker1MouseClicked(evt);
+            }
+        });
+        ViewStudent.add(HomeSmallLocker1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+
+        jLabel170.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel170.setText(">");
+        ViewStudent.add(jLabel170, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        jLabel171.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel171.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel171.setText("View Student");
+        ViewStudent.add(jLabel171, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ViewStudent.png"))); // NOI18N
+        ViewStudent.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(ViewStudent, "card6");
+
+        PaymentStatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel172.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/payment icon.png"))); // NOI18N
+        PaymentStatus.add(jLabel172, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        HomeSmallLocker2.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        HomeSmallLocker2.setText("Home");
+        HomeSmallLocker2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeSmallLocker2MouseClicked(evt);
+            }
+        });
+        PaymentStatus.add(HomeSmallLocker2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+
+        jLabel173.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel173.setText(">");
+        PaymentStatus.add(jLabel173, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        jLabel174.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel174.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel174.setText("Payment Status");
+        PaymentStatus.add(jLabel174, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/PaymentStatus.png"))); // NOI18N
+        PaymentStatus.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(PaymentStatus, "card7");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -3075,6 +3149,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
         Home();
     }//GEN-LAST:event_HomeSmallLockerMouseClicked
 
+    private void HomeSmallLocker1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeSmallLocker1MouseClicked
+        Home();
+    }//GEN-LAST:event_HomeSmallLocker1MouseClicked
+
+    private void HomeSmallLocker2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeSmallLocker2MouseClicked
+        Home();
+    }//GEN-LAST:event_HomeSmallLocker2MouseClicked
+
     private void Page1() {
         containerPanel.removeAll();
         containerPanel.add(SmallLockerPage);
@@ -3133,6 +3215,8 @@ public class AdminMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel HomeLargeLocker;
     private javax.swing.JLabel HomeMediumLocker;
     private javax.swing.JLabel HomeSmallLocker;
+    private javax.swing.JLabel HomeSmallLocker1;
+    private javax.swing.JLabel HomeSmallLocker2;
     private javax.swing.JPanel LargeLockerPage;
     private javax.swing.JPanel Line;
     private javax.swing.JLabel LockerIcon;
@@ -3141,12 +3225,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel MainWindowPanel;
     private javax.swing.JPanel MediumLockerPage;
     private javax.swing.JLabel MediumLockerWindow1;
+    private javax.swing.JPanel PaymentStatus;
     private javax.swing.JPanel PaymentStatusPanel;
     private javax.swing.JPanel SmallLockerPage;
     private javax.swing.JPanel ViewLockerPanel;
     private javax.swing.JLabel ViewLockerText;
     private javax.swing.JLabel ViewLockerText1;
     private javax.swing.JLabel ViewLockerText2;
+    private javax.swing.JPanel ViewStudent;
     private javax.swing.JPanel ViewStudentPanel;
     private javax.swing.JPanel containerPanel;
     private javax.swing.JLabel jLabel1;
@@ -3211,9 +3297,17 @@ public class AdminMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
     private javax.swing.JLabel jLabel169;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -3231,6 +3325,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;

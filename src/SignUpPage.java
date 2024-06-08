@@ -175,7 +175,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 
                 String hashedPassword = CryptoUtils.hashPassword(password);
 
-                query = "INSERT INTO user (student_id, first_name, last_name, pass_word) VALUES ('" + student_id + "','" + first_name + "','" + last_name + "','" + hashedPassword + "')";
+                query = "INSERT INTO student (student_id, first_name, last_name, password) VALUES ('" + student_id + "','" + first_name + "','" + last_name + "','" + hashedPassword + "')";
 
                 st.executeUpdate(query);
 

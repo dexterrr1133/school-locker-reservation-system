@@ -130,7 +130,11 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_EnterStudentIDJFieldMouseClicked
 
     private void SignInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignInBtnActionPerformed
-        loginUser();
+        if(EnterStudentIDJField.getText().equals("1900-202024")){
+            loginAdminUser();
+        } else {
+            loginStudentUser();
+        }
     }//GEN-LAST:event_SignInBtnActionPerformed
 
     private void CreateAccBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccBtnActionPerformed
@@ -157,10 +161,10 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_showPasswordButtonActionPerformed
 
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_PasswordFieldActionPerformed
 
-    public void loginUser() {
+    public void loginStudentUser() {
         String student_id;
         char[] password;
 
@@ -182,36 +186,76 @@ public class LoginPage extends javax.swing.JFrame {
             }else {
                 student_id = EnterStudentIDJField.getText();
                 password = PasswordField.getPassword();
+                
+                String query = "SELECT password FROM student WHERE student_id = '" + student_id + "'";
+                ResultSet rs = st.executeQuery(query);
 
-                // Retrieve the plain text password from the database
-                String query = "SELECT pass_word FROM user WHERE student_id = '" + student_id + "'";
+                if (rs.next()) {
+                    String storedHashedPassword = rs.getString("password");
+
+                    String enteredPassword = new String(password);
+                    String hashedEnteredPassword = CryptoUtils.hashPassword(enteredPassword);
+
+                    if (storedHashedPassword.equals(hashedEnteredPassword)) {
+                            JOptionPane.showMessageDialog(null, "Login successful!");
+
+                            StudentMainWindow GoToStudentMainWindow = new StudentMainWindow();
+                            GoToStudentMainWindow.setVisible(true);
+                            dispose();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Invalid username or password", "Dialog", JOptionPane.ERROR_MESSAGE);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Student ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);
+                }
+                con.close();
+            }
+        } catch (Exception e) {
+            System.out.println("Error " + e.getMessage());
+        }
+    }
+    
+    public void loginAdminUser() {
+        String admin_id;
+        char[] password;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+
+            if ("".equals(EnterStudentIDJField.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Username is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (PasswordField.getPassword().length == 0) {
+                JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            }else if (!(EnterStudentIDJField.getText().contains("-"))){
+                JOptionPane.showMessageDialog(new JFrame(), "Admin ID must contain '-'", "Dialog", JOptionPane.ERROR_MESSAGE); 
+            }else {
+                admin_id = EnterStudentIDJField.getText();
+                password = PasswordField.getPassword();
+                
+                String query = "SELECT pass_word FROM admin WHERE admin_id = '" + admin_id + "'";
                 ResultSet rs = st.executeQuery(query);
 
                 if (rs.next()) {
                     String storedHashedPassword = rs.getString("pass_word");
 
                     String enteredPassword = new String(password);
-                    String hashedEnteredPassword = CryptoUtils.hashPassword(enteredPassword);
 
-                    if (storedHashedPassword.equals(hashedEnteredPassword)) {
-                        if (EnterStudentIDJField.getText().equals("1900-202024")){
-                            JOptionPane.showMessageDialog(null, "Login successful!");
-
-                            AdminMainWindow GoToMainWindow = new AdminMainWindow();
-                            GoToMainWindow.setVisible(true);
+                    if (storedHashedPassword.equals(enteredPassword)) {
+                            JOptionPane.showMessageDialog(null, "Login successful! Hello Admin!");
+                            AdminMainWindow GoToAdminMainWindow = new AdminMainWindow();
+                            GoToAdminMainWindow.setVisible(true);
                             dispose();
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Login successful!");
-
-                            StudentMainWindow GoToStudentMainWindow = new StudentMainWindow();
-                            GoToStudentMainWindow.setVisible(true);
-                            dispose();
-                        }
                     } else {
                         JOptionPane.showMessageDialog(null, "Invalid username or password", "Dialog", JOptionPane.ERROR_MESSAGE);
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Student ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Admin ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);
                 }
                 con.close();
             }

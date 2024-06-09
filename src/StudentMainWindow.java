@@ -1,4 +1,8 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +15,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     public StudentMainWindow() {
         initComponents();
         checkAvailableLocker();
+        clickedPanel();
     }
 
     
@@ -254,8 +259,14 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel127 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        ReservationPanel = new javax.swing.JPanel();
+        LockerName = new javax.swing.JLabel();
+        ViewStudentHomeLabel = new javax.swing.JLabel();
+        ReserveButton = new javax.swing.JButton();
+        ReservationPanelBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1900, 1080));
 
         containerPanel.setLayout(new java.awt.CardLayout());
 
@@ -2906,6 +2917,34 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
         containerPanel.add(LargeLockerPage, "card6");
 
+        ReservationPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ReservationPanel.setMaximumSize(new java.awt.Dimension(1900, 1080));
+        ReservationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LockerName.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        LockerName.setForeground(new java.awt.Color(49, 112, 143));
+        LockerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LockerName.setText("LOCKER NAME (S1)");
+        ReservationPanel.add(LockerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, 290, 60));
+
+        ViewStudentHomeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        ViewStudentHomeLabel.setText("Home");
+        ViewStudentHomeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ViewStudentHomeLabelMouseClicked(evt);
+            }
+        });
+        ReservationPanel.add(ViewStudentHomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, -1));
+
+        ReserveButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ReserveButton.setText("Reserve");
+        ReservationPanel.add(ReserveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 900, 250, 40));
+
+        ReservationPanelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/PaymentStatus.png"))); // NOI18N
+        ReservationPanel.add(ReservationPanelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(ReservationPanel, "card8");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2974,6 +3013,10 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private void smallLockerPage3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_smallLockerPage3MouseClicked
         Page(3);
     }//GEN-LAST:event_smallLockerPage3MouseClicked
+
+    private void ViewStudentHomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewStudentHomeLabelMouseClicked
+        Home();
+    }//GEN-LAST:event_ViewStudentHomeLabelMouseClicked
 
     private void lockerAssignment() {
         lockers.put(1, s1);
@@ -3095,16 +3138,13 @@ public class StudentMainWindow extends javax.swing.JFrame {
             if (rs.next()) {
                 boolean isAvailable = rs.getBoolean("is_available");
                 boolean isPending = rs.getBoolean("is_pending");
-                if(!isPending) {
-                    if(!isAvailable) {
-                        panel.setBackground(Color.RED);
-                        panel.setForeground(Color.WHITE);
-                    } else {
-                        panel.setBackground(Color.GREEN);
-                        panel.setForeground(Color.WHITE); 
-                    } 
-                } else {
+                
+                if (!isAvailable && isPending) {
                     panel.setBackground(Color.GRAY);
+                } else if (isAvailable && !isPending) {
+                    panel.setBackground(Color.GREEN);
+                } else if (!isAvailable && !isPending){
+                    panel.setBackground(Color.RED);
                 }
             }
 
@@ -3112,18 +3152,42 @@ public class StudentMainWindow extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
-}
+    }
     
     public void checkAvailableLocker(){
         lockerAssignment();
         for (Map.Entry<Integer, JPanel> entry : lockers.entrySet()) {
         Integer lockerId = entry.getKey();
         JPanel panel = entry.getValue();
-
-        // Now you can use lockerId and panel as needed
-        System.out.println("Locker ID: " + lockerId);
         
         changeButtonColorIfLockerNotAvailable(lockerId, panel);
+        checkLockerStatusAndUpdateButton(lockerId);
+        }
+    }
+    
+    private void checkLockerStatusAndUpdateButton(int lockerId) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+
+            String query = "SELECT is_available, is_pending FROM locker WHERE locker_id = '" + lockerId + "'";
+            ResultSet rs = st.executeQuery(query);
+
+            if (rs.next()) {
+                boolean isAvailable = rs.getBoolean("is_available");
+                boolean isPending = rs.getBoolean("is_pending");
+                
+                ReserveButton.setEnabled(isAvailable && !isPending);
+            }
+
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
         }
     }
     
@@ -3152,6 +3216,76 @@ public class StudentMainWindow extends javax.swing.JFrame {
     containerPanel.repaint();
     containerPanel.revalidate();
 }
+    
+    public void clickedPanel(){
+    for (Map.Entry<Integer, JPanel> entry : lockers.entrySet()) {
+        JPanel panel = entry.getValue();
+        
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Integer clickedLockerId = entry.getKey();
+                String LockerId = Integer.toString(clickedLockerId);
+
+                containerPanel.removeAll();
+                containerPanel.add(ReservationPanel);
+                containerPanel.repaint();
+                containerPanel.revalidate();
+
+                LockerName.setText("Locker " + LockerId);
+                
+                checkLockerStatusAndUpdateButton(clickedLockerId);
+                
+                for (ActionListener remove : ReserveButton.getActionListeners()) {
+                    ReserveButton.removeActionListener(remove);
+                }
+                
+                ReserveButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+                            String url = "jdbc:mysql://localhost:3306/locker_reservation";
+                            String user = "root";
+                            String pass = "";
+
+                            Connection con = DriverManager.getConnection(url, user, pass);
+                            Statement st = con.createStatement();
+
+                            String query = "SELECT is_available, is_pending FROM locker WHERE locker_id = '" + clickedLockerId + "'";
+                            ResultSet rs = st.executeQuery(query);
+
+                            if (rs.next()) {
+                                boolean isAvailable = rs.getBoolean("is_available");
+                                boolean isPending = rs.getBoolean("is_pending");
+
+                                if (!isAvailable && isPending) {
+                                    // Locker is pending and not available
+                                    String updateAvailabilityQuery = "UPDATE locker SET is_available = false WHERE locker_id = '" + clickedLockerId + "'";
+                                    st.executeUpdate(updateAvailabilityQuery);
+                                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
+                                } else {
+                                    // Locker is neither pending nor available, update to pending and not available
+                                    String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
+                                    st.executeUpdate(updateQuery);
+                                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
+                                }
+
+                                // Disable the ReserveButton after reserving the locker
+                                ReserveButton.setEnabled(false);
+                            }
+
+                            con.close();
+                        } catch (Exception ex) {
+                            System.out.println("Error: " + ex.getMessage());
+                        }
+                    }
+                });
+            }
+        });
+    }
+}
+    
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -3212,12 +3346,17 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel LargeLockerPage;
     private javax.swing.JPanel Line;
     private javax.swing.JLabel LockerIcon;
+    private javax.swing.JLabel LockerName;
     private javax.swing.JPanel MainWindowPanel;
     private javax.swing.JPanel MediumLockerPage;
     private javax.swing.JLabel MediumLockerWindow1;
+    private javax.swing.JPanel ReservationPanel;
+    private javax.swing.JLabel ReservationPanelBackground;
+    private javax.swing.JButton ReserveButton;
     private javax.swing.JPanel SmallLockerPage;
     private javax.swing.JPanel ViewLockerPanel;
     private javax.swing.JLabel ViewLockerText;
+    private javax.swing.JLabel ViewStudentHomeLabel;
     private javax.swing.JPanel containerPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;

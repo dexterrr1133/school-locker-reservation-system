@@ -12,6 +12,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     
     private HashMap<Integer, JPanel> lockers = new HashMap<>();
     
+    
     public StudentMainWindow() {
         initComponents();
         checkAvailableLocker();
@@ -268,6 +269,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 1080));
 
+        containerPanel.setMaximumSize(new java.awt.Dimension(1920, 1080));
         containerPanel.setLayout(new java.awt.CardLayout());
 
         MainWindowPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2918,7 +2920,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         containerPanel.add(LargeLockerPage, "card6");
 
         ReservationPanel.setBackground(new java.awt.Color(255, 255, 255));
-        ReservationPanel.setMaximumSize(new java.awt.Dimension(1900, 1080));
+        ReservationPanel.setMaximumSize(new java.awt.Dimension(1920, 1080));
         ReservationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LockerName.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -2949,7 +2951,9 @@ public class StudentMainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(containerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1932, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(containerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1932, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3217,7 +3221,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     containerPanel.revalidate();
 }
     
-    public void clickedPanel(){
+    public void clickedPanel (){
     for (Map.Entry<Integer, JPanel> entry : lockers.entrySet()) {
         JPanel panel = entry.getValue();
         
@@ -3260,18 +3264,23 @@ public class StudentMainWindow extends javax.swing.JFrame {
                                 boolean isPending = rs.getBoolean("is_pending");
 
                                 if (!isAvailable && isPending) {
-                                    // Locker is pending and not available
                                     String updateAvailabilityQuery = "UPDATE locker SET is_available = false WHERE locker_id = '" + clickedLockerId + "'";
                                     st.executeUpdate(updateAvailabilityQuery);
                                     changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
                                 } else {
-                                    // Locker is neither pending nor available, update to pending and not available
                                     String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
                                     st.executeUpdate(updateQuery);
+                                    
+                                    LoginPage studentId = new LoginPage();
+                                    String student_Id = studentId.getLoggedInStudentId();
+                                    String startDate = "2024-01-01"; 
+                                    String endDate = "2024-12-31"; 
+                                    String insertReservationQuery = "INSERT INTO reservation (locker_id, student_id, start_date, end_date) VALUES ('" + clickedLockerId + "', '" + student_Id + "', '" + startDate + "', '" + endDate + "')";
+                                    st.executeUpdate(insertReservationQuery);
+                                    
                                     changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
                                 }
-
-                                // Disable the ReserveButton after reserving the locker
+                                
                                 ReserveButton.setEnabled(false);
                             }
 
@@ -3288,30 +3297,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
     
     
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StudentMainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StudentMainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StudentMainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StudentMainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new StudentMainWindow().setVisible(true);

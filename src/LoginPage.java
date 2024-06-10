@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 
 public class LoginPage extends javax.swing.JFrame {
     private boolean passwordVisible = false;
+    private static String loggedInStudentId;
     
     public LoginPage() {
         initComponents();
@@ -128,7 +129,7 @@ public class LoginPage extends javax.swing.JFrame {
         EnterStudentIDJField.setText("");
         EnterStudentIDJField.setForeground(Color.BLACK);
     }//GEN-LAST:event_EnterStudentIDJFieldMouseClicked
-
+    
     private void SignInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignInBtnActionPerformed
         if(EnterStudentIDJField.getText().equals("1900-202024")){
             loginAdminUser();
@@ -163,7 +164,15 @@ public class LoginPage extends javax.swing.JFrame {
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
         
     }//GEN-LAST:event_PasswordFieldActionPerformed
-
+    
+    public static void setLoggedInStudentId(String studentId) {
+        loggedInStudentId = studentId;
+    }
+    
+    public static String getLoggedInStudentId() {
+        return loggedInStudentId;
+    }
+    
     public void loginStudentUser() {
         String student_id;
         char[] password;
@@ -198,7 +207,7 @@ public class LoginPage extends javax.swing.JFrame {
 
                     if (storedHashedPassword.equals(hashedEnteredPassword)) {
                             JOptionPane.showMessageDialog(null, "Login successful!");
-
+                            setLoggedInStudentId(student_id);
                             StudentMainWindow GoToStudentMainWindow = new StudentMainWindow();
                             GoToStudentMainWindow.setVisible(true);
                             dispose();

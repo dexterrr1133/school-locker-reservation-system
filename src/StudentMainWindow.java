@@ -264,6 +264,24 @@ public class StudentMainWindow extends javax.swing.JFrame {
         ViewStudentHomeLabel = new javax.swing.JLabel();
         ReserveButton = new javax.swing.JButton();
         ReservationPanelBackground = new javax.swing.JLabel();
+        ReservationPanel1 = new javax.swing.JPanel();
+        jLabel126 = new javax.swing.JLabel();
+        HomeLargeLocker1 = new javax.swing.JLabel();
+        jLabel138 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 1080));
@@ -1585,7 +1603,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         SmallLockerPage.add(smallLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
 
         jLabel169.setForeground(new java.awt.Color(49, 112, 143));
-        jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/smallLocker.png"))); // NOI18N
+        jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Small Locker Stud.png"))); // NOI18N
         SmallLockerPage.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel168.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -2369,7 +2387,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel142.setText("Medium Locker");
         MediumLockerPage.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
-        MediumLockerWindow1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mediumLocker.png"))); // NOI18N
+        MediumLockerWindow1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Medium Locker Stud.png"))); // NOI18N
         MediumLockerPage.add(MediumLockerWindow1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel143.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
@@ -2912,7 +2930,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel128.setText("Large Locker");
         LargeLockerPage.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/large locke.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LArge Locker Student.png"))); // NOI18N
         LargeLockerPage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(LargeLockerPage, "card6");
@@ -2944,6 +2962,109 @@ public class StudentMainWindow extends javax.swing.JFrame {
         ReservationPanel.add(ReservationPanelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(ReservationPanel, "card8");
+
+        ReservationPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        ReservationPanel1.setMaximumSize(new java.awt.Dimension(1900, 1080));
+        ReservationPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/reserve.png"))); // NOI18N
+        ReservationPanel1.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        HomeLargeLocker1.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        HomeLargeLocker1.setText("Home");
+        HomeLargeLocker1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeLargeLocker1MouseClicked(evt);
+            }
+        });
+        ReservationPanel1.add(HomeLargeLocker1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+
+        jLabel138.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel138.setText(">");
+        ReservationPanel1.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        jLabel140.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel140.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel140.setText("Reservation Page");
+        ReservationPanel1.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+
+        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
+
+        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel5.setText("Student ID");
+
+        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel6.setText("First Name");
+
+        jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel7.setText("Last Name");
+
+        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel8.setText("Start Date");
+
+        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel9.setText("End Date");
+
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jButton1.setText("Reserve");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(293, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42))
+        );
+
+        ReservationPanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 920, 720));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservation Page Admin.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        ReservationPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        containerPanel.add(ReservationPanel1, "card8");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -3017,6 +3138,10 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private void ViewStudentHomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewStudentHomeLabelMouseClicked
         Home();
     }//GEN-LAST:event_ViewStudentHomeLabelMouseClicked
+
+    private void HomeLargeLocker1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLargeLocker1MouseClicked
+        Home();
+    }//GEN-LAST:event_HomeLargeLocker1MouseClicked
 
     private void lockerAssignment() {
         lockers.put(1, s1);
@@ -3321,6 +3446,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HomeLargeLocker;
+    private javax.swing.JLabel HomeLargeLocker1;
     private javax.swing.JLabel HomeMediumLocker;
     private javax.swing.JLabel HomeSmallLocker;
     private javax.swing.JPanel L1;
@@ -3351,6 +3477,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel MediumLockerPage;
     private javax.swing.JLabel MediumLockerWindow1;
     private javax.swing.JPanel ReservationPanel;
+    private javax.swing.JPanel ReservationPanel1;
     private javax.swing.JLabel ReservationPanelBackground;
     private javax.swing.JButton ReserveButton;
     private javax.swing.JPanel SmallLockerPage;
@@ -3358,6 +3485,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel ViewLockerText;
     private javax.swing.JLabel ViewStudentHomeLabel;
     private javax.swing.JPanel containerPanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
@@ -3384,6 +3512,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
@@ -3395,7 +3524,9 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel139;
+    private javax.swing.JLabel jLabel140;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
     private javax.swing.JLabel jLabel143;
@@ -3441,7 +3572,11 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
@@ -3452,6 +3587,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
@@ -3462,6 +3598,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
@@ -3472,6 +3609,12 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel largeLockerPage1;
     private javax.swing.JLabel largeLockerPage2;
     private javax.swing.JLabel largeLockerPage3;

@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.security.MessageDigest;
@@ -38,7 +37,6 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -167,6 +165,8 @@ public class SignUpPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Password does not match", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if (!(StudentIDTF.getText().contains("-"))){
                 JOptionPane.showMessageDialog(new JFrame(), "Student ID must contain '-'", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (!(StudentIDTF.getText().length() != 12)){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID must be 12 characters long", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else {
                 first_name = FirstNameTF.getText();
                 last_name = LastNameTF.getText();

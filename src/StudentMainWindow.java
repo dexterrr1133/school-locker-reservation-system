@@ -4,9 +4,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 public class StudentMainWindow extends javax.swing.JFrame {
     
@@ -17,6 +24,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         initComponents();
         checkAvailableLocker();
         clickedPanel();
+        setIcons();
     }
 
     
@@ -139,7 +147,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         smallLockerPage1 = new javax.swing.JLabel();
         smallLockerPage2 = new javax.swing.JLabel();
         smallLockerPage3 = new javax.swing.JLabel();
-        jLabel169 = new javax.swing.JLabel();
+        smallLockerBackground = new javax.swing.JLabel();
         jLabel168 = new javax.swing.JLabel();
         MediumLockerPage = new javax.swing.JPanel();
         m1 = new javax.swing.JPanel();
@@ -209,7 +217,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         HomeMediumLocker = new javax.swing.JLabel();
         jLabel141 = new javax.swing.JLabel();
         jLabel142 = new javax.swing.JLabel();
-        MediumLockerWindow1 = new javax.swing.JLabel();
+        mediumLockerBackground = new javax.swing.JLabel();
         jLabel143 = new javax.swing.JLabel();
         LargeLockerPage = new javax.swing.JPanel();
         L1 = new javax.swing.JPanel();
@@ -259,30 +267,28 @@ public class StudentMainWindow extends javax.swing.JFrame {
         HomeLargeLocker = new javax.swing.JLabel();
         jLabel127 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        largeLockerBackground = new javax.swing.JLabel();
+        ConfirmationPanel = new javax.swing.JPanel();
+        ConfimationBackground = new javax.swing.JLabel();
         ReservationPanel = new javax.swing.JPanel();
-        LockerName = new javax.swing.JLabel();
-        ViewStudentHomeLabel = new javax.swing.JLabel();
-        ReserveButton = new javax.swing.JButton();
-        ReservationPanelBackground = new javax.swing.JLabel();
-        ReservationPanel1 = new javax.swing.JPanel();
-        jLabel126 = new javax.swing.JLabel();
+        ReserveIcon = new javax.swing.JLabel();
         HomeLargeLocker1 = new javax.swing.JLabel();
         jLabel138 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
+        LockerName = new javax.swing.JLabel();
+        jLabel165 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        StudentIDTF = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        FirstNameTF = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        LastNameTF = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        StartDateTF = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        EndDateTF = new javax.swing.JTextField();
+        ReserveButton = new javax.swing.JButton();
+        reservePanelBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 1080));
@@ -1604,9 +1610,8 @@ public class StudentMainWindow extends javax.swing.JFrame {
         });
         SmallLockerPage.add(smallLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
 
-        jLabel169.setForeground(new java.awt.Color(49, 112, 143));
-        jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Small Locker Stud.png"))); // NOI18N
-        SmallLockerPage.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        smallLockerBackground.setForeground(new java.awt.Color(49, 112, 143));
+        SmallLockerPage.add(smallLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel168.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel168.setForeground(new java.awt.Color(49, 112, 143));
@@ -2388,9 +2393,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel142.setForeground(new java.awt.Color(49, 112, 143));
         jLabel142.setText("Medium Locker");
         MediumLockerPage.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
-
-        MediumLockerWindow1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Medium Locker Stud.png"))); // NOI18N
-        MediumLockerPage.add(MediumLockerWindow1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        MediumLockerPage.add(mediumLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel143.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
         jLabel143.setText("3");
@@ -2931,46 +2934,32 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel128.setForeground(new java.awt.Color(49, 112, 143));
         jLabel128.setText("Large Locker");
         LargeLockerPage.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LArge Locker Student.png"))); // NOI18N
-        LargeLockerPage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        LargeLockerPage.add(largeLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(LargeLockerPage, "card6");
 
+        ConfimationBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ConfimationImg.png"))); // NOI18N
+
+        javax.swing.GroupLayout ConfirmationPanelLayout = new javax.swing.GroupLayout(ConfirmationPanel);
+        ConfirmationPanel.setLayout(ConfirmationPanelLayout);
+        ConfirmationPanelLayout.setHorizontalGroup(
+            ConfirmationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ConfimationBackground, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
+        );
+        ConfirmationPanelLayout.setVerticalGroup(
+            ConfirmationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfirmationPanelLayout.createSequentialGroup()
+                .addComponent(ConfimationBackground)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        containerPanel.add(ConfirmationPanel, "card7");
+
         ReservationPanel.setBackground(new java.awt.Color(255, 255, 255));
-        ReservationPanel.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        ReservationPanel.setMaximumSize(new java.awt.Dimension(1900, 1080));
+        ReservationPanel.setPreferredSize(new java.awt.Dimension(1920, 1080));
         ReservationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LockerName.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        LockerName.setForeground(new java.awt.Color(49, 112, 143));
-        LockerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LockerName.setText("LOCKER NAME (S1)");
-        ReservationPanel.add(LockerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, 290, 60));
-
-        ViewStudentHomeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        ViewStudentHomeLabel.setText("Home");
-        ViewStudentHomeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ViewStudentHomeLabelMouseClicked(evt);
-            }
-        });
-        ReservationPanel.add(ViewStudentHomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, -1));
-
-        ReserveButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        ReserveButton.setText("Reserve");
-        ReservationPanel.add(ReserveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 900, 250, 40));
-
-        ReservationPanelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/PaymentStatus.png"))); // NOI18N
-        ReservationPanel.add(ReservationPanelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        containerPanel.add(ReservationPanel, "card8");
-
-        ReservationPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        ReservationPanel1.setMaximumSize(new java.awt.Dimension(1900, 1080));
-        ReservationPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/reserve.png"))); // NOI18N
-        ReservationPanel1.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        ReservationPanel.add(ReserveIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
         HomeLargeLocker1.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
         HomeLargeLocker1.setText("Home");
@@ -2979,94 +2968,66 @@ public class StudentMainWindow extends javax.swing.JFrame {
                 HomeLargeLocker1MouseClicked(evt);
             }
         });
-        ReservationPanel1.add(HomeLargeLocker1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+        ReservationPanel.add(HomeLargeLocker1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
 
         jLabel138.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
         jLabel138.setText(">");
-        ReservationPanel1.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+        ReservationPanel.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
 
-        jLabel140.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(49, 112, 143));
-        jLabel140.setText("Reservation Page");
-        ReservationPanel1.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
+        LockerName.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        LockerName.setForeground(new java.awt.Color(49, 112, 143));
+        LockerName.setText("Reservation Page");
+        ReservationPanel.add(LockerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, -1, 40));
+
+        jLabel165.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel165.setForeground(new java.awt.Color(49, 112, 143));
+        jLabel165.setText("Reservation Page");
+        ReservationPanel.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel5.setText("Student ID");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 25, -1, -1));
+
+        StudentIDTF.setText(" ");
+        jPanel1.add(StudentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 75, 600, 50));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel6.setText("First Name");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 143, -1, -1));
+        jPanel1.add(FirstNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 193, 600, 50));
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel7.setText("Last Name");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 261, -1, -1));
+        jPanel1.add(LastNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 311, 600, 50));
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel8.setText("Start Date");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 379, -1, -1));
+        jPanel1.add(StartDateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 429, 600, 50));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel9.setText("End Date");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 497, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        jButton1.setText("Reserve");
+        EndDateTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EndDateTFActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EndDateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 547, 600, 50));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(293, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-        );
+        ReserveButton.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        ReserveButton.setText("Reserve");
+        jPanel1.add(ReserveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 630, 314, 48));
 
-        ReservationPanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 920, 720));
+        ReservationPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 920, 720));
+        ReservationPanel.add(reservePanelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservation Page Admin.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        ReservationPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        containerPanel.add(ReservationPanel1, "card8");
+        containerPanel.add(ReservationPanel, "card8");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -3074,7 +3035,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(containerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1932, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3139,13 +3100,13 @@ public class StudentMainWindow extends javax.swing.JFrame {
         Page(3);
     }//GEN-LAST:event_smallLockerPage3MouseClicked
 
-    private void ViewStudentHomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewStudentHomeLabelMouseClicked
-        Home();
-    }//GEN-LAST:event_ViewStudentHomeLabelMouseClicked
-
     private void HomeLargeLocker1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLargeLocker1MouseClicked
         Home();
     }//GEN-LAST:event_HomeLargeLocker1MouseClicked
+
+    private void EndDateTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EndDateTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EndDateTFActionPerformed
 
     private void lockerAssignment() {
         lockers.put(1, s1);
@@ -3248,6 +3209,26 @@ public class StudentMainWindow extends javax.swing.JFrame {
         lockers.put(98, L18);
         lockers.put(99, L19);
         lockers.put(100, L20);
+    }
+    
+    private void setIcons() {
+        ImageIcon reservebg = new ImageIcon("src\\img\\ReservationPageAdmin.png");
+        ImageIcon smalllockerBackground = new ImageIcon("src\\img\\SmallLockerStud.png");
+        ImageIcon mediumlockerBackground = new ImageIcon("src\\img\\MediumLockerStud.png");
+        ImageIcon biglockerBackground = new ImageIcon("src\\img\\LArge Locker Student.png");
+        ImageIcon reserveicon = new ImageIcon("src\\img\\reserve.png");
+        
+        reservePanelBackground.setIcon(reservebg);
+        smallLockerBackground.setIcon(smalllockerBackground);
+        mediumLockerBackground.setIcon(mediumlockerBackground);
+        largeLockerBackground.setIcon(biglockerBackground);
+        ReserveIcon.setIcon(reserveicon);
+    }
+    
+    private void setAutomaticallyStudentIDTextField(){
+        LoginPage studentId = new LoginPage();
+        String student_Id = studentId.getLoggedInStudentId();
+        StudentIDTF.setText(student_Id);
     }
     
     
@@ -3362,8 +3343,14 @@ public class StudentMainWindow extends javax.swing.JFrame {
                 containerPanel.revalidate();
 
                 LockerName.setText("Locker " + LockerId);
-                
-                checkLockerStatusAndUpdateButton(clickedLockerId);
+                if (panel.getBackground().equals(Color.GRAY) || panel.getBackground().equals(Color.RED)){
+                    setLockerOwnerDetails(clickedLockerId);
+                    checkLockerStatusAndUpdateButton(clickedLockerId);
+                } else {
+                    setAutomaticallyStudentIDTextField();
+                    autoSetDetailsReservationPanel(clickedLockerId);
+                    checkLockerStatusAndUpdateButton(clickedLockerId);
+                }
                 
                 for (ActionListener remove : ReserveButton.getActionListeners()) {
                     ReserveButton.removeActionListener(remove);
@@ -3388,20 +3375,45 @@ public class StudentMainWindow extends javax.swing.JFrame {
                                 boolean isAvailable = rs.getBoolean("is_available");
                                 boolean isPending = rs.getBoolean("is_pending");
 
-                                if (!isAvailable && isPending) {
-                                    String updateAvailabilityQuery = "UPDATE locker SET is_available = false WHERE locker_id = '" + clickedLockerId + "'";
+                                if (isAvailable && !isPending) {
+                                    String updateAvailabilityQuery = "UPDATE locker SET is_available = false, is_pending = true WHERE locker_id = '" + clickedLockerId + "'";
                                     st.executeUpdate(updateAvailabilityQuery);
-                                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
-                                } else {
-                                    String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
-                                    st.executeUpdate(updateQuery);
                                     
                                     LoginPage studentId = new LoginPage();
                                     String student_Id = studentId.getLoggedInStudentId();
-                                    String startDate = "2024-01-01"; 
-                                    String endDate = "2024-12-31"; 
-                                    String insertReservationQuery = "INSERT INTO reservation (locker_id, student_id, start_date, end_date) VALUES ('" + clickedLockerId + "', '" + student_Id + "', '" + startDate + "', '" + endDate + "')";
+                                    String firstname = FirstNameTF.getText();
+                                    String lastname = LastNameTF.getText();
+                                    String startDate = getTodaysDateAsString();
+                                    String endDate = getDateAfterAddingMonths(3);
+                                    String payment_deadline = "2024-06-21";
+                                    String insertReservationQuery = "INSERT INTO reservation (locker_id, student_id, first_name, last_name,  start_date, end_date, payment_deadline) VALUES ('" + clickedLockerId + "', '" + student_Id + "', '" + firstname + "', '"+ lastname +"', '" + startDate + "', '" + endDate + "', '" + payment_deadline +"')";
                                     st.executeUpdate(insertReservationQuery);
+                                    String updateAssignedLockerStudent = "UPDATE student SET assigned_locker = '" + clickedLockerId + "' WHERE student_id = '" + student_Id + "'";
+                                    st.executeUpdate(updateAssignedLockerStudent);
+                                    
+                                    containerPanel.removeAll();
+                                    containerPanel.add(ConfirmationPanel);
+                                    containerPanel.repaint();
+                                    containerPanel.revalidate();
+                                    
+                                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
+                                    
+                                    Timer timer = new Timer(10000, new ActionListener() {
+                                    @Override
+                                    public void actionPerformed(ActionEvent e) {
+                                        // After 10 seconds, show the LoginPage
+                                        LoginPage returnToLoginPage = new LoginPage();
+                                        returnToLoginPage.setVisible(true);
+                                    }
+                                });
+                                timer.setRepeats(false); // Ensure the timer only runs once
+                                timer.start(); // Start the timer
+                            
+                                    
+                                    
+                                } else {
+                                    String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
+                                    st.executeUpdate(updateQuery);
                                     
                                     changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
                                 }
@@ -3420,6 +3432,100 @@ public class StudentMainWindow extends javax.swing.JFrame {
     }
 }
     
+    public void autoSetDetailsReservationPanel(int clickedLockerId) {
+        int notFound = 0;
+        
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:MySQL://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+            
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+            
+            
+            LoginPage studentId = new LoginPage();
+            String student_Id = studentId.getLoggedInStudentId();
+            String startDate = getTodaysDateAsString();
+            String endDate = getDateAfterAddingMonths(3);
+            
+            String sql = "SELECT * FROM student WHERE student_id ='" + student_Id+"'";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                FirstNameTF.setText(rs.getString("first_name"));
+                LastNameTF.setText(rs.getString("last_name"));
+                StartDateTF.setText(startDate);
+                EndDateTF.setText(endDate);
+                notFound = 1;
+            }if(notFound==0){
+                    JOptionPane.showMessageDialog(new JFrame(), "Error", "WARNING", JOptionPane.ERROR_MESSAGE);
+            }
+            con.close();
+                
+        }catch(Exception e){
+            System.out.println("Error "+ e.getMessage());
+        }
+    }
+    
+    public static String getTodaysDateAsString() {
+        Date today = new Date(); // Get the current date and time
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd"); // Choose your desired format
+        return sdf.format(today);
+    }
+    
+    public static String getDateAfterAddingMonths(int monthsToAdd) {
+      Date today = new Date(); // Get the current date and time
+      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd"); // Choose your desired format
+
+      Calendar calendar = Calendar.getInstance(); // Create a Calendar object
+      calendar.setTime(today); // Set the Calendar object to the current date
+
+      calendar.add(Calendar.MONTH, monthsToAdd); // Add the specified number of months
+
+      return sdf.format(calendar.getTime()); // Format and return the new date
+    }
+    
+    private void setPriceLocker(){
+        
+    }
+    
+    public void setLockerOwnerDetails(int lockerId){
+        int notFound = 0;
+        
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:MySQL://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+            
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+            
+            
+            LoginPage studentId = new LoginPage();
+            String student_Id = studentId.getLoggedInStudentId();
+            String startDate = getTodaysDateAsString();
+            String endDate = getDateAfterAddingMonths(3);
+            
+            String sql = "SELECT * FROM reservation WHERE locker_id ='" + lockerId+"'";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                StudentIDTF.setText(rs.getString("student_id"));
+                FirstNameTF.setText(rs.getString("first_name"));
+                LastNameTF.setText(rs.getString("last_name"));
+                StartDateTF.setText(startDate);
+                EndDateTF.setText(endDate);
+                notFound = 1;
+            }if(notFound==0){
+                    JOptionPane.showMessageDialog(new JFrame(), "Error", "WARNING", JOptionPane.ERROR_MESSAGE);
+            }
+            con.close();
+                
+        }catch(Exception e){
+            System.out.println("Error "+ e.getMessage());
+        }
+    }
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -3430,6 +3536,10 @@ public class StudentMainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ConfimationBackground;
+    private javax.swing.JPanel ConfirmationPanel;
+    private javax.swing.JTextField EndDateTF;
+    private javax.swing.JTextField FirstNameTF;
     private javax.swing.JLabel HomeLargeLocker;
     private javax.swing.JLabel HomeLargeLocker1;
     private javax.swing.JLabel HomeMediumLocker;
@@ -3455,23 +3565,21 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel L8;
     private javax.swing.JPanel L9;
     private javax.swing.JPanel LargeLockerPage;
+    private javax.swing.JTextField LastNameTF;
     private javax.swing.JPanel Line;
     private javax.swing.JLabel LockerIcon;
     private javax.swing.JLabel LockerName;
     private javax.swing.JPanel MainWindowPanel;
     private javax.swing.JPanel MediumLockerPage;
-    private javax.swing.JLabel MediumLockerWindow1;
     private javax.swing.JPanel ReservationPanel;
-    private javax.swing.JPanel ReservationPanel1;
-    private javax.swing.JLabel ReservationPanelBackground;
     private javax.swing.JButton ReserveButton;
+    private javax.swing.JLabel ReserveIcon;
     private javax.swing.JPanel SmallLockerPage;
+    private javax.swing.JTextField StartDateTF;
+    private javax.swing.JTextField StudentIDTF;
     private javax.swing.JPanel ViewLockerPanel;
     private javax.swing.JLabel ViewLockerText;
-    private javax.swing.JLabel ViewStudentHomeLabel;
     private javax.swing.JPanel containerPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -3497,7 +3605,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
@@ -3511,7 +3618,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel139;
-    private javax.swing.JLabel jLabel140;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
     private javax.swing.JLabel jLabel143;
@@ -3536,10 +3642,10 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
-    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -3557,7 +3663,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel69;
@@ -3595,11 +3700,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JLabel largeLockerBackground;
     private javax.swing.JLabel largeLockerPage1;
     private javax.swing.JLabel largeLockerPage2;
     private javax.swing.JLabel largeLockerPage3;
@@ -3633,9 +3734,11 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel m7;
     private javax.swing.JPanel m8;
     private javax.swing.JPanel m9;
+    private javax.swing.JLabel mediumLockerBackground;
     private javax.swing.JLabel mediumLockerPage1;
     private javax.swing.JLabel mediumLockerPage2;
     private javax.swing.JLabel mediumLockerPage3;
+    private javax.swing.JLabel reservePanelBackground;
     private javax.swing.JPanel s1;
     private javax.swing.JPanel s10;
     private javax.swing.JPanel s11;
@@ -3686,6 +3789,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel s7;
     private javax.swing.JPanel s8;
     private javax.swing.JPanel s9;
+    private javax.swing.JLabel smallLockerBackground;
     private javax.swing.JLabel smallLockerPage1;
     private javax.swing.JLabel smallLockerPage2;
     private javax.swing.JLabel smallLockerPage3;

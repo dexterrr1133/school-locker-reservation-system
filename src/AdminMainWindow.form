@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="jPopupMenu1">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[200, 48]"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="Logout">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;Logout&quot;" type="code"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[128, 32]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LogoutActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1920, 1080]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -214,10 +245,26 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="AccountLabel">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Icon &#x25bc;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AccountLabelMouseClicked"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1820" y="60" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
             <Component class="javax.swing.JLabel" name="mainWindowBackground">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/AdminMainWindow.png"/>
+                  <Image iconType="3" name="/img/AdminMainWindowBackground.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -257,7 +304,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="70" y="250" width="1780" height="770"/>
+                  <AbsoluteConstraints x="70" y="250" width="1780" height="730"/>
                 </Constraint>
               </Constraints>
 
@@ -265,6 +312,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="Table">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="Title 1" type="java.lang.Object"/>
@@ -273,6 +323,8 @@
                         <Column editable="true" title="Title 4" type="java.lang.Object"/>
                       </Table>
                     </Property>
+                    <Property name="columnSelectionAllowed" type="boolean" value="true"/>
+                    <Property name="rowHeight" type="int" value="35"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -322,11 +374,54 @@
                 </Constraint>
               </Constraints>
             </Component>
+            <Component class="javax.swing.JTextField" name="SearchTF">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchTFActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1635" y="210" width="130" height="30"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="SearchButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchButtonActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1769" y="210" width="80" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="AccountLabel1">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Icon &#x25bc;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AccountLabel1MouseClicked"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1820" y="60" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
             <Component class="javax.swing.JLabel" name="ViewStudentBackground">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/ViewStudent.png"/>
                 </Property>
+                <Property name="iconTextGap" type="int" value="7"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -2708,6 +2803,22 @@
                 </Constraint>
               </Constraints>
             </Component>
+            <Component class="javax.swing.JLabel" name="AccountLabel2">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Icon &#x25bc;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AccountLabel2MouseClicked"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1820" y="60" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
             <Component class="javax.swing.JLabel" name="smallLockerBackground">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -4189,6 +4300,22 @@
                 </Constraint>
               </Constraints>
             </Component>
+            <Component class="javax.swing.JLabel" name="AccountLabel3">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Icon &#x25bc;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AccountLabel3MouseClicked"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1820" y="60" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
             <Component class="javax.swing.JLabel" name="mediumLockerBackground">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -5220,6 +5347,22 @@
                 </Constraint>
               </Constraints>
             </Component>
+            <Component class="javax.swing.JLabel" name="AccountLabel4">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Icon &#x25bc;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AccountLabel4MouseClicked"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1820" y="60" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
             <Component class="javax.swing.JLabel" name="largeLockerBackground">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -5316,7 +5459,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel1">
+            <Container class="javax.swing.JPanel" name="DetailsPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5328,65 +5471,8 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="reserveEndDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="reserveStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="StartDateTF" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
-                              <Component id="reserveLastName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="LastNameTF" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
-                              <Component id="reserveFirstName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="FirstNameTF" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
-                              <Component id="reserveStudentID" min="-2" max="-2" attributes="0"/>
-                              <Component id="StudentIDTF" min="-2" pref="600" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="AcceptButton" min="-2" pref="281" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="RejectButton" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="EndDateTF" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="293" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="reserveStudentID" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="StudentIDTF" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="reserveFirstName" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="FirstNameTF" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="reserveLastName" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="LastNameTF" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="reserveStartDate" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="StartDateTF" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="reserveEndDate" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="EndDateTF" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace pref="33" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AcceptButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="RejectButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="reserveStudentID">
@@ -5396,8 +5482,18 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Student ID"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="25" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="StudentIDTF">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="75" width="600" height="50"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="reserveFirstName">
                   <Properties>
@@ -5406,8 +5502,18 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="First Name"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="143" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="FirstNameTF">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="193" width="600" height="50"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="reserveLastName">
                   <Properties>
@@ -5416,8 +5522,18 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Last Name"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="261" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="LastNameTF">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="311" width="600" height="50"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="reserveStartDate">
                   <Properties>
@@ -5426,8 +5542,18 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Start Date"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="379" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="StartDateTF">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="429" width="600" height="50"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="reserveEndDate">
                   <Properties>
@@ -5436,21 +5562,67 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="End Date"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="497" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="UpdateButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Update"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="540" y="560" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="EndDateTF">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="547" width="600" height="50"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JButton" name="AcceptButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Accept"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="27" y="630" width="281" height="40"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
                 <Component class="javax.swing.JButton" name="RejectButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Reject"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="326" y="630" width="301" height="40"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="AccountLabel5">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Icon &#x25bc;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="AccountLabel5MouseClicked"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="1820" y="60" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
             <Component class="javax.swing.JLabel" name="reservePanelBackground">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

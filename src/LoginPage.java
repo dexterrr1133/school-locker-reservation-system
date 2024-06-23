@@ -26,43 +26,39 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        showPasswordButton = new javax.swing.JButton();
+        ShowHide = new javax.swing.JLabel();
         PasswordField = new javax.swing.JPasswordField();
         EnterStudentIDJField = new javax.swing.JTextField();
         CreateAccBtn = new javax.swing.JButton();
         SignInBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        ForgotPassword = new javax.swing.JLabel();
+        LoginBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        showPasswordButton.setBackground(new java.awt.Color(242, 242, 242));
-        showPasswordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ShowPasswordIcon.png"))); // NOI18N
-        showPasswordButton.setBorder(null);
-        showPasswordButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showPasswordButtonActionPerformed(evt);
+        ShowHide.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ShowHide.setForeground(new java.awt.Color(0, 0, 0));
+        ShowHide.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ShowHide.setText("Show");
+        ShowHide.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ShowHideMouseClicked(evt);
             }
         });
-        jPanel3.add(showPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 600, 100, 40));
+        jPanel3.add(ShowHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(1079, 600, 80, 40));
 
         PasswordField.setBackground(new java.awt.Color(242, 242, 242));
         PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        PasswordField.setText("Password");
+        PasswordField.setText(null);
         PasswordField.setBorder(null);
-        PasswordField.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                PasswordFieldMouseClicked(evt);
-            }
-        });
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordFieldActionPerformed(evt);
             }
         });
-        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 550, 40));
+        jPanel3.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 460, 40));
 
         EnterStudentIDJField.setBackground(new java.awt.Color(242, 242, 242));
         EnterStudentIDJField.setColumns(1);
@@ -94,20 +90,30 @@ public class LoginPage extends javax.swing.JFrame {
         SignInBtn.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
         SignInBtn.setForeground(new java.awt.Color(255, 255, 255));
         SignInBtn.setText("Sign In");
-        SignInBtn.setBorder(null);
         SignInBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SignInBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 740, 280, 60));
+        jPanel3.add(SignInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(888, 740, 280, 60));
 
-        jLabel1.setForeground(new java.awt.Color(49, 112, 143));
-        jLabel1.setText("Forgot Password");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 650, -1, -1));
+        ForgotPassword.setForeground(new java.awt.Color(49, 112, 143));
+        ForgotPassword.setText("Forgot Password");
+        ForgotPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ForgotPasswordMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ForgotPasswordMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ForgotPasswordMouseExited(evt);
+            }
+        });
+        jPanel3.add(ForgotPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 650, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        LoginBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
+        jPanel3.add(LoginBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,26 +150,34 @@ public class LoginPage extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_CreateAccBtnActionPerformed
 
-    private void PasswordFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordFieldMouseClicked
-        PasswordField.setText("");
-    }//GEN-LAST:event_PasswordFieldMouseClicked
-
-    private void showPasswordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordButtonActionPerformed
-        ImageIcon hidePasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\HidePasswordIcon.png");
-        ImageIcon showPasswordIcon = new ImageIcon("C:\\Users\\linus\\Documents\\NetBeansProjects\\school-locker-reservation-system\\src\\img\\ShowPasswordIcon.png");
-        passwordVisible = !passwordVisible; // Toggle the password visibility
-                if (passwordVisible) {
-                    PasswordField.setEchoChar((char) 0);
-                    showPasswordButton.setIcon(hidePasswordIcon);
-                } else {
-                    PasswordField.setEchoChar('*');
-                    showPasswordButton.setIcon(showPasswordIcon);
-                }
-    }//GEN-LAST:event_showPasswordButtonActionPerformed
-
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
         
     }//GEN-LAST:event_PasswordFieldActionPerformed
+
+    private void ShowHideMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShowHideMouseClicked
+        passwordVisible = !passwordVisible; // Toggle the password visibility
+        if (passwordVisible) {
+            PasswordField.setEchoChar((char) 0);
+            ShowHide.setText("Hide");
+        } else {
+            PasswordField.setEchoChar('*');
+            ShowHide.setText("Show");
+        }
+    }//GEN-LAST:event_ShowHideMouseClicked
+
+    private void ForgotPasswordMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotPasswordMouseEntered
+        ForgotPassword.setText("<html><u>" + "Forgot Password" + "</u></html>");
+    }//GEN-LAST:event_ForgotPasswordMouseEntered
+
+    private void ForgotPasswordMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotPasswordMouseExited
+        ForgotPassword.setText("Forgot Password");
+    }//GEN-LAST:event_ForgotPasswordMouseExited
+
+    private void ForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotPasswordMouseClicked
+        ForgotPasswordWindow goToForgotPasswordWindow = new ForgotPasswordWindow();
+        goToForgotPasswordWindow.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ForgotPasswordMouseClicked
     
     public static void setLoggedInStudentId(String studentId) {
         loggedInStudentId = studentId;
@@ -304,12 +318,12 @@ public class LoginPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CreateAccBtn;
     private javax.swing.JTextField EnterStudentIDJField;
+    private javax.swing.JLabel ForgotPassword;
+    private javax.swing.JLabel LoginBackground;
     private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JLabel ShowHide;
     private javax.swing.JButton SignInBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JButton showPasswordButton;
     // End of variables declaration//GEN-END:variables
 
 }

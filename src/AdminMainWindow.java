@@ -46,6 +46,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         ViewLockerText1 = new javax.swing.JLabel();
         LockerIcon1 = new javax.swing.JLabel();
         AccountLabel = new javax.swing.JLabel();
+        GreetingsLabel = new javax.swing.JLabel();
         mainWindowBackground = new javax.swing.JLabel();
         ViewStudent = new javax.swing.JPanel();
         ViewStudentIcon = new javax.swing.JLabel();
@@ -57,6 +58,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         SearchTF = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
         AccountLabel1 = new javax.swing.JLabel();
+        DeleteButton = new javax.swing.JButton();
         ViewStudentBackground = new javax.swing.JLabel();
         SmallLockerPage = new javax.swing.JPanel();
         s1 = new javax.swing.JPanel();
@@ -304,7 +306,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
         reserveStartDate = new javax.swing.JLabel();
         StartDateTF = new javax.swing.JTextField();
         reserveEndDate = new javax.swing.JLabel();
-        UpdateButton = new javax.swing.JButton();
         EndDateTF = new javax.swing.JTextField();
         AcceptButton = new javax.swing.JButton();
         RejectButton = new javax.swing.JButton();
@@ -431,6 +432,12 @@ public class AdminMainWindow extends javax.swing.JFrame {
         });
         MainWindowPanel.add(AccountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
 
+        GreetingsLabel.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 36)); // NOI18N
+        GreetingsLabel.setForeground(new java.awt.Color(255, 255, 255));
+        GreetingsLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        GreetingsLabel.setText("Hi, Admin!");
+        MainWindowPanel.add(GreetingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 40, 510, -1));
+
         mainWindowBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/AdminMainWindowBackground.png"))); // NOI18N
         MainWindowPanel.add(mainWindowBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -453,8 +460,9 @@ public class AdminMainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        Table.setColumnSelectionAllowed(true);
+        Table.setCellSelectionEnabled(false);
         Table.setRowHeight(35);
+        Table.setRowSelectionAllowed(true);
         jScrollPane1.setViewportView(Table);
 
         ViewStudent.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 1780, 730));
@@ -501,6 +509,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
             }
         });
         ViewStudent.add(AccountLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+
+        DeleteButton.setText("Delete");
+        DeleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteButtonActionPerformed(evt);
+            }
+        });
+        ViewStudent.add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1700, 1000, 140, 40));
 
         ViewStudentBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ViewStudent.png"))); // NOI18N
         ViewStudentBackground.setIconTextGap(7);
@@ -3160,9 +3176,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
         reserveEndDate.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         reserveEndDate.setText("End Date");
         DetailsPanel.add(reserveEndDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 497, -1, -1));
-
-        UpdateButton.setText("Update");
-        DetailsPanel.add(UpdateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 560, -1, -1));
         DetailsPanel.add(EndDateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 547, 600, 50));
 
         AcceptButton.setText("Accept");
@@ -3316,6 +3329,16 @@ public class AdminMainWindow extends javax.swing.JFrame {
         returnToLoginPage.setVisible(true);
         dispose();
     }//GEN-LAST:event_LogoutActionPerformed
+
+    private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
+        int confirm = JOptionPane.showConfirmDialog(null,"Are you sure you want to delete this student record?","Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (confirm == JOptionPane.YES_OPTION){
+                    deleteSelectedRow();
+            } else {
+                JOptionPane.showMessageDialog(null, "Action canceled.", "Canceled", JOptionPane.INFORMATION_MESSAGE);
+            }
+        checkAvailableLocker();
+    }//GEN-LAST:event_DeleteButtonActionPerformed
     
     private void setIcons() {
         ImageIcon reservebg = new ImageIcon("src\\img\\ReservationPanelBackground.png");
@@ -3628,30 +3651,36 @@ public class AdminMainWindow extends javax.swing.JFrame {
 
                             String query = "SELECT is_available, is_pending FROM locker WHERE locker_id = '" + clickedLockerId + "'";
                             ResultSet rs = st.executeQuery(query);
+                            
+                            int confirm = JOptionPane.showConfirmDialog(null,"Are you sure you want to accept this reservation?","Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                            if (confirm == JOptionPane.YES_OPTION){
+                                if (rs.next()) {
+                                        boolean isAvailable = rs.getBoolean("is_available");
+                                        boolean isPending = rs.getBoolean("is_pending");
 
-                            if (rs.next()) {
-                                boolean isAvailable = rs.getBoolean("is_available");
-                                boolean isPending = rs.getBoolean("is_pending");
+                                        if (!isAvailable && isPending) {
+                                            // Locker is pending and not available
+                                            String student_Id = StudentIDTF.getText();
+                                            String updateAvailabilityQuery = "UPDATE locker SET is_pending = false WHERE locker_id = '" + clickedLockerId + "'";
+                                            st.executeUpdate(updateAvailabilityQuery);
+                                            String updateAssignedLockerStudent = "UPDATE student SET assigned_locker = '" + clickedLockerId + "' WHERE student_id = '" + student_Id + "'";
+                                            st.executeUpdate(updateAssignedLockerStudent);
+                                            loadData();
+                                            changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
+                                        } else {
+                                            // Locker is neither pending nor available, update to pending and not available
+                                            String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
+                                            st.executeUpdate(updateQuery);
 
-                                if (!isAvailable && isPending) {
-                                    // Locker is pending and not available
-                                    String student_Id = StudentIDTF.getText();
-                                    String updateAvailabilityQuery = "UPDATE locker SET is_pending = false WHERE locker_id = '" + clickedLockerId + "'";
-                                    st.executeUpdate(updateAvailabilityQuery);
-                                    String updateAssignedLockerStudent = "UPDATE student SET assigned_locker = '" + clickedLockerId + "' WHERE student_id = '" + student_Id + "'";
-                                    st.executeUpdate(updateAssignedLockerStudent);
-                                    loadData();
-                                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
-                                } else {
-                                    // Locker is neither pending nor available, update to pending and not available
-                                    String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
-                                    st.executeUpdate(updateQuery);
-                                    
-                                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
-                                }
+                                            changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
+                                        }
+                                    } 
                                 
-                                AcceptButton.setEnabled(false);
-                                RejectButton.setEnabled(false);
+
+                                    AcceptButton.setEnabled(false);
+                                    RejectButton.setEnabled(false);
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Action canceled.", "Canceled", JOptionPane.INFORMATION_MESSAGE);
                             }
 
                             con.close();
@@ -3682,14 +3711,13 @@ public class AdminMainWindow extends javax.swing.JFrame {
                             String query = "SELECT is_available, is_pending FROM locker WHERE locker_id = '" + clickedLockerId + "'";
                             ResultSet rs = st.executeQuery(query);
                             
-                            int confirm = JOptionPane.showConfirmDialog(null,"Are you sure you want to reject this request?","Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                            int confirm = JOptionPane.showConfirmDialog(null,"Are you sure you want to reject this reservation?","Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                             if (confirm == JOptionPane.YES_OPTION){
                                     if (rs.next()) {
                                     boolean isAvailable = rs.getBoolean("is_available");
                                     boolean isPending = rs.getBoolean("is_pending");
 
                                     if (!isAvailable && isPending) {
-                                        String student_Id = StudentIDTF.getText();
                                         String updateAvailabilityQuery = "UPDATE locker SET is_pending = false, is_available = true WHERE locker_id = '" + clickedLockerId + "'";
                                         st.executeUpdate(updateAvailabilityQuery);
                                         String deleteReservationQuery = "DELETE FROM reservation WHERE locker_id = '" + clickedLockerId + "'";
@@ -3756,6 +3784,57 @@ public class AdminMainWindow extends javax.swing.JFrame {
             System.out.println("Error"+e.getMessage());
         }
     }
+    
+    private void deleteSelectedRow() {
+    int selectedRow = Table.getSelectedRow();
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "No row selected", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    
+    String studentId = Table.getValueAt(selectedRow, 0).toString(); // Assuming ID is in column 0
+    String assignedLocker = Table.getValueAt(selectedRow, 4).toString(); // Assuming assigned_locker is in column 4
+
+    
+    try {
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/locker_reservation", "root", "");
+        Statement stmt = con.createStatement();
+
+        
+        String deleteReservationSql = "DELETE FROM reservation WHERE student_id = '" + studentId + "'";
+        int reservationsDeleted = stmt.executeUpdate(deleteReservationSql);
+        
+        String deleteStudentSql = "DELETE FROM student WHERE student_id = '" + studentId + "'";
+        int studentDeleted = stmt.executeUpdate(deleteStudentSql);
+
+        
+        if (studentDeleted > 0) {
+            if (!assignedLocker.equals("-")) {
+                String updateLockerSql = "UPDATE locker SET is_available = 1, is_pending = 0 WHERE locker_id = '" + assignedLocker + "'";
+                int lockerUpdated = stmt.executeUpdate(updateLockerSql);
+                if (lockerUpdated > 0) {
+                    JOptionPane.showMessageDialog(this, "Student record and related data deleted. Locker updated.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Student record deleted. Failed to update locker.", "Warning", JOptionPane.WARNING_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Student record deleted. No locker update needed.", "Success", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            // Update GUI
+            DefaultTableModel model = (DefaultTableModel) Table.getModel();
+            model.removeRow(selectedRow);
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to delete student record", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        con.close();
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "SQL Exception: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        ex.printStackTrace();
+    }
+}
     
     public void changeButtonColorIfLockerNotAvailable(int locker_id, JPanel panel) {
         try {
@@ -3856,9 +3935,11 @@ public class AdminMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel AccountLabel3;
     private javax.swing.JLabel AccountLabel4;
     private javax.swing.JLabel AccountLabel5;
+    private javax.swing.JButton DeleteButton;
     private javax.swing.JPanel DetailsPanel;
     private javax.swing.JTextField EndDateTF;
     private javax.swing.JTextField FirstNameTF;
+    private javax.swing.JLabel GreetingsLabel;
     private javax.swing.JLabel HomeMediumLocker;
     private javax.swing.JPanel L1;
     private javax.swing.JPanel L10;
@@ -3901,7 +3982,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField StartDateTF;
     private javax.swing.JTextField StudentIDTF;
     private javax.swing.JTable Table;
-    private javax.swing.JButton UpdateButton;
     private javax.swing.JPanel ViewLockerPanel;
     private javax.swing.JLabel ViewLockerText;
     private javax.swing.JLabel ViewLockerText1;

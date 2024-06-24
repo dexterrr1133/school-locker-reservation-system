@@ -12,6 +12,7 @@ import java.util.Map;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -24,6 +25,8 @@ public class StudentMainWindow extends javax.swing.JFrame {
         checkAvailableLocker();
         clickedPanel();
         setIcons();
+        autoSetStudentProfileDetails();
+        ConfirmButton.setVisible(false);
     }
 
     
@@ -44,7 +47,22 @@ public class StudentMainWindow extends javax.swing.JFrame {
         Line = new javax.swing.JPanel();
         MainWindowBackground = new javax.swing.JLabel();
         StudentProfilePanel = new javax.swing.JPanel();
-        AccountLabel1 = new javax.swing.JLabel();
+        AccountLabel2 = new javax.swing.JLabel();
+        EditFirstName = new javax.swing.JLabel();
+        EditLastName = new javax.swing.JLabel();
+        EditStudentID = new javax.swing.JLabel();
+        EditCourse = new javax.swing.JLabel();
+        EditEmail = new javax.swing.JLabel();
+        EditMobileNumber = new javax.swing.JLabel();
+        StudentProfFirstName = new javax.swing.JTextField();
+        StudentProfLastName = new javax.swing.JTextField();
+        StudentProfStudentID = new javax.swing.JTextField();
+        StudentProfCourse = new javax.swing.JTextField();
+        StudentProfEmail = new javax.swing.JTextField();
+        StudentProfPhoneNum = new javax.swing.JTextField();
+        ConfirmButton = new javax.swing.JButton();
+        ProfilePicture = new javax.swing.JLabel();
+        BackButton = new javax.swing.JLabel();
         StudentProfileBackground = new javax.swing.JLabel();
         SmallLockerPage = new javax.swing.JPanel();
         s1 = new javax.swing.JPanel();
@@ -147,6 +165,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel161 = new javax.swing.JLabel();
         s49 = new javax.swing.JPanel();
         jLabel163 = new javax.swing.JLabel();
+        AccountLabel3 = new javax.swing.JLabel();
         jLabel164 = new javax.swing.JLabel();
         HomeSmallLocker = new javax.swing.JLabel();
         jLabel166 = new javax.swing.JLabel();
@@ -154,7 +173,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
         smallLockerPage1 = new javax.swing.JLabel();
         smallLockerPage2 = new javax.swing.JLabel();
         smallLockerPage3 = new javax.swing.JLabel();
-        AccountLabel2 = new javax.swing.JLabel();
         smallLockerBackground = new javax.swing.JLabel();
         jLabel168 = new javax.swing.JLabel();
         MediumLockerPage = new javax.swing.JPanel();
@@ -218,6 +236,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel134 = new javax.swing.JLabel();
         m30 = new javax.swing.JPanel();
         jLabel110 = new javax.swing.JLabel();
+        AccountLabel4 = new javax.swing.JLabel();
         mediumLockerPage1 = new javax.swing.JLabel();
         mediumLockerPage2 = new javax.swing.JLabel();
         mediumLockerPage3 = new javax.swing.JLabel();
@@ -225,7 +244,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
         HomeMediumLocker = new javax.swing.JLabel();
         jLabel141 = new javax.swing.JLabel();
         jLabel142 = new javax.swing.JLabel();
-        AccountLabel3 = new javax.swing.JLabel();
         mediumLockerBackground = new javax.swing.JLabel();
         jLabel143 = new javax.swing.JLabel();
         LargeLockerPage = new javax.swing.JPanel();
@@ -269,6 +287,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel121 = new javax.swing.JLabel();
         L20 = new javax.swing.JPanel();
         jLabel118 = new javax.swing.JLabel();
+        AccountLabel5 = new javax.swing.JLabel();
         largeLockerPage1 = new javax.swing.JLabel();
         largeLockerPage2 = new javax.swing.JLabel();
         largeLockerPage3 = new javax.swing.JLabel();
@@ -276,7 +295,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
         HomeLargeLocker = new javax.swing.JLabel();
         jLabel127 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
-        AccountLabel4 = new javax.swing.JLabel();
         largeLockerBackground = new javax.swing.JLabel();
         ConfirmationPanel = new javax.swing.JPanel();
         PaymentDeadline = new javax.swing.JLabel();
@@ -302,7 +320,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         EndDateTF = new javax.swing.JTextField();
         ReserveButton = new javax.swing.JButton();
-        AccountLabel5 = new javax.swing.JLabel();
+        AccountLabel6 = new javax.swing.JLabel();
         reservePanelBackground = new javax.swing.JLabel();
 
         jPopupMenu1.setPreferredSize(new java.awt.Dimension(200, 56));
@@ -336,17 +354,17 @@ public class StudentMainWindow extends javax.swing.JFrame {
         GreetingsLabel.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 36)); // NOI18N
         GreetingsLabel.setForeground(new java.awt.Color(255, 255, 255));
         GreetingsLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        GreetingsLabel.setText("Hi, [Student Name]");
+        GreetingsLabel.setText("Hi, Student!");
         MainWindowPanel.add(GreetingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 40, 510, -1));
 
         AccountLabel.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel.setText("Icon ▼");
+        AccountLabel.setText(" ▼");
         AccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AccountLabelMouseClicked(evt);
             }
         });
-        MainWindowPanel.add(AccountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+        MainWindowPanel.add(AccountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
 
         ViewLockerPanel.setBackground(new java.awt.Color(255, 255, 255));
         ViewLockerPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
@@ -406,16 +424,127 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
         containerPanel.add(MainWindowPanel, "card3");
 
+        StudentProfilePanel.setForeground(new java.awt.Color(0, 0, 0));
         StudentProfilePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        AccountLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel1.setText("Icon ▼");
-        AccountLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        AccountLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel2.setText(" ▼");
+        AccountLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel1MouseClicked(evt);
+                AccountLabel2MouseClicked(evt);
             }
         });
-        StudentProfilePanel.add(AccountLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+        StudentProfilePanel.add(AccountLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
+
+        EditFirstName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditFirstNameMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(EditFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 460, 50, 50));
+
+        EditLastName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditLastNameMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(EditLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 558, 50, 50));
+
+        EditStudentID.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditStudentIDMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(EditStudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 642, 50, 50));
+
+        EditCourse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditCourseMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(EditCourse, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 742, 50, 50));
+
+        EditEmail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditEmailMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(EditEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 840, 50, 50));
+
+        EditMobileNumber.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditMobileNumberMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(EditMobileNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 940, 50, 50));
+
+        StudentProfFirstName.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        StudentProfFirstName.setText("jTextField1");
+        StudentProfFirstName.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        StudentProfFirstName.setEnabled(false);
+        StudentProfFirstName.setMargin(new java.awt.Insets(2, 16, 2, 6));
+        StudentProfilePanel.add(StudentProfFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, 330, 40));
+
+        StudentProfLastName.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        StudentProfLastName.setText("jTextField1");
+        StudentProfLastName.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        StudentProfLastName.setEnabled(false);
+        StudentProfLastName.setMargin(new java.awt.Insets(2, 16, 2, 6));
+        StudentProfilePanel.add(StudentProfLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 550, 330, 40));
+
+        StudentProfStudentID.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        StudentProfStudentID.setText("jTextField1");
+        StudentProfStudentID.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        StudentProfStudentID.setEnabled(false);
+        StudentProfStudentID.setMargin(new java.awt.Insets(2, 16, 2, 6));
+        StudentProfilePanel.add(StudentProfStudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 650, 330, 40));
+
+        StudentProfCourse.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        StudentProfCourse.setText("jTextField1");
+        StudentProfCourse.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        StudentProfCourse.setEnabled(false);
+        StudentProfCourse.setMargin(new java.awt.Insets(2, 16, 2, 6));
+        StudentProfilePanel.add(StudentProfCourse, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 750, 330, 40));
+
+        StudentProfEmail.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        StudentProfEmail.setText("jTextField1");
+        StudentProfEmail.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        StudentProfEmail.setEnabled(false);
+        StudentProfEmail.setMargin(new java.awt.Insets(2, 16, 2, 6));
+        StudentProfilePanel.add(StudentProfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 850, 330, 40));
+
+        StudentProfPhoneNum.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        StudentProfPhoneNum.setText("jTextField1");
+        StudentProfPhoneNum.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        StudentProfPhoneNum.setEnabled(false);
+        StudentProfPhoneNum.setMargin(new java.awt.Insets(2, 16, 2, 6));
+        StudentProfilePanel.add(StudentProfPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 950, 330, 40));
+
+        ConfirmButton.setBackground(new java.awt.Color(53, 64, 142));
+        ConfirmButton.setForeground(new java.awt.Color(255, 255, 255));
+        ConfirmButton.setText("Confirm");
+        ConfirmButton.setFocusPainted(false);
+        ConfirmButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmButtonActionPerformed(evt);
+            }
+        });
+        StudentProfilePanel.add(ConfirmButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 1010, 210, 40));
+
+        ProfilePicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/StudentDetailProfilePic.jpg"))); // NOI18N
+        StudentProfilePanel.add(ProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 200, 250, 250));
+
+        BackButton.setFont(new java.awt.Font("Segoe UI Variable", 1, 24)); // NOI18N
+        BackButton.setForeground(new java.awt.Color(0, 0, 0));
+        BackButton.setText("< Back ");
+        BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BackButtonMouseClicked(evt);
+            }
+        });
+        StudentProfilePanel.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+
+        StudentProfileBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/StudentProfileBackground.png"))); // NOI18N
         StudentProfilePanel.add(StudentProfileBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(StudentProfilePanel, "card8");
@@ -1622,6 +1751,15 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
         SmallLockerPage.add(s49, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 770, 160, 130));
 
+        AccountLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel3.setText(" ▼");
+        AccountLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountLabel3MouseClicked(evt);
+            }
+        });
+        SmallLockerPage.add(AccountLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
+
         jLabel164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Locker.png"))); // NOI18N
         SmallLockerPage.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
@@ -1673,15 +1811,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
             }
         });
         SmallLockerPage.add(smallLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
-
-        AccountLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel2.setText("Icon ▼");
-        AccountLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel2MouseClicked(evt);
-            }
-        });
-        SmallLockerPage.add(AccountLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
 
         smallLockerBackground.setForeground(new java.awt.Color(49, 112, 143));
         SmallLockerPage.add(smallLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -2415,6 +2544,15 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
         MediumLockerPage.add(m30, new org.netbeans.lib.awtextra.AbsoluteConstraints(1580, 710, 160, 220));
 
+        AccountLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel4.setText(" ▼");
+        AccountLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountLabel4MouseClicked(evt);
+            }
+        });
+        MediumLockerPage.add(AccountLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
+
         mediumLockerPage1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
         mediumLockerPage1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mediumLockerPage1.setText("1");
@@ -2466,15 +2604,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel142.setForeground(new java.awt.Color(49, 112, 143));
         jLabel142.setText("Medium Locker");
         MediumLockerPage.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
-
-        AccountLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel3.setText("Icon ▼");
-        AccountLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel3MouseClicked(evt);
-            }
-        });
-        MediumLockerPage.add(AccountLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
         MediumLockerPage.add(mediumLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel143.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
@@ -2965,6 +3094,15 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
         LargeLockerPage.add(L20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1520, 600, 140, 320));
 
+        AccountLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel5.setText(" ▼");
+        AccountLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountLabel5MouseClicked(evt);
+            }
+        });
+        LargeLockerPage.add(AccountLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
+
         largeLockerPage1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
         largeLockerPage1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         largeLockerPage1.setText("1");
@@ -3016,15 +3154,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
         jLabel128.setForeground(new java.awt.Color(49, 112, 143));
         jLabel128.setText("Large Locker");
         LargeLockerPage.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
-
-        AccountLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel4.setText("Icon ▼");
-        AccountLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel4MouseClicked(evt);
-            }
-        });
-        LargeLockerPage.add(AccountLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
         LargeLockerPage.add(largeLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(LargeLockerPage, "card6");
@@ -3150,14 +3279,14 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
         ReservationPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 920, 720));
 
-        AccountLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel5.setText("Icon ▼");
-        AccountLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        AccountLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel6.setText(" ▼");
+        AccountLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel5MouseClicked(evt);
+                AccountLabel6MouseClicked(evt);
             }
         });
-        ReservationPanel.add(AccountLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+        ReservationPanel.add(AccountLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
         ReservationPanel.add(reservePanelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(ReservationPanel, "card8");
@@ -3256,9 +3385,88 @@ public class StudentMainWindow extends javax.swing.JFrame {
         containerPanel.revalidate();
     }//GEN-LAST:event_AccountSettingsActionPerformed
 
-    private void AccountLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel1MouseClicked
-        jPopupMenu1.show(AccountLabel1, 500, 30);
-    }//GEN-LAST:event_AccountLabel1MouseClicked
+    private void EditFirstNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditFirstNameMouseClicked
+        ConfirmButton.setVisible(true);
+        StudentProfFirstName.setEnabled(true);
+    }//GEN-LAST:event_EditFirstNameMouseClicked
+
+    private void EditLastNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditLastNameMouseClicked
+        ConfirmButton.setVisible(true);
+        StudentProfLastName.setEnabled(true);
+    }//GEN-LAST:event_EditLastNameMouseClicked
+
+    private void EditStudentIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditStudentIDMouseClicked
+        ConfirmButton.setVisible(true);
+        StudentProfStudentID.setEnabled(true);
+    }//GEN-LAST:event_EditStudentIDMouseClicked
+
+    private void EditCourseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditCourseMouseClicked
+        ConfirmButton.setVisible(true);
+        StudentProfCourse.setEnabled(true);
+    }//GEN-LAST:event_EditCourseMouseClicked
+
+    private void EditEmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditEmailMouseClicked
+        ConfirmButton.setVisible(true);
+        StudentProfEmail.setEnabled(true);
+    }//GEN-LAST:event_EditEmailMouseClicked
+
+    private void EditMobileNumberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMobileNumberMouseClicked
+        ConfirmButton.setVisible(true);
+        StudentProfPhoneNum.setEnabled(true);
+    }//GEN-LAST:event_EditMobileNumberMouseClicked
+
+    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
+        ConfirmButton.setVisible(false);
+        StudentProfFirstName.setEnabled(false);
+        StudentProfLastName.setEnabled(false);
+        StudentProfStudentID.setEnabled(false);
+        StudentProfCourse.setEnabled(false);
+        StudentProfEmail.setEnabled(false);
+        StudentProfPhoneNum.setEnabled(false);
+        
+        int notFound = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:MySQL://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+            
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+            
+            LoginPage studentId = new LoginPage();
+            String ID = studentId.getLoggedInStudentId();
+            System.out.print(ID);
+            
+            if("".equals(ID)){
+                JOptionPane.showMessageDialog(new JFrame(), "ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                String sql = "SELECT * FROM student WHERE student_id = '" + ID + "'";;
+                ResultSet rs = st.executeQuery(sql);
+                while(rs.next()){
+                    notFound = 1;
+                    String first_name = StudentProfFirstName.getText();
+                    String last_name = StudentProfLastName.getText();
+                    String student_id = StudentProfStudentID.getText();
+                    String course = StudentProfCourse.getText();
+                    String email = StudentProfEmail.getText();
+                    String phone_num = StudentProfPhoneNum.getText();
+                    
+                    String sql2 = "UPDATE student SET first_name='" + first_name + "', last_name='" + last_name + "', student_id='" + student_id + "', program='" + course + "', email='" + email + "', phone_num='" + phone_num + "' WHERE student_id='" + ID + "'";
+                    st.executeUpdate(sql2);
+                    
+                    showMessageDialog(new JFrame(), "Successfully updated.", "Dialog" , JOptionPane.INFORMATION_MESSAGE);
+                }
+                if(notFound==0){
+                    JOptionPane.showMessageDialog(new JFrame(), "Error", "Dialog", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            con.close();
+        }catch(Exception e){
+            System.out.println("Error "+ e.getMessage());
+        }
+    }//GEN-LAST:event_ConfirmButtonActionPerformed
 
     private void AccountLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel2MouseClicked
         jPopupMenu1.show(AccountLabel2, 500, 30);
@@ -3275,6 +3483,17 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private void AccountLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel5MouseClicked
         jPopupMenu1.show(AccountLabel5, 500, 30);
     }//GEN-LAST:event_AccountLabel5MouseClicked
+
+    private void AccountLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel6MouseClicked
+        jPopupMenu1.show(AccountLabel6, 500, 30);
+    }//GEN-LAST:event_AccountLabel6MouseClicked
+
+    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
+        containerPanel.removeAll();
+        containerPanel.add(MainWindowPanel);
+        containerPanel.repaint();
+        containerPanel.revalidate();
+    }//GEN-LAST:event_BackButtonMouseClicked
 
     private void lockerAssignment() {
         lockers.put(1, s1);
@@ -3386,6 +3605,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         ImageIcon biglockerBackground = new ImageIcon("src\\img\\LargeLockerBackground.png");
         ImageIcon reserveicon = new ImageIcon("src\\img\\ReserveIcon.png");
         ImageIcon studentProfileBackground = new ImageIcon("src\\img\\StudentProfileBackground.png");
+        ImageIcon profileIcon = new ImageIcon("src\\img\\ProfileIcon.jpg");
         
         reservePanelBackground.setIcon(reservebg);
         smallLockerBackground.setIcon(smalllockerBackground);
@@ -3393,6 +3613,12 @@ public class StudentMainWindow extends javax.swing.JFrame {
         largeLockerBackground.setIcon(biglockerBackground);
         ReserveIcon.setIcon(reserveicon);
         StudentProfileBackground.setIcon(studentProfileBackground);
+        AccountLabel.setIcon(profileIcon);
+        AccountLabel2.setIcon(profileIcon);
+        AccountLabel3.setIcon(profileIcon);
+        AccountLabel4.setIcon(profileIcon);
+        AccountLabel5.setIcon(profileIcon);
+        AccountLabel6.setIcon(profileIcon);
     }
     
     private void setAutomaticallyStudentIDTextField(){
@@ -3565,6 +3791,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
                                     String updateAssignedLockerStudent = "UPDATE student SET assigned_locker = '" + clickedLockerId + " (Pending)" + "' WHERE student_id = '" + student_Id + "'";
                                     st.executeUpdate(updateAssignedLockerStudent);
                                     
+                                    setPriceLocker(clickedLockerId);
                                     PaymentDeadline.setText("Payment Deadline: " + payment_deadline);
                                     
                                     containerPanel.removeAll();
@@ -3645,6 +3872,42 @@ public class StudentMainWindow extends javax.swing.JFrame {
         }
     }
     
+        public void autoSetStudentProfileDetails() {
+        int notFound = 0;
+        
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:MySQL://localhost:3306/locker_reservation";
+            String user = "root";
+            String pass = "";
+            
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+            
+            
+            LoginPage studentId = new LoginPage();
+            String student_Id = studentId.getLoggedInStudentId();
+            
+            String sql = "SELECT * FROM student WHERE student_id ='" + student_Id+"'";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                StudentProfFirstName.setText(rs.getString("first_name"));
+                StudentProfLastName.setText(rs.getString("last_name"));
+                StudentProfStudentID.setText(rs.getString("student_id"));
+                StudentProfCourse.setText(rs.getString("program"));
+                StudentProfEmail.setText(rs.getString("email"));
+                StudentProfPhoneNum.setText(rs.getString("phone_num"));
+                notFound = 1;
+            }if(notFound==0){
+                    JOptionPane.showMessageDialog(new JFrame(), "Error", "WARNING", JOptionPane.ERROR_MESSAGE);
+            }
+            con.close();
+                
+        }catch(Exception e){
+            System.out.println("Error "+ e.getMessage());
+        }
+    }
+    
     public static String getTodaysDateAsString() {
         Date today = new Date(); 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -3675,8 +3938,17 @@ public class StudentMainWindow extends javax.swing.JFrame {
       return sdf.format(calendar.getTime()); // Format and return the new date
     }
     
-    private void setPriceLocker(){
-        
+    private void setPriceLocker(int clickedLockerId){
+        if (clickedLockerId <= 50){
+            LockerNumberSize.setText("Locker Number "+ clickedLockerId +" (Small)");
+            LockerPrice.setText("Price: ₱200.00");
+        } else if(clickedLockerId > 50 && clickedLockerId <= 80){
+            LockerNumberSize.setText("Locker Number "+ clickedLockerId +" (Medium)");
+            LockerPrice.setText("Price: ₱350.00");
+        } else {
+            LockerNumberSize.setText("Locker Number "+ clickedLockerId +" (Large)");
+            LockerPrice.setText("Price: ₱450.00");
+        }
     }
     
     public void setLockerOwnerDetails(int lockerId){
@@ -3726,14 +3998,22 @@ public class StudentMainWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AccountLabel;
-    private javax.swing.JLabel AccountLabel1;
     private javax.swing.JLabel AccountLabel2;
     private javax.swing.JLabel AccountLabel3;
     private javax.swing.JLabel AccountLabel4;
     private javax.swing.JLabel AccountLabel5;
+    private javax.swing.JLabel AccountLabel6;
     private javax.swing.JMenuItem AccountSettings;
+    private javax.swing.JLabel BackButton;
     private javax.swing.JLabel ConfimationBackground;
+    private javax.swing.JButton ConfirmButton;
     private javax.swing.JPanel ConfirmationPanel;
+    private javax.swing.JLabel EditCourse;
+    private javax.swing.JLabel EditEmail;
+    private javax.swing.JLabel EditFirstName;
+    private javax.swing.JLabel EditLastName;
+    private javax.swing.JLabel EditMobileNumber;
+    private javax.swing.JLabel EditStudentID;
     private javax.swing.JTextField EndDateTF;
     private javax.swing.JTextField FirstNameTF;
     private javax.swing.JLabel GreetingsLabel;
@@ -3774,12 +4054,19 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel MediumLockerPage;
     private javax.swing.JLabel PaymentDeadline;
     private javax.swing.JLabel PaymentDeadline1;
+    private javax.swing.JLabel ProfilePicture;
     private javax.swing.JPanel ReservationPanel;
     private javax.swing.JButton ReserveButton;
     private javax.swing.JLabel ReserveIcon;
     private javax.swing.JPanel SmallLockerPage;
     private javax.swing.JTextField StartDateTF;
     private javax.swing.JTextField StudentIDTF;
+    private javax.swing.JTextField StudentProfCourse;
+    private javax.swing.JTextField StudentProfEmail;
+    private javax.swing.JTextField StudentProfFirstName;
+    private javax.swing.JTextField StudentProfLastName;
+    private javax.swing.JTextField StudentProfPhoneNum;
+    private javax.swing.JTextField StudentProfStudentID;
     private javax.swing.JLabel StudentProfileBackground;
     private javax.swing.JPanel StudentProfilePanel;
     private javax.swing.JPanel ViewLockerPanel;

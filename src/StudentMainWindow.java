@@ -45,6 +45,8 @@ public class StudentMainWindow extends javax.swing.JFrame {
         ViewLockerText = new javax.swing.JLabel();
         LockerIcon = new javax.swing.JLabel();
         Line = new javax.swing.JPanel();
+        Exclamation = new javax.swing.JLabel();
+        Notice = new javax.swing.JLabel();
         MainWindowBackground = new javax.swing.JLabel();
         StudentProfilePanel = new javax.swing.JPanel();
         AccountLabel2 = new javax.swing.JLabel();
@@ -418,6 +420,21 @@ public class StudentMainWindow extends javax.swing.JFrame {
         );
 
         MainWindowPanel.add(Line, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 1400, 10));
+
+        Exclamation.setBackground(new java.awt.Color(255, 0, 0));
+        Exclamation.setFont(new java.awt.Font("Segoe UI Variable", 1, 36)); // NOI18N
+        Exclamation.setForeground(new java.awt.Color(255, 255, 255));
+        Exclamation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Exclamation.setText("!");
+        Exclamation.setOpaque(true);
+        MainWindowPanel.add(Exclamation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 142, 40, 40));
+
+        Notice.setBackground(new java.awt.Color(255, 0, 0));
+        Notice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Notice.setForeground(new java.awt.Color(255, 255, 255));
+        Notice.setText("jLabel1");
+        Notice.setOpaque(true);
+        MainWindowPanel.add(Notice, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 142, 1880, 40));
 
         MainWindowBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/StudentMainWindow.png"))); // NOI18N
         MainWindowPanel.add(MainWindowBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -3804,7 +3821,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
                                     Timer timer = new Timer(100000, new ActionListener() {
                                     @Override
                                     public void actionPerformed(ActionEvent e) {
-                                        // After 1 minute, show the LoginPage
                                         LoginPage returnToLoginPage = new LoginPage();
                                         returnToLoginPage.setVisible(true);
                                         dispose();
@@ -3872,7 +3888,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
         }
     }
     
-        public void autoSetStudentProfileDetails() {
+    public void autoSetStudentProfileDetails() {
         int notFound = 0;
         
         try{
@@ -3897,6 +3913,18 @@ public class StudentMainWindow extends javax.swing.JFrame {
                 StudentProfCourse.setText(rs.getString("program"));
                 StudentProfEmail.setText(rs.getString("email"));
                 StudentProfPhoneNum.setText(rs.getString("phone_num"));
+                String verifiedOwner = rs.getString("assigned_locker");
+                String firstname = StudentProfFirstName.getText();
+                
+                GreetingsLabel.setText("Hi, "+ firstname +"!");
+                if (!(verifiedOwner.contains("-"))){
+                    Notice.setText("Hi "+ firstname +", your locker number is " + verifiedOwner + ".");
+                    Notice.setVisible(true);
+                    Exclamation.setVisible(true);
+                } else {
+                    Notice.setVisible(false);
+                    Exclamation.setVisible(false);
+                }
                 notFound = 1;
             }if(notFound==0){
                     JOptionPane.showMessageDialog(new JFrame(), "Error", "WARNING", JOptionPane.ERROR_MESSAGE);
@@ -3966,8 +3994,6 @@ public class StudentMainWindow extends javax.swing.JFrame {
             
             LoginPage studentId = new LoginPage();
             String student_Id = studentId.getLoggedInStudentId();
-            String startDate = getTodaysDateAsString();
-            String endDate = getDateAfterAddingMonths(3);
             
             String sql = "SELECT * FROM reservation WHERE locker_id ='" + lockerId+"'";
             ResultSet rs = st.executeQuery(sql);
@@ -3975,8 +4001,8 @@ public class StudentMainWindow extends javax.swing.JFrame {
                 StudentIDTF.setText(rs.getString("student_id"));
                 FirstNameTF.setText(rs.getString("first_name"));
                 LastNameTF.setText(rs.getString("last_name"));
-                StartDateTF.setText(startDate);
-                EndDateTF.setText(endDate);
+                StartDateTF.setText(rs.getString("start_date"));
+                EndDateTF.setText(rs.getString("end_date"));
                 notFound = 1;
             }if(notFound==0){
                     JOptionPane.showMessageDialog(new JFrame(), "Error", "WARNING", JOptionPane.ERROR_MESSAGE);
@@ -4015,6 +4041,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel EditMobileNumber;
     private javax.swing.JLabel EditStudentID;
     private javax.swing.JTextField EndDateTF;
+    private javax.swing.JLabel Exclamation;
     private javax.swing.JTextField FirstNameTF;
     private javax.swing.JLabel GreetingsLabel;
     private javax.swing.JLabel HomeLargeLocker;
@@ -4052,6 +4079,7 @@ public class StudentMainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel MainWindowBackground;
     private javax.swing.JPanel MainWindowPanel;
     private javax.swing.JPanel MediumLockerPage;
+    private javax.swing.JLabel Notice;
     private javax.swing.JLabel PaymentDeadline;
     private javax.swing.JLabel PaymentDeadline1;
     private javax.swing.JLabel ProfilePicture;

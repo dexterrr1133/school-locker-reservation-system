@@ -45,10 +45,11 @@ public class AdminMainWindow extends javax.swing.JFrame {
         ViewStudentPanel = new javax.swing.JPanel();
         ViewLockerText1 = new javax.swing.JLabel();
         LockerIcon1 = new javax.swing.JLabel();
-        AccountLabel = new javax.swing.JLabel();
         GreetingsLabel = new javax.swing.JLabel();
+        AccountLabel = new javax.swing.JLabel();
         mainWindowBackground = new javax.swing.JLabel();
         ViewStudent = new javax.swing.JPanel();
+        AccountLabel3 = new javax.swing.JLabel();
         ViewStudentIcon = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
@@ -57,7 +58,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
         ViewStudentLabel = new javax.swing.JLabel();
         SearchTF = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
-        AccountLabel1 = new javax.swing.JLabel();
         DeleteButton = new javax.swing.JButton();
         ViewStudentBackground = new javax.swing.JLabel();
         SmallLockerPage = new javax.swing.JPanel();
@@ -161,6 +161,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         jLabel161 = new javax.swing.JLabel();
         s49 = new javax.swing.JPanel();
         jLabel163 = new javax.swing.JLabel();
+        AccountLabel2 = new javax.swing.JLabel();
         smallLockerIcon = new javax.swing.JLabel();
         smallLockerHomeLabel = new javax.swing.JLabel();
         smallLockerArrow = new javax.swing.JLabel();
@@ -168,7 +169,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
         smallLockerPage1 = new javax.swing.JLabel();
         smallLockerPage2 = new javax.swing.JLabel();
         smallLockerPage3 = new javax.swing.JLabel();
-        AccountLabel2 = new javax.swing.JLabel();
         smallLockerBackground = new javax.swing.JLabel();
         MediumLockerPage = new javax.swing.JPanel();
         m1 = new javax.swing.JPanel();
@@ -238,7 +238,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         HomeMediumLocker = new javax.swing.JLabel();
         mediumLockerArrow = new javax.swing.JLabel();
         mediumLockerLabel = new javax.swing.JLabel();
-        AccountLabel3 = new javax.swing.JLabel();
+        AccountLabel4 = new javax.swing.JLabel();
         mediumLockerBackground = new javax.swing.JLabel();
         LargeLockerPage = new javax.swing.JPanel();
         L1 = new javax.swing.JPanel();
@@ -288,7 +288,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         largeLockerHomeLabel = new javax.swing.JLabel();
         largeLockerArrow = new javax.swing.JLabel();
         largeLockerLabel = new javax.swing.JLabel();
-        AccountLabel4 = new javax.swing.JLabel();
+        AccountLabel5 = new javax.swing.JLabel();
         largeLockerBackground = new javax.swing.JLabel();
         ReservationPanel = new javax.swing.JPanel();
         ReservePanelIcon = new javax.swing.JLabel();
@@ -309,7 +309,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         EndDateTF = new javax.swing.JTextField();
         AcceptButton = new javax.swing.JButton();
         RejectButton = new javax.swing.JButton();
-        AccountLabel5 = new javax.swing.JLabel();
+        AccountLabel6 = new javax.swing.JLabel();
         reservePanelBackground = new javax.swing.JLabel();
 
         jPopupMenu1.setPreferredSize(new java.awt.Dimension(200, 48));
@@ -423,20 +423,20 @@ public class AdminMainWindow extends javax.swing.JFrame {
 
         MainWindowPanel.add(ViewStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 430, 190));
 
-        AccountLabel.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel.setText("Icon ▼");
-        AccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabelMouseClicked(evt);
-            }
-        });
-        MainWindowPanel.add(AccountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
-
         GreetingsLabel.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 36)); // NOI18N
         GreetingsLabel.setForeground(new java.awt.Color(255, 255, 255));
         GreetingsLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         GreetingsLabel.setText("Hi, Admin!");
         MainWindowPanel.add(GreetingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 40, 510, -1));
+
+        AccountLabel.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel.setText(" ▼");
+        AccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountLabelMouseClicked(evt);
+            }
+        });
+        MainWindowPanel.add(AccountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
 
         mainWindowBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/AdminMainWindowBackground.png"))); // NOI18N
         MainWindowPanel.add(mainWindowBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -444,6 +444,15 @@ public class AdminMainWindow extends javax.swing.JFrame {
         containerPanel.add(MainWindowPanel, "card3");
 
         ViewStudent.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        AccountLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel3.setText(" ▼");
+        AccountLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountLabel3MouseClicked(evt);
+            }
+        });
+        ViewStudent.add(AccountLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
 
         ViewStudentIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/student page.png"))); // NOI18N
         ViewStudent.add(ViewStudentIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
@@ -491,6 +500,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         });
         ViewStudent.add(SearchTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1635, 210, 130, 30));
 
+        SearchButton.setBackground(new java.awt.Color(53, 64, 142));
         SearchButton.setText("Search");
         SearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -499,15 +509,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
         });
         ViewStudent.add(SearchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1769, 210, 80, -1));
 
-        AccountLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel1.setText("Icon ▼");
-        AccountLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel1MouseClicked(evt);
-            }
-        });
-        ViewStudent.add(AccountLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
-
+        DeleteButton.setBackground(new java.awt.Color(53, 64, 142));
         DeleteButton.setText("Delete");
         DeleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1724,6 +1726,15 @@ public class AdminMainWindow extends javax.swing.JFrame {
 
         SmallLockerPage.add(s49, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 770, 160, 130));
 
+        AccountLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel2.setText(" ▼");
+        AccountLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountLabel2MouseClicked(evt);
+            }
+        });
+        SmallLockerPage.add(AccountLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
+
         smallLockerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Locker.png"))); // NOI18N
         SmallLockerPage.add(smallLockerIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
@@ -1775,15 +1786,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
             }
         });
         SmallLockerPage.add(smallLockerPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 960, 50, 70));
-
-        AccountLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel2.setText("Icon ▼");
-        AccountLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel2MouseClicked(evt);
-            }
-        });
-        SmallLockerPage.add(AccountLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
         SmallLockerPage.add(smallLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(SmallLockerPage, "card6");
@@ -2562,14 +2564,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
         mediumLockerLabel.setText("Medium Locker");
         MediumLockerPage.add(mediumLockerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
-        AccountLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel3.setText("Icon ▼");
-        AccountLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        AccountLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel4.setText(" ▼");
+        AccountLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel3MouseClicked(evt);
+                AccountLabel4MouseClicked(evt);
             }
         });
-        MediumLockerPage.add(AccountLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+        MediumLockerPage.add(AccountLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
         MediumLockerPage.add(mediumLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(MediumLockerPage, "card6");
@@ -3108,14 +3110,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
         largeLockerLabel.setText("Large Locker");
         LargeLockerPage.add(largeLockerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 40));
 
-        AccountLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel4.setText("Icon ▼");
-        AccountLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        AccountLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel5.setText(" ▼");
+        AccountLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel4MouseClicked(evt);
+                AccountLabel5MouseClicked(evt);
             }
         });
-        LargeLockerPage.add(AccountLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+        LargeLockerPage.add(AccountLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
         LargeLockerPage.add(largeLockerBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(LargeLockerPage, "card6");
@@ -3184,14 +3186,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
 
         ReservationPanel.add(DetailsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 920, 670));
 
-        AccountLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        AccountLabel5.setText("Icon ▼");
-        AccountLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        AccountLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        AccountLabel6.setText(" ▼");
+        AccountLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AccountLabel5MouseClicked(evt);
+                AccountLabel6MouseClicked(evt);
             }
         });
-        ReservationPanel.add(AccountLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1820, 60, -1, -1));
+        ReservationPanel.add(AccountLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 40, 70, 60));
         ReservationPanel.add(reservePanelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         containerPanel.add(ReservationPanel, "card8");
@@ -3298,30 +3300,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
         searchTable();
     }//GEN-LAST:event_SearchButtonActionPerformed
 
-    private void AccountLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabelMouseClicked
-        jPopupMenu1.show(AccountLabel, 500, 30);
-    }//GEN-LAST:event_AccountLabelMouseClicked
-
-    private void AccountLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel1MouseClicked
-        jPopupMenu1.show(AccountLabel1, 500, 30);
-    }//GEN-LAST:event_AccountLabel1MouseClicked
-
-    private void AccountLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel2MouseClicked
-        jPopupMenu1.show(AccountLabel2, 500, 30);
-    }//GEN-LAST:event_AccountLabel2MouseClicked
-
-    private void AccountLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel3MouseClicked
-        jPopupMenu1.show(AccountLabel3, 500, 30);
-    }//GEN-LAST:event_AccountLabel3MouseClicked
-
-    private void AccountLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel4MouseClicked
-        jPopupMenu1.show(AccountLabel4, 500, 30);
-    }//GEN-LAST:event_AccountLabel4MouseClicked
-
-    private void AccountLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel5MouseClicked
-        jPopupMenu1.show(AccountLabel5, 500, 30);
-    }//GEN-LAST:event_AccountLabel5MouseClicked
-
     private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
         LoginPage returnToLoginPage = new LoginPage();
         returnToLoginPage.setVisible(true);
@@ -3337,6 +3315,30 @@ public class AdminMainWindow extends javax.swing.JFrame {
             }
         checkAvailableLocker();
     }//GEN-LAST:event_DeleteButtonActionPerformed
+
+    private void AccountLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabelMouseClicked
+        jPopupMenu1.show(AccountLabel, 500, 30);
+    }//GEN-LAST:event_AccountLabelMouseClicked
+
+    private void AccountLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel3MouseClicked
+        jPopupMenu1.show(AccountLabel3, 500, 30);
+    }//GEN-LAST:event_AccountLabel3MouseClicked
+
+    private void AccountLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel2MouseClicked
+        jPopupMenu1.show(AccountLabel2, 500, 30);
+    }//GEN-LAST:event_AccountLabel2MouseClicked
+
+    private void AccountLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel4MouseClicked
+        jPopupMenu1.show(AccountLabel4, 500, 30);
+    }//GEN-LAST:event_AccountLabel4MouseClicked
+
+    private void AccountLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel5MouseClicked
+        jPopupMenu1.show(AccountLabel5, 500, 30);
+    }//GEN-LAST:event_AccountLabel5MouseClicked
+
+    private void AccountLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabel6MouseClicked
+        jPopupMenu1.show(AccountLabel6, 500, 30);
+    }//GEN-LAST:event_AccountLabel6MouseClicked
     
     private void setIcons() {
         ImageIcon reservebg = new ImageIcon("src\\img\\ReservationPanelBackground.png");
@@ -3344,12 +3346,19 @@ public class AdminMainWindow extends javax.swing.JFrame {
         ImageIcon mediumlockerBackground = new ImageIcon("src\\img\\MediumLockerBackground.png");
         ImageIcon biglockerBackground = new ImageIcon("src\\img\\LargeLockerBackground.png");
         ImageIcon reserveicon = new ImageIcon("src\\img\\ReserveIcon.png");
+        ImageIcon profileIcon = new ImageIcon("src\\img\\ProfileIcon.jpg");
         
         reservePanelBackground.setIcon(reservebg);
         smallLockerBackground.setIcon(smalllockerBackground);
         mediumLockerBackground.setIcon(mediumlockerBackground);
         largeLockerBackground.setIcon(biglockerBackground);
         ReservePanelIcon.setIcon(reserveicon);
+        AccountLabel.setIcon(profileIcon);
+        AccountLabel2.setIcon(profileIcon);
+        AccountLabel3.setIcon(profileIcon);
+        AccountLabel4.setIcon(profileIcon);
+        AccountLabel5.setIcon(profileIcon);
+        AccountLabel6.setIcon(profileIcon);
     }
     
     private void displayOnlyReservationTextField(){
@@ -3554,7 +3563,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(url, user, pass);
             Statement st = con.createStatement();
             
-            
             LoginPage studentId = new LoginPage();
             String student_Id = studentId.getLoggedInStudentId();
             String startDate = getTodaysDateAsString();
@@ -3590,17 +3598,14 @@ public class AdminMainWindow extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(url, user, pass);
             Statement st = con.createStatement();
             
-            String startDate = getTodaysDateAsString();
-            String endDate = getDateAfterAddingMonths(3);
-            
             String sql = "SELECT * FROM reservation WHERE locker_id ='" + lockerId+"'";
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 StudentIDTF.setText(rs.getString("student_id"));
                 FirstNameTF.setText(rs.getString("first_name"));
                 LastNameTF.setText(rs.getString("last_name"));
-                StartDateTF.setText(startDate);
-                EndDateTF.setText(endDate);
+                StartDateTF.setText(rs.getString("start_date"));
+                EndDateTF.setText(rs.getString("end_date"));
                 notFound = 1;
             }if(notFound==0){
                     JOptionPane.showMessageDialog(new JFrame(), "Error", "WARNING", JOptionPane.ERROR_MESSAGE);
@@ -3657,7 +3662,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
                                         boolean isPending = rs.getBoolean("is_pending");
 
                                         if (!isAvailable && isPending) {
-                                            // Locker is pending and not available
                                             String student_Id = StudentIDTF.getText();
                                             String updateAvailabilityQuery = "UPDATE locker SET is_pending = false WHERE locker_id = '" + clickedLockerId + "'";
                                             st.executeUpdate(updateAvailabilityQuery);
@@ -3666,7 +3670,6 @@ public class AdminMainWindow extends javax.swing.JFrame {
                                             loadData();
                                             changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
                                         } else {
-                                            // Locker is neither pending nor available, update to pending and not available
                                             String updateQuery = "UPDATE locker SET is_pending = true, is_available = false WHERE locker_id = '" + clickedLockerId + "'";
                                             st.executeUpdate(updateQuery);
 
@@ -3794,44 +3797,48 @@ public class AdminMainWindow extends javax.swing.JFrame {
     String studentId = Table.getValueAt(selectedRow, 0).toString(); // Assuming ID is in column 0
     String assignedLocker = Table.getValueAt(selectedRow, 4).toString(); // Assuming assigned_locker is in column 4
 
-    
-    try {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/locker_reservation", "root", "");
-        Statement stmt = con.createStatement();
+        
+            try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/locker_reservation", "root", "");
+            Statement stmt = con.createStatement();
 
-        
-        String deleteReservationSql = "DELETE FROM reservation WHERE student_id = '" + studentId + "'";
-        int reservationsDeleted = stmt.executeUpdate(deleteReservationSql);
-        
-        String deleteStudentSql = "DELETE FROM student WHERE student_id = '" + studentId + "'";
-        int studentDeleted = stmt.executeUpdate(deleteStudentSql);
+            String deleteReservationSql = "DELETE FROM reservation WHERE student_id = '" + studentId + "'";
+            int reservationsDeleted = stmt.executeUpdate(deleteReservationSql);
 
-        
-        if (studentDeleted > 0) {
-            if (!assignedLocker.equals("-")) {
-                String updateLockerSql = "UPDATE locker SET is_available = 1, is_pending = 0 WHERE locker_id = '" + assignedLocker + "'";
-                int lockerUpdated = stmt.executeUpdate(updateLockerSql);
-                if (lockerUpdated > 0) {
-                    JOptionPane.showMessageDialog(this, "Student record and related data deleted. Locker updated.", "Success", JOptionPane.INFORMATION_MESSAGE);
+            String deleteStudentSql = "DELETE FROM student WHERE student_id = '" + studentId + "'";
+            int studentDeleted = stmt.executeUpdate(deleteStudentSql);
+            
+            if (studentDeleted > 0) {
+                if (!assignedLocker.equals("-")) {
+                    String assignedLockerNumberTruncate = assignedLocker.substring(0,1);
+                    String updateLockerSql = "UPDATE locker SET is_available = 1, is_pending = 0 WHERE locker_id = '" + assignedLockerNumberTruncate + "'";
+                    int lockerUpdated = stmt.executeUpdate(updateLockerSql);
+                    for (Map.Entry<Integer, JPanel> entry : lockers.entrySet()) {
+                    Integer clickedLockerId = entry.getKey();
+                    JPanel panel = entry.getValue();
+                    changeButtonColorIfLockerNotAvailable(clickedLockerId, panel);
+                    }
+                    if (lockerUpdated > 0) {
+                        JOptionPane.showMessageDialog(this, "Student record and related data deleted. Locker updated.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Student record deleted. Failed to update locker.", "Warning", JOptionPane.WARNING_MESSAGE);
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Student record deleted. Failed to update locker.", "Warning", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Student record deleted. No locker update needed.", "Success", JOptionPane.INFORMATION_MESSAGE);
                 }
+
+                // Update GUI
+                DefaultTableModel model = (DefaultTableModel) Table.getModel();
+                model.removeRow(selectedRow);
             } else {
-                JOptionPane.showMessageDialog(this, "Student record deleted. No locker update needed.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Failed to delete student record", "Error", JOptionPane.ERROR_MESSAGE);
             }
 
-            // Update GUI
-            DefaultTableModel model = (DefaultTableModel) Table.getModel();
-            model.removeRow(selectedRow);
-        } else {
-            JOptionPane.showMessageDialog(this, "Failed to delete student record", "Error", JOptionPane.ERROR_MESSAGE);
+            con.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "SQL Exception: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
         }
-
-        con.close();
-    } catch (SQLException ex) {
-        JOptionPane.showMessageDialog(this, "SQL Exception: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        ex.printStackTrace();
-    }
 }
     
     public void changeButtonColorIfLockerNotAvailable(int locker_id, JPanel panel) {
@@ -3928,11 +3935,11 @@ public class AdminMainWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AcceptButton;
     private javax.swing.JLabel AccountLabel;
-    private javax.swing.JLabel AccountLabel1;
     private javax.swing.JLabel AccountLabel2;
     private javax.swing.JLabel AccountLabel3;
     private javax.swing.JLabel AccountLabel4;
     private javax.swing.JLabel AccountLabel5;
+    private javax.swing.JLabel AccountLabel6;
     private javax.swing.JButton DeleteButton;
     private javax.swing.JPanel DetailsPanel;
     private javax.swing.JTextField EndDateTF;

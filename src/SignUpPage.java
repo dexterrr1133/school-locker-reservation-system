@@ -122,7 +122,7 @@ public class SignUpPage extends javax.swing.JFrame {
 
         ProgramCourseTF.setBackground(new java.awt.Color(242, 242, 242));
         ProgramCourseTF.setForeground(new java.awt.Color(153, 153, 153));
-        ProgramCourseTF.setText("Enter Program and Course");
+        ProgramCourseTF.setText("Enter Program and Course e.g. SECA - BSCS");
         ProgramCourseTF.setBorder(null);
         ProgramCourseTF.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -208,6 +208,14 @@ public class SignUpPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "First Name is required", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if ("".equals(LastNameTF.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Last Name is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if ("".equals(StudentIDTF.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if ("".equals(ProgramCourseTF.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Program and Course is required", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (!(StudentIDTF.getText().contains("-"))){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID must contain '-'", "Dialog", JOptionPane.ERROR_MESSAGE);
+            } else if (!(StudentIDTF.getText().length() == 11)){
+                JOptionPane.showMessageDialog(new JFrame(), "Student ID must be 11 characters long", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if ("".equals(EmailTF.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Email is required", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if (!(EmailTF.getText().contains("@")) || !(EmailTF.getText().contains(".com"))){
@@ -220,10 +228,6 @@ public class SignUpPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else if (!(new String(PasswordTF.getPassword())).equals(new String(ReEnterPassTF.getPassword()))) {
                 JOptionPane.showMessageDialog(new JFrame(), "Password does not match", "Dialog", JOptionPane.ERROR_MESSAGE);
-            } else if (!(StudentIDTF.getText().contains("-"))){
-                JOptionPane.showMessageDialog(new JFrame(), "Student ID must contain '-'", "Dialog", JOptionPane.ERROR_MESSAGE);
-            } else if (!(StudentIDTF.getText().length() == 12)){
-                JOptionPane.showMessageDialog(new JFrame(), "Student ID must be 12 characters long", "Dialog", JOptionPane.ERROR_MESSAGE);
             } else {
                 first_name = FirstNameTF.getText();
                 last_name = LastNameTF.getText();
@@ -241,7 +245,10 @@ public class SignUpPage extends javax.swing.JFrame {
 
                 FirstNameTF.setText("");
                 LastNameTF.setText("");
+                StudentIDTF.setText("");
+                ProgramCourseTF.setText("");
                 EmailTF.setText("");
+                PhoneNumTF.setText("");
                 PasswordTF.setText("");
                 ReEnterPassTF.setText("");
 
@@ -323,7 +330,7 @@ public class SignUpPage extends javax.swing.JFrame {
         @Override
         public void keyTyped(KeyEvent e) {
             char c = e.getKeyChar();
-            if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || EmailTF.getText().length() >= 12 || (c == KeyEvent.VK_MINUS && EmailTF.getText().contains("-"))) {
+            if (!((c >= '0' && c <= '9') || c == KeyEvent.VK_MINUS) || (c == KeyEvent.VK_MINUS && EmailTF.getText().contains("-"))) {
                 e.consume();
             } 
         }

@@ -226,7 +226,7 @@ public class LoginPage extends javax.swing.JFrame {
                             GoToStudentMainWindow.setVisible(true);
                             dispose();
                     } else {
-                        JOptionPane.showMessageDialog(null, "Invalid username or password", "Dialog", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Invalid password", "Dialog", JOptionPane.ERROR_MESSAGE);
                     }
                 } else {
                     JOptionPane.showMessageDialog(null, "Student ID not found", "Dialog", JOptionPane.ERROR_MESSAGE);

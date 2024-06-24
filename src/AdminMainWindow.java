@@ -460,9 +460,7 @@ public class AdminMainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        Table.setCellSelectionEnabled(false);
         Table.setRowHeight(35);
-        Table.setRowSelectionAllowed(true);
         jScrollPane1.setViewportView(Table);
 
         ViewStudent.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 1780, 730));

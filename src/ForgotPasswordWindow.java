@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.Properties;
@@ -274,10 +275,12 @@ public class ForgotPasswordWindow extends javax.swing.JFrame {
 
     private void StudentIDTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentIDTFMouseClicked
         StudentIDTF.setText("");
+        StudentIDTF.setForeground(Color.BLACK);
     }//GEN-LAST:event_StudentIDTFMouseClicked
 
     private void EmailTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EmailTFMouseClicked
         EmailTF.setText("");
+        EmailTF.setForeground(Color.BLACK);
     }//GEN-LAST:event_EmailTFMouseClicked
 
     private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed
